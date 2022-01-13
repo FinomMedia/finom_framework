@@ -1,0 +1,154 @@
+// https://res.cloudinary.com/patrik-vadura/image/upload/v1641902355/marak_web/Webdesign_JM_01_woqzkk.jpg
+// https://res.cloudinary.com/patrik-vadura/image/upload/v1642059692/antonovic_web/background_with-foto_gcinn8.png
+@background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1641902355/marak_web/Webdesign_JM_01_woqzkk.jpg");
+@scroll-image: url('data:image/svg+xml,%3Csvg width="100%25" height="100%25" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3E%3Cg transform="matrix(1,0,0,1,-415.332,-854.593)"%3E%3Cg%3E%3Cg transform="matrix(0.701396,0,0,0.701396,131.482,268.928)"%3E%3Crect x="404.693" y="834.999" width="71.257" height="71.257" style="fill:rgb(187,128,43);"/%3E%3C/g%3E%3Cg transform="matrix(1,0,0,0.756433,-12.8734,220.966)"%3E%3Cpath d="M462.57,873.135L453.195,889.66L443.82,873.135L462.57,873.135Z" style="fill:white;"/%3E%3C/g%3E%3Cg transform="matrix(1,0,0,0.756433,-12.8734,220.966)"%3E%3Cpath d="M451.111,851.716L451.111,876.44C451.111,877.96 452.045,879.194 453.195,879.194C454.345,879.194 455.278,877.96 455.278,876.44L455.278,851.716C455.278,850.196 454.345,848.962 453.195,848.962C452.045,848.962 451.111,850.196 451.111,851.716Z" style="fill:white;"/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+
+.hero (@background-image) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: @background-image;
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  z-index: 0;
+}
+
+.scroll (@scroll-image, @width, @height) {
+  position: absolute;
+  width: @width;
+  height: @height;
+  content: @scroll-image;
+}
+
+.hero {
+  .wrap {
+    .wrapM;
+
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    padding: 0 calc(1rem + (1 - 1) * var(--calcWidth));
+    height: 100%;
+  }
+
+  //states
+  &-1 {
+    .hero(@background-image);
+
+    color: var(--secondary);
+
+    .social {
+      .flex(row, flex-start, center);
+
+      margin-bottom: 1rem;
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        object-fit: contain;
+      }
+    }
+
+    .special {
+      .flex-justify(center, center);
+
+      padding: calc(1rem + (1.5 - 1) * var(--calcWidth)) calc(2rem + (3.5 - 1) * var(--calcWidth));
+      width: fit-content;
+      font-size: calc(3rem + (5 - 3) * var(--calcWidth));
+      font-weight: var(--fontWeightLight);
+      color: var(--primary);
+      border: .25rem solid var(--primary);
+      text-transform: uppercase;
+
+      @media (min-width: @screenLg) {
+        padding: calc(var(--spacer) * 3) calc(var(--spacer) * 7);
+        font-size: calc(var(--spacer) * 10);
+      }
+    }
+
+    p {
+      display: none;
+    }
+
+    .image {
+      position: relative;
+      display: none;
+      height: 100%;
+
+      @media (min-width: @screenMd) {
+        display: inherit;
+      }
+
+      img {
+        position: absolute;
+        max-height: 80vh;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+
+    .scroll {
+      .scroll (@scroll-image, 3rem, 3rem);
+
+      left: 1rem;
+      bottom: 1rem;
+    }
+  }
+
+  &-2 {
+    .hero(@background-image);
+
+    background-position: top right;
+
+    @media (min-width: @screenLg) {
+      background-position: inherit;
+    }
+
+    color: var(--white);
+
+    .social,
+    .special {
+      display: none;
+    }
+
+    h1 {
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: calc(1.5rem + (2.5 - 1.5) * var(--calcWidth));
+
+      @media (min-width: @screenLg) {
+        font-size: calc(var(--fontSizeParagraph) * 2.5);
+      }
+    }
+
+    .image {
+      position: relative;
+      display: none;
+      height: 100%;
+
+      @media (min-width: @screenMd) {
+        display: inherit;
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+    .scroll {
+      .scroll (@scroll-image, 3rem, 3rem);
+
+      left: 1rem;
+      bottom: 1rem;
+    }
+  }
+}

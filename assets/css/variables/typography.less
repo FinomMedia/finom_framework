@@ -1,0 +1,51 @@
+:root {
+  --fontFamily: "Brandon Grotesque", helvetica, sans-serif;
+
+  //sizes
+  --fontSizeH1: 3rem;
+  --fontSizeH2: 2rem;
+  --fontSizeH3: 1.5rem;
+  --fontSizeH4: 1rem;
+  --fontSizeH5: .9rem;
+  --fontSizeSmall: .75rem;
+  --fontSizeParagraph: .9rem;
+  --fontSizeNav: .9rem;
+  --fontSizeButton: 1rem;
+
+  //font-weight
+  --fontWeightLight: 300;
+  --fontWeightRegular: normal;
+  --fontWeightMedium: 500;
+  --fontWeightBold: bold;
+  --fontWeightBlack: 900;
+
+  //line-height
+  --lineHeightSmall: 1;
+  --lineHeightBase: 1.5;
+  --lineHeightLarge: 2;
+  --lineHeightExtraLarge: 2.5;
+}
+
+// calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport]) / ([max viewport] - [min viewport])))
+
+h1 {
+  font-size: calc(2rem + (3 - 2) * var(--calcWidth));
+  font-weight: var(--fontWeightLight);
+
+  @media screen and (min-width: @screenMd) {
+    font-size: var(--fontSizeH1);
+  }
+
+  span {
+    font-weight: var(--fontWeightBold);
+  }
+}
+
+p {
+  font-size: var(--fontSizeParagraph);
+  font-weight: var(--fontWeightLight);
+
+  span {
+    font-weight: var(--fontWeightBold);
+  }
+}

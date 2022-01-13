@@ -1,0 +1,66 @@
+@screenXs: 30rem;    //480px
+@screenSm: 48rem;    //768px
+@screenMd: 62rem;    //992px
+@screenLg: 75rem;    //1200px
+
+:root {
+  //spacers
+  --spacer: .5rem;
+
+  //layout
+  --wrapS: 56.25rem;  //900px
+  --wrapM: 75rem;     //1200px
+  --wrapL: 100rem;    //1600px
+
+  //calculate
+  --calcWidth: ((100vw - 30rem) / (75 - 30));
+}
+
+//flex
+.flex(@direction, @justify, @align) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.flex-direction(@direction, @align) {
+  display: flex;
+  flex-direction: @direction;
+}
+
+.flex-justify(@justify, @align) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.flex-align(@align) {
+  display: flex;
+  align-items: @align;
+}
+
+//wrap classes
+.wrapS {
+  width: 100%;
+
+  @media (min-width: @screenLg) {
+    width: var(--wrapS);
+  }
+}
+
+.wrapM {
+  width: 100%;
+
+  @media (min-width: @screenLg) {
+    width: var(--wrapM);
+  }
+}
+
+.wrapL {
+  width: 100%;
+
+  @media (min-width: @screenLg) {
+    width: var(--wrapL);
+  }
+}

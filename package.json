@@ -1,0 +1,21 @@
+{
+  "name": "finom_framework",
+  "scripts": {
+    "start": "lessc assets/css/main.less assets/css/main.css",
+    "watch": "less-watch-compiler assets/css assets/css main.less",
+    "lint:style": "stylelint --fix \"**/*.less\" --custom-syntax postcss-less"
+  },
+  "dependencies": {
+    "gulp-file-include": "^2.3.0",
+    "less": "^4.1.2",
+    "stylelint-less": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-bake": "^1.9.0",
+    "gulp": "^4.0.2",
+    "postcss": "^8.4.5",
+    "postcss-less": "^6.0.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0"
+  }
+}
