@@ -1,0 +1,40 @@
+.grid {
+  /* stylelint-disable */
+  /* stylelint-enable */
+}
+.grid-2 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 6rem;
+  overflow: hidden;
+}
+.grid-3 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 3rem;
+  overflow: hidden;
+}
+.grid-4 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 3rem;
+  overflow: hidden;
+}
+.grid-5 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-column-gap: 2rem;
+  overflow: hidden;
+}
+.grid-6 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-column-gap: 2rem;
+  overflow: hidden;
+}
+/*# sourceMappingURL=grid.css.map */

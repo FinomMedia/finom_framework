@@ -5,8 +5,21 @@ h1 {
 h1 span {
   font-weight: var(--fontWeightBold);
 }
+h2 {
+  font-size: clamp(2rem, calc(2rem + (3 - 2) * var(--calcWidth)), 3rem);
+  font-weight: var(--fontWeightLight);
+  text-transform: uppercase;
+}
+h2 span {
+  font-weight: var(--fontWeightBold);
+}
+h3 {
+  font-size: clamp(1.5rem, calc(1.5rem + (2 - 1.5) * var(--calcWidth)), 2rem);
+  font-weight: var(--fontWeightBold);
+  text-transform: uppercase;
+}
 p {
-  font-size: clamp(0.8rem, calc(0.8rem + (0.9 - 0.8) * var(--calcWidth)), 0.9rem);
+  font-size: clamp(0.9rem, calc(0.9rem + (1 - 0.9) * var(--calcWidth)), 1rem);
   font-weight: var(--fontWeightLight);
 }
 p span {

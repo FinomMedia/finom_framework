@@ -12,8 +12,26 @@ h1 {
   }
 }
 
+h2 {
+  .fontSize(@min: 2, @max: 3);
+
+  font-weight: var(--fontWeightLight);
+  text-transform: uppercase;
+
+  span {
+    font-weight: var(--fontWeightBold);
+  }
+}
+
+h3 {
+  .fontSize(@min: 1.5, @max: 2);
+
+  font-weight: var(--fontWeightBold);
+  text-transform: uppercase;
+}
+
 p {
-  .fontSize(@min: .8, @max: .9);
+  .fontSize(@min: .9, @max: 1);
 
   font-weight: var(--fontWeightLight);
 
