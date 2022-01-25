@@ -1,0 +1,17 @@
+.services {
+  @min: 2;
+  @max: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
+
+  h2 {
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 5rem;
+  }
+}

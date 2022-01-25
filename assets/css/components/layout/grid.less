@@ -1,0 +1,31 @@
+.grid(@min, @gap) {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(unit(@min, rem), 1fr));
+  grid-column-gap: unit(@gap, rem);
+  overflow: hidden;
+}
+
+.grid {
+  /* stylelint-disable */
+  &-2 {
+    .grid(30, 6);
+  }
+
+  &-3 {
+    .grid(30, 3);
+  }
+
+  &-4 {
+    .grid(20, 3);
+  }
+
+  &-5 {
+    .grid(18, 2);
+  }
+
+  &-6 {
+    .grid(14, 2);
+  }
+  /* stylelint-enable */
+}
