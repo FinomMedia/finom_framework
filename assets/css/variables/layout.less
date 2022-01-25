@@ -3,18 +3,7 @@
 @screenMd: 62rem;    //992px
 @screenLg: 75rem;    //1200px
 
-:root {
-  //spacers
-  --spacer: .5rem;
-
-  //layout
-  --wrapS: 56.25rem;  //900px
-  --wrapM: 75rem;     //1200px
-  --wrapL: 100rem;    //1600px
-
-  //calculate
-  --calcWidth: ((100vw - 30rem) / (75 - 30));
-}
+// calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport]) / ([max viewport] - [min viewport])))
 
 //flex
 .flex(@direction, @justify, @align) {
@@ -40,27 +29,7 @@
   align-items: @align;
 }
 
-//wrap classes
-.wrapS {
+.wrap {
   width: 100%;
-
-  @media (min-width: @screenLg) {
-    width: var(--wrapS);
-  }
-}
-
-.wrapM {
-  width: 100%;
-
-  @media (min-width: @screenLg) {
-    width: var(--wrapM);
-  }
-}
-
-.wrapL {
-  width: 100%;
-
-  @media (min-width: @screenLg) {
-    width: var(--wrapL);
-  }
+  max-width: var(--wrap);
 }
