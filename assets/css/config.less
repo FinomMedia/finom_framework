@@ -1,0 +1,59 @@
+:root {
+  //layout
+  //spacers
+  --spacer: .5rem;
+
+  //layout
+  --wrapS: 56.25rem;  //900px
+  --wrapM: 75rem;     //1200px
+  --wrapL: 100rem;    //1600px
+  --wrap: var(--wrapL);
+
+  //calculate
+  --calcWidth: calc((100vw - 30rem) / (75 - 30));
+
+  //typography
+  //font
+  --fontFamily: "Brandon Grotesque", helvetica, sans-serif;
+
+  //sizes
+  --fontSizeH1Min: 2;
+  --fontSizeH1Max: 3;
+  --fontSizeH2Min: 1.5;
+  --fontSizeH2Max: 2;
+  --fontSizeH3Min: 1.25;
+  --fontSizeH3Max: 1.5;
+  --fontSizeH4Min: 1;
+  --fontSizeH4Max: 1;
+  --fontSizeH5Min: .9;
+  --fontSizeH5Max: .9;
+  --fontSizeSmallMin: .75;
+  --fontSizeSmallMax: .75;
+  --fontSizeParagraphMin: .8;
+  --fontSizeParagraphMax: .9;
+  --fontSizeNavMin: .9;
+  --fontSizeNavMax: .9;
+  --fontSizeButtonMin: 1;
+  --fontSizeButtonMax: 1;
+
+  //font-weight
+  --fontWeightLight: 300;
+  --fontWeightRegular: normal;
+  --fontWeightMedium: 500;
+  --fontWeightBold: bold;
+  --fontWeightBlack: 900;
+
+  //line-height
+  --lineHeightSmall: calc(var(--lineHeightBase) * .75);
+  --lineHeightBase: calc(var(--spacer) * 3);
+  --lineHeightLarge: calc(var(--lineHeightBase) * 1.25);
+  --lineHeightExtraLarge: calc(var(--lineHeightBase) * 1.5);
+
+  //colors
+  --primary: #bb802b;
+  --secondary: #fff;
+  --typography: #000;
+  --white: #fff;
+  --black: #000;
+  --shadow: .15rem .15rem .25rem 0 rgb(0 0 0 / 10%);
+}

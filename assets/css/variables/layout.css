@@ -1,32 +1,5 @@
-:root {
-  --spacer: 0.5rem;
-  --wrapS: 56.25rem;
-  --wrapM: 75rem;
-  --wrapL: 100rem;
-  --calcWidth: ((100vw - 30rem) / (75 - 30));
-}
-.wrapS {
+.wrap {
   width: 100%;
-}
-@media (min-width: 75rem) {
-  .wrapS {
-    width: var(--wrapS);
-  }
-}
-.wrapM {
-  width: 100%;
-}
-@media (min-width: 75rem) {
-  .wrapM {
-    width: var(--wrapM);
-  }
-}
-.wrapL {
-  width: 100%;
-}
-@media (min-width: 75rem) {
-  .wrapL {
-    width: var(--wrapL);
-  }
+  max-width: var(--wrap);
 }
 /*# sourceMappingURL=layout.css.map */

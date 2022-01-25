@@ -13,13 +13,11 @@
   }
 
   .wrap {
-    padding: calc((var(--spacer) * 1.5) + (1.5 - 1) * var(--calcWidth));
-    width: 100%;
+    @min: 1;
+    @max: 1.5;
 
-    @media (min-width: @screenLg) {
-      padding: calc(var(--spacer) * 3);
-      width: var(--wrapM);
-    }
+    padding: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
+    width: 100%;
   }
 
   ul {
@@ -170,14 +168,12 @@
     }
 
     .logo img {
-      position: absolute;
-      height: calc((var(--spacer) * 10) + (6 - 5) * var(--calcWidth));
-      transform: translateY(calc(var(--spacer) + (3 - 1) * var(--calcWidth)));
+      @min: 5;
+      @max: 6;
 
-      @media (min-width: @screenLg) {
-        height: calc(var(--spacer) * 12);
-        transform: translateY(calc(var(--spacer) * 6));
-      }
+      position: absolute;
+      height: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
+      transform: translateY(clamp(unit(1, rem), calc(unit(1, rem) + (3 - 1) * var(--calcWidth)), unit(3, rem)));
     }
 
     .navigation {
@@ -263,11 +259,10 @@
     }
 
     .logo img {
-      width: calc((var(--spacer) * 18) + (15 - 9) * var(--calcWidth));
+      @min: 9;
+      @max: 15;
 
-      @media (min-width: @screenLg) {
-        width: calc(var(--spacer) * 30);
-      }
+      width: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
     }
 
     .navigation {
