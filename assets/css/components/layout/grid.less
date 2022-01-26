@@ -1,31 +1,34 @@
-.grid(@min, @gap) {
+.grid(@min, @gapCol, @gapRow) {
   display: grid;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(unit(@min, rem), 1fr));
-  grid-column-gap: unit(@gap, rem);
+  grid-column-gap: unit(@gapCol, rem);
+  row-gap: unit(@gapRow, rem);
   overflow: hidden;
 }
 
 .grid {
   /* stylelint-disable */
   &-2 {
-    .grid(30, 6);
+    .grid(20, 6, 4);
   }
 
   &-3 {
-    .grid(30, 3);
+    .grid(24, 6, 3);
   }
 
   &-4 {
-    .grid(20, 3);
+    .grid(20, 3, 3);
   }
 
   &-5 {
-    .grid(18, 2);
+    .grid(18, 2, 2);
   }
 
   &-6 {
-    .grid(14, 2);
+    .grid(14, 2, 2);
   }
   /* stylelint-enable */
 }

@@ -19,7 +19,7 @@ h3 {
   text-transform: uppercase;
 }
 p {
-  font-size: clamp(0.9rem, calc(0.9rem + (1 - 0.9) * var(--calcWidth)), 1rem);
+  font-size: clamp(1rem, calc(1rem + (1.1 - 1) * var(--calcWidth)), 1.1rem);
   font-weight: var(--fontWeightLight);
 }
 p span {

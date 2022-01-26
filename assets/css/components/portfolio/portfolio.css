@@ -1,0 +1,14 @@
+.portfolio-01 h2 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+.portfolio-01 .description {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 5rem;
+}
+.portfolio-01 .counterItem {
+  color: var(--white);
+}
+/*# sourceMappingURL=portfolio.css.map */
