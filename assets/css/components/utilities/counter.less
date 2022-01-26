@@ -1,0 +1,22 @@
+.counter {
+  &Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+
+    span {
+      font-weight: var(--fontWeightBold);
+    }
+  }
+
+  &-01 {
+    .counterItem {
+      font-size: 1rem;
+
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+}
