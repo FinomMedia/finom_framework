@@ -1,4 +1,37 @@
 .portfolio {
+  &Gallery {
+    column-width: 27rem;
+    column-gap: 0;
+    padding: 0;
+    margin-bottom: 5rem;
+
+    @media (min-width: @screenLg) {
+      width: var(--wrap);
+    }
+
+    &:hover {
+      img {
+        @media (min-width: @screenLg) {
+          opacity: .28;
+        }
+      }
+    }
+
+    .item {
+      img {
+        width: 100%;
+        display: block;
+        transition: all .8s;
+      }
+
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
   &-01 {
     h2 {
       text-align: center;
