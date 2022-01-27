@@ -5,9 +5,12 @@
     align-items: center;
     text-transform: uppercase;
 
-    span {
+    &Number {
       font-weight: var(--fontWeightBold);
     }
+
+    .more::after { content: "+"; }
+    .year::after { content: "let"; }
   }
 
   &-01 {

@@ -6,6 +6,7 @@
     "lint:style": "stylelint --fix \"**/*.less\" --custom-syntax postcss-less"
   },
   "dependencies": {
+    "counterup": "^1.0.2",
     "gulp-file-include": "^2.3.0",
     "less": "^4.1.2",
     "stylelint-less": "^1.0.1"
