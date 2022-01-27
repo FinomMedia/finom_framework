@@ -38,6 +38,9 @@
   --typography: #000;
   --white: #fff;
   --black: #000;
+  --light: #d6b380;
   --shadow: 0.15rem 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+  --primaryToTransparent: linear-gradient(180deg, #bb802b 0%, rgba(187, 128, 43, 0) 100%);
+  --secondaryToTransparent: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
 /*# sourceMappingURL=config.css.map */

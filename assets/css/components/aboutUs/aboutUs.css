@@ -4,14 +4,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: clamp(2rem, calc(2rem + (3 - 2) * var(--calcWidth)), 3rem);
+  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
 }
 .aboutUs .grid-2 {
   align-items: center;
 }
 .aboutUsContent h2 {
   color: var(--white);
-  margin-top: clamp(2rem, calc(2rem + (3 - 2) * var(--calcWidth)), 3rem);
   margin-bottom: 5rem;
 }
 .aboutUsContent p {

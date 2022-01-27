@@ -4,8 +4,14 @@
   align-items: center;
   text-transform: uppercase;
 }
-.counterItem span {
+.counterItemNumber {
   font-weight: var(--fontWeightBold);
+}
+.counterItem .more::after {
+  content: "+";
+}
+.counterItem .year::after {
+  content: "let";
 }
 .counter-01 .counterItem {
   font-size: 1rem;

@@ -892,6 +892,14 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
+"counterup@^1.0.2":
+  "integrity" "sha1-B9vh5dMYwXAtv/ir4l6aS4Jp3Hg="
+  "resolved" "https://registry.npmjs.org/counterup/-/counterup-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "jquery" ">=1.5"
+    "waypoints" ">=2.0"
+
 "cssesc@^3.0.0":
   "integrity" "sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg=="
   "resolved" "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
@@ -2216,6 +2224,11 @@
   "integrity" "sha1-TkMekrEalzFjaqH5yNHMvP2reN8="
   "resolved" "https://registry.npmjs.org/isobject/-/isobject-3.0.1.tgz"
   "version" "3.0.1"
+
+"jquery@>=1.5":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
 
 "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
@@ -4467,6 +4480,11 @@
     "cloneable-readable" "^1.0.0"
     "remove-trailing-separator" "^1.0.1"
     "replace-ext" "^1.0.0"
+
+"waypoints@>=2.0":
+  "integrity" "sha1-CZeaBXOBCylifLpDZqKEoGLsacg="
+  "resolved" "https://registry.npmjs.org/waypoints/-/waypoints-4.0.1.tgz"
+  "version" "4.0.1"
 
 "which-module@^1.0.0":
   "integrity" "sha1-u6Y8qGGUiZT/MHc2CJ47lgJsKk8="
