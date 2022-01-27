@@ -1,12 +1,34 @@
 .servicesBox {
-  text-align: center;
-  color: var(--white);
+  &-01 {
+    @min: 0;
+    @max: 2;
 
-  img {
-    height: 3.5rem;
-  }
+    padding: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
+    text-align: center;
+    color: var(--white);
+    transition: all 300ms ease-in-out;
 
-  p {
-    font-size: 125%;
+    img {
+      height: 3.5rem;
+    }
+
+    h3 {
+      transition: all 300ms ease-in-out;
+    }
+
+    p {
+      font-size: 125%;
+    }
+
+    &:hover {
+      @media (min-width: @screenLg) {
+        background-color: rgba(#bb802b, .5);
+
+        h3 {
+          color: var(--primary);
+          transform: scale(1.2);
+        }
+      }
+    }
   }
 }
