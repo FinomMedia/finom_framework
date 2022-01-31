@@ -18,6 +18,11 @@ h3 {
   font-weight: var(--fontWeightBold);
   text-transform: uppercase;
 }
+h4 {
+  font-size: clamp(1rem, calc(1rem + (1.25 - 1) * var(--calcWidth)), 1.25rem);
+  font-weight: var(--fontWeightBold);
+  text-transform: uppercase;
+}
 p {
   font-size: clamp(1rem, calc(1rem + (1.1 - 1) * var(--calcWidth)), 1.1rem);
   font-weight: var(--fontWeightLight);
