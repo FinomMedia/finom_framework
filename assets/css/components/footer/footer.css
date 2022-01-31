@@ -1,0 +1,49 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--white);
+  z-index: 0;
+}
+.footer-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--white);
+  z-index: 0;
+}
+.footer-01 .wrap {
+  position: relative;
+  padding: clamp(1rem, calc(1rem + (1.5 - 1) * var(--calcWidth)), 1.5rem);
+}
+.footer-01 .credits {
+  font-size: 1rem;
+  font-weight: var(--fontWeightLight);
+}
+.footer-01 .credits span {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--black);
+}
+.footer-01 .credits img {
+  margin-left: 0.5rem;
+  height: 1.5rem;
+}
+.footer-01 .scroll {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  content: url('data:image/svg+xml,%3Csvg width="100%25" height="100%25" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3E%3Cg transform="matrix(1,0,0,1,-415.332,-854.593)"%3E%3Cg%3E%3Cg transform="matrix(0.701396,0,0,0.701396,131.482,268.928)"%3E%3Crect x="404.693" y="834.999" width="71.257" height="71.257" style="fill:rgb(187,128,43);"/%3E%3C/g%3E%3Cg transform="matrix(1,0,0,0.756433,-12.8734,220.966)"%3E%3Cpath d="M462.57,873.135L453.195,889.66L443.82,873.135L462.57,873.135Z" style="fill:white;"/%3E%3C/g%3E%3Cg transform="matrix(1,0,0,0.756433,-12.8734,220.966)"%3E%3Cpath d="M451.111,851.716L451.111,876.44C451.111,877.96 452.045,879.194 453.195,879.194C454.345,879.194 455.278,877.96 455.278,876.44L455.278,851.716C455.278,850.196 454.345,848.962 453.195,848.962C452.045,848.962 451.111,850.196 451.111,851.716Z" style="fill:white;"/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A');
+  right: 1rem;
+  bottom: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
+  transform: rotate(180deg);
+  transition: all 300ms ease-in-out;
+}
+.footer-01 .scroll:hover {
+  transform: translateY(-2rem) scale(1.2) rotate(180deg);
+}
+/*# sourceMappingURL=footer.css.map */

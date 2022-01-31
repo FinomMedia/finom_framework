@@ -1,0 +1,83 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+
+  .grid {
+    &-4 {
+      padding: 2rem 0;
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(unit(16, rem), 1fr));
+    grid-column-gap: unit(2rem, rem);
+  }
+
+  &Box {
+    padding: 2rem;
+    text-align: center;
+    color: var(--white);
+
+    img {
+      height: 3rem;
+    }
+
+    h4 {
+      margin-bottom: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: all 300ms ease-in-out;
+    }
+
+    p,
+    a {
+      font-size: 95%;
+      line-height: 1.5;
+      color: var(--white);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 300ms ease-in-out;
+    }
+
+    &:hover {
+      @media (min-width: @screenLg) {
+        background-color: rgba(#bb802b, .5);
+
+        h4 {
+          color: var(--primary);
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  &-01 {
+    .contact;
+
+    .wrapS {
+      margin-bottom: 4rem;
+      padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .action {
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
