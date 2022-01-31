@@ -211,7 +211,7 @@ iframe {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 10;
 }
 .header .topBar {
   padding: var(--spacer);
@@ -805,7 +805,7 @@ iframe {
 .referenceSliderNav {
   bottom: 0;
   margin: 0 0.5rem;
-  z-index: 10;
+  z-index: 5;
   outline: 0.5rem solid #ccc;
   outline-offset: -0.5rem;
   cursor: pointer;
