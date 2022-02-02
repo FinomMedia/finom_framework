@@ -154,6 +154,10 @@
         opacity: .5;
         transition: all .6s ease-in-out;
 
+        @media (max-width: @screenSm) {
+          border: none;
+        }
+
         &:hover {
           opacity: 1;
 
@@ -199,7 +203,7 @@
     .navigationBtn {
       &:checked {
         ~ .navigation {
-          margin-top: 2rem;
+          margin-top: 4rem;
         }
       }
     }

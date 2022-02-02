@@ -1,8 +1,11 @@
+@background-image-Reference: "https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png";
+
 .reference {
   &Slider {
     .flex-justify(center, flex-end);
 
     position: relative;
+    margin: 0 auto;
     padding: 0 2rem;
     flex-flow: row nowrap;
     overflow: hidden;
@@ -77,8 +80,12 @@
       margin-bottom: clamp(unit(2, rem), calc(unit(2, rem) + (5 - 2) * var(--calcWidth)), unit(5, rem));
     }
   }
+}
 
+.reference {
   &-01 {
+    .reference;
+
     padding: 2rem;
 
     h2 {
@@ -86,17 +93,28 @@
       color: var(--white);
     }
 
-    &Caption {
-      color: var(--white);
-    }
+    .reference {
+      background-image: url("@{background-image-About}");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat, repeat;
 
-    .referenceSlider {
+      @media (min-width: @screenLg) {
+        width: 100%;
+      }
+
       &Caption {
         color: var(--white);
       }
 
-      &Txt {
-        color: var(--white);
+      .referenceSlider {
+        &Caption {
+          color: var(--white);
+        }
+
+        &Txt {
+          color: var(--white);
+        }
       }
     }
   }
