@@ -1,99 +1,17 @@
-.referenceSlider {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-end;
-  justify-content: center;
-  height: 60vh;
-}
-.referenceSliderNav {
-  width: 1rem;
-  height: 1rem;
-  margin: 2rem 1rem;
-  border-radius: 50%;
-  z-index: 10;
-  outline: 0.5rem solid #ccc;
-  outline-offset: -0.5rem;
-  cursor: pointer;
-  appearance: none;
-  backface-visibility: hidden;
-}
-.referenceSliderNav:checked {
-  animation: check 0.4s linear forwards;
-}
-.referenceSliderNav:checked:nth-of-type(1) ~ .referenceSliderInner {
-  left: 0;
-}
-.referenceSliderNav:checked:nth-of-type(2) ~ .referenceSliderInner {
-  left: -100%;
-}
-.referenceSliderNav:checked:nth-of-type(3) ~ .referenceSliderInner {
-  left: -200%;
-}
-.referenceSliderNav:checked:nth-of-type(4) ~ .referenceSliderInner {
-  left: -300%;
-}
-.referenceSliderInner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 400%;
-  height: 100%;
-  transition: left 0.4s;
-  display: flex;
-  flex-flow: row nowrap;
-}
-.referenceSliderContents {
-  height: 100%;
+.reference-01 {
   padding: 2rem;
-  text-align: center;
-  display: flex;
-  flex: 1;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-}
-.referenceSliderImage {
-  font-size: 2.7rem;
-  color: #2196f3;
-}
-.referenceSliderCaption {
-  font-weight: 500;
-  margin: 2rem 0 1rem;
-  text-transform: uppercase;
-}
-.referenceSliderTxt {
-  margin-bottom: 3rem;
-  max-width: 19rem;
 }
 .reference-01 h2 {
+  text-align: center;
   color: var(--white);
 }
-.reference-01 .referenceSlider h2 {
+.reference-01Caption {
+  color: var(--white);
+}
+.reference-01 .referenceSliderCaption {
   color: var(--white);
 }
 .reference-01 .referenceSliderTxt {
   color: var(--white);
-}
-@-webkit-keyframes check {
-  50% {
-    outline-color: #333;
-    box-shadow: 0 0 0 1rem #333, 0 0 0 2rem rgba(51, 51, 51, 0.2);
-  }
-  100% {
-    outline-color: #333;
-    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  }
-}
-@keyframes check {
-  50% {
-    outline-color: #333;
-    box-shadow: 0 0 0 1rem #333, 0 0 0 2rem rgba(51, 51, 51, 0.2);
-  }
-  100% {
-    outline-color: #333;
-    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
-  }
 }
 /*# sourceMappingURL=reference.css.map */

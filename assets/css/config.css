@@ -40,6 +40,12 @@
   --black: #000;
   --light: #d6b380;
   --shadow: 0.15rem 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+  --primaryHover: #bb802b;
+  --secondaryHover: #000;
+  --typographyHover: #fff;
+  --whiteHover: #000;
+  --blackHover: #fff;
+  --lightHover: #d6b380;
   --primaryToTransparent: linear-gradient(180deg, #bb802b 0%, rgba(187, 128, 43, 0) 100%);
   --secondaryToTransparent: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }

@@ -40,6 +40,12 @@
   --black: #000;
   --light: #d6b380;
   --shadow: 0.15rem 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+  --primaryHover: #bb802b;
+  --secondaryHover: #000;
+  --typographyHover: #fff;
+  --whiteHover: #000;
+  --blackHover: #fff;
+  --lightHover: #d6b380;
   --primaryToTransparent: linear-gradient(180deg, #bb802b 0%, rgba(187, 128, 43, 0) 100%);
   --secondaryToTransparent: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -341,6 +347,11 @@ iframe {
   opacity: 0.5;
   transition: all 0.6s ease-in-out;
 }
+@media (max-width: 48rem) {
+  .header-1 ul li a {
+    border: none;
+  }
+}
 .header-1 ul li a:hover {
   opacity: 1;
 }
@@ -373,7 +384,7 @@ iframe {
   background: var(--black);
 }
 .header-1 .navigationBtn:checked ~ .navigation {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .header-2 {
   background: var(--white);
@@ -648,7 +659,7 @@ iframe {
   align-items: center;
   justify-content: center;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-column-gap: 6rem;
   row-gap: 4rem;
   overflow: hidden;
@@ -658,7 +669,7 @@ iframe {
   align-items: center;
   justify-content: center;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-column-gap: 6rem;
   row-gap: 3rem;
   overflow: hidden;
@@ -668,8 +679,8 @@ iframe {
   align-items: center;
   justify-content: center;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-column-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-column-gap: 4rem;
   row-gap: 3rem;
   overflow: hidden;
 }
@@ -738,15 +749,56 @@ iframe {
   width: 100%;
   padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
 }
-.aboutUs .grid-2 {
-  align-items: center;
-}
 .aboutUsContent h2 {
-  color: var(--white);
   margin-bottom: 5rem;
 }
 .aboutUsContent p {
   text-align: justify;
+}
+.aboutUs-01 {
+  background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat, repeat;
+  width: 100%;
+}
+@media (min-width: 62rem) {
+  .aboutUs-01 {
+    background-position: center;
+  }
+}
+.aboutUs-01Content h2 {
+  color: var(--white);
+}
+.aboutUs-01Content h4 {
+  color: var(--primary);
+}
+.aboutUs-01Content p {
+  color: var(--white);
+}
+.aboutUs-01 .grid-3 {
+  margin-top: 4rem;
+  align-items: flex-start !important;
+}
+.aboutUs-01 .aboutUs {
+  background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat, repeat;
+  width: 100%;
+}
+@media (min-width: 62rem) {
+  .aboutUs-01 .aboutUs {
+    background-position: center;
+  }
+}
+.aboutUs-01 .aboutUsContent h2 {
+  color: var(--white);
+}
+.aboutUs-01 .aboutUsContent h4 {
+  color: var(--primary);
+}
+.aboutUs-01 .aboutUsContent p {
   color: var(--white);
 }
 .portfolioGallery {
@@ -791,6 +843,7 @@ iframe {
   justify-content: center;
   align-items: flex-end;
   position: relative;
+  margin: 0 auto;
   padding: 0 2rem;
   flex-flow: row nowrap;
   overflow: hidden;
@@ -865,11 +918,16 @@ iframe {
   margin-bottom: clamp(2rem, calc(2rem + (5 - 2) * var(--calcWidth)), 5rem);
 }
 .reference-01 {
+  background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
   padding: 2rem;
 }
-.reference-01 h2 {
-  text-align: center;
-  color: var(--white);
+@media (min-width: 75rem) {
+  .reference-01 {
+    width: 100%;
+  }
 }
 .reference-01Caption {
   color: var(--white);
@@ -878,6 +936,30 @@ iframe {
   color: var(--white);
 }
 .reference-01 .referenceSliderTxt {
+  color: var(--white);
+}
+.reference-01 h2 {
+  text-align: center;
+  color: var(--white);
+}
+.reference-01 .reference {
+  background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+}
+@media (min-width: 75rem) {
+  .reference-01 .reference {
+    width: 100%;
+  }
+}
+.reference-01 .referenceCaption {
+  color: var(--white);
+}
+.reference-01 .reference .referenceSliderCaption {
+  color: var(--white);
+}
+.reference-01 .reference .referenceSliderTxt {
   color: var(--white);
 }
 .footer {
