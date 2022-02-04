@@ -16,6 +16,6 @@ jobs:
       with:
         username: 'w2932'
         server: 'wmsc1-sftp.wedos.net'
-        ssh_private_key: '${{ secrets.password }}'
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
         remote_path: '/wwww/'
         args: '-o ConnectTimeout=5'
