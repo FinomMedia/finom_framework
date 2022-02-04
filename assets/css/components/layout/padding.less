@@ -1,0 +1,19 @@
+.p {
+  &x {
+    &-1 { padding: 0 1rem; }
+    &-2 { padding: 0 2rem; }
+    &-3 { padding: 0 3rem; }
+  }
+
+  &xc {
+    &-1 { padding: 0 clamp(.5rem, 1rem, 1rem); }
+    &-2 { padding: 0 clamp(1rem, 2rem, 2rem); }
+    &-3 { padding: 0 clamp(1rem, 3rem, 3rem); }
+  }
+
+  &y {
+    &-1 { padding: 1rem 0; }
+    &-2 { padding: 2rem 0; }
+    &-3 { padding: 3rem 0; }
+  }
+}

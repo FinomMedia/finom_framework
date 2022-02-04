@@ -1,0 +1,18 @@
+@screenXs: 30rem;    //480px
+@screenSm: 48rem;    //768px
+@screenMd: 62rem;    //992px
+@screenLg: 75rem;    //1200px
+
+.wrap {
+  margin: 0 auto;
+  padding: clamp(1rem, 3rem, 3rem);
+  width: 100%;
+  max-width: var(--wrap);
+}
+
+.wrapS {
+  .wrap;
+
+  padding: 0;
+  max-width: var(--wrapS);
+}

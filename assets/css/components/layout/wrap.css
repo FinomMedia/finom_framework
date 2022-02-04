@@ -1,15 +1,15 @@
 .wrap {
   margin: 0 auto;
-  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
+  padding: clamp(1rem, 3rem, 3rem);
   width: 100%;
   max-width: var(--wrap);
 }
 .wrapS {
   margin: 0 auto;
-  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
+  padding: clamp(1rem, 3rem, 3rem);
   width: 100%;
   max-width: var(--wrap);
   padding: 0;
   max-width: var(--wrapS);
 }
-/*# sourceMappingURL=layout.css.map */
+/*# sourceMappingURL=wrap.css.map */

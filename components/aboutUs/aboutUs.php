@@ -1,10 +1,10 @@
 <div id="about" class="aboutUs-01">
   <div class="wrap">
-    <div class="grid-2">
+    <div class="grid-2 mb-5">
       <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1643796251/marak_web/Webdesign_JM_04_b22haw.png">
 
       <div class="aboutUsContent">
-        <h2>
+        <h2 class="mb-5">
           O mně
         </h2>
 
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="grid-3">
+    <div class="grid-3 ais">
       <div class="aboutUsContent">
         <h4>
           2010
