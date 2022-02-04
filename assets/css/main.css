@@ -650,56 +650,78 @@ iframe {
 .hero-2 .scroll:hover {
   transform: translateY(-2rem) scale(1.2);
 }
+.ais {
+  --alignItems: normal;
+}
+.aic {
+  --alignItems: center;
+}
+.aie {
+  --alignItems: flex-end;
+}
+.ass {
+  --alignSelf: normal;
+}
+.asc {
+  --alignSelf: center;
+}
+.ase {
+  --alignSelf: flex-end;
+}
+.jcs {
+  --alignItems: normal;
+}
+.jcc {
+  --alignItems: center;
+}
+.jce {
+  --alignItems: flex-end;
+}
 .grid {
   /* stylelint-disable */
   /* stylelint-enable */
 }
 .grid-2 {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--alignItems, center);
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   grid-column-gap: 6rem;
   row-gap: 4rem;
   overflow: hidden;
 }
 .grid-3 {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--alignItems, center);
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  grid-column-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  grid-column-gap: 4rem;
   row-gap: 3rem;
   overflow: hidden;
 }
 .grid-4 {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--alignItems, center);
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   grid-column-gap: 4rem;
   row-gap: 3rem;
   overflow: hidden;
 }
 .grid-5 {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--alignItems, center);
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   grid-column-gap: 2rem;
   row-gap: 2rem;
   overflow: hidden;
 }
 .grid-6 {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--alignItems, center);
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
   grid-column-gap: 2rem;
   row-gap: 2rem;
   overflow: hidden;
@@ -737,6 +759,31 @@ iframe {
     background-color: rgba(187, 128, 43, 0.5);
   }
   .servicesBox-01:hover h3 {
+    color: var(--primary);
+    transform: scale(1.2);
+  }
+}
+.servicesBox-02 {
+  padding: clamp(0rem, calc(0rem + (2 - 0) * var(--calcWidth)), 2rem);
+  text-align: center;
+  background-color: rgba(187, 128, 43, 0.5);
+  color: var(--white);
+  transition: all 300ms ease-in-out;
+}
+.servicesBox-02 img {
+  height: 3.5rem;
+}
+.servicesBox-02 h3 {
+  transition: all 300ms ease-in-out;
+}
+.servicesBox-02 p {
+  font-size: 125%;
+}
+@media (min-width: 75rem) {
+  .servicesBox-02:hover {
+    background-color: transparent;
+  }
+  .servicesBox-02:hover h3 {
     color: var(--primary);
     transform: scale(1.2);
   }
@@ -1023,7 +1070,7 @@ iframe {
 }
 .contact .columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   grid-column-gap: 2rem;
 }
 .contactBox {
@@ -1071,7 +1118,7 @@ iframe {
 }
 .contact-01 .columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   grid-column-gap: 2rem;
 }
 .contact-01Box {
