@@ -1,3 +1,8 @@
+<?php
+    $heroImage = "https://res.cloudinary.com/patrik-vadura/image/upload/v1641902355/marak_web/Webdesign_JM_02_xpi8qj.png";
+    $heroTitle = "Jmenuji se <span>Ondřej Mařák</span>";
+?>
+
 <div class="hero hero-1">
     <div class="wrap">
         <div>
@@ -11,8 +16,9 @@
                 </a>
             </div>
 
-            <h1 id="title"></h1>
-            <p id="description"></p>
+            <h1>
+                <?php echo $heroTitle; ?>
+            </h1>
 
             <div class="special">
                 <span>Investor</span>
@@ -27,16 +33,7 @@
         </div>
 
         <div class="image">
-            <img id="image" src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641902355/marak_web/Webdesign_JM_02_xpi8qj.png">
+            <img src="<?php echo $heroImage; ?>">
         </div>
     </div>
 </div>
-
-<script>
-    var img = document.getElementById('image');
-    img.src = "https://res.cloudinary.com/patrik-vadura/image/upload/v1641902355/marak_web/Webdesign_JM_02_xpi8qj.png";
-
-    let titleContent = "Jmenuji se" + " " + '<span>Ondřej Mařák</span>';
-    document.getElementById("title").innerHTML = titleContent;
-    document.getElementById("description").innerHTML = descriptionContent;
-</script>
