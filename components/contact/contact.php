@@ -1,7 +1,11 @@
+<?php
+    $contactTitle = "Kontaktujte mě";
+?>
+
 <div id="contact" class="contact-01">
     <div class="wrap">
         <h2>
-            Kontaktujte mě
+            <?php echo $contactTitle; ?>
         </h2>
 
         <div class="grid-4">

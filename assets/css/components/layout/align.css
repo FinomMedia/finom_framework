@@ -1,0 +1,28 @@
+.ais {
+  --alignItems: normal;
+}
+.aic {
+  --alignItems: center;
+}
+.aie {
+  --alignItems: flex-end;
+}
+.ass {
+  --alignSelf: normal;
+}
+.asc {
+  --alignSelf: center;
+}
+.ase {
+  --alignSelf: flex-end;
+}
+.jcs {
+  --alignItems: normal;
+}
+.jcc {
+  --alignItems: center;
+}
+.jce {
+  --alignItems: flex-end;
+}
+/*# sourceMappingURL=align.css.map */

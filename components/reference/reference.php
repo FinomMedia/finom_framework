@@ -1,7 +1,12 @@
+<?php
+    $referenceTitle = "Reference";
+?>
+
+
 <div id="reference" class="reference-01">
     <div class="wrap">
         <h2>
-            Reference
+            <?php echo $referenceTitle; ?>
         </h2>
 
 

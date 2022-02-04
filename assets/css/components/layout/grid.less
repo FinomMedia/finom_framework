@@ -1,9 +1,8 @@
 .grid(@min, @gapCol, @gapRow) {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: var(--alignItems, center);
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(unit(@min, rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, unit(@min, rem)), 1fr));
   grid-column-gap: unit(@gapCol, rem);
   row-gap: unit(@gapRow, rem);
   overflow: hidden;
@@ -16,7 +15,7 @@
   }
 
   &-3 {
-    .grid(16, 6, 3);
+    .grid(20, 4, 3);
   }
 
   &-4 {
