@@ -14,7 +14,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: sftp://wmsc1-sftp.wedos.net:22/
+        server: wmsc1-sftp.wedos.net
         username: w2932_cicd
+        port: 22
         password: ${{ secrets.PASSWORD }}
-        server-dir: 	/wwww/
+        server-dir: /wwww/
