@@ -14,7 +14,7 @@ jobs:
     - name: 📂 Sync files
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        username: 'w2932'
+        username: 'w2932_cicd'
         server: 'wmsc1-sftp.wedos.net'
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
         remote_path: '/wwww/'
