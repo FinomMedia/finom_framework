@@ -1,0 +1,46 @@
+//flex
+.flex(@direction, @justify, @align) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.flex-direction(@direction, @align) {
+  display: flex;
+  flex-direction: @direction;
+}
+
+.flex-justify(@justify, @align) {
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.flex-align(@align) {
+  display: flex;
+  align-items: @align;
+}
+
+//align
+.a {
+  &i {
+    &s { --alignItems: normal; }
+    &c { --alignItems: center; }
+    &e { --alignItems: flex-end; }
+  }
+
+  &s {
+    &s { --alignSelf: normal; }
+    &c { --alignSelf: center; }
+    &e { --alignSelf: flex-end; }
+  }
+}
+
+.j {
+  &c {
+    &s { --alignItems: normal; }
+    &c { --alignItems: center; }
+    &e { --alignItems: flex-end; }
+  }
+}

@@ -1,37 +1,15 @@
 @background-image-About: "https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png";
 
 .aboutUs {
-  @min: 1;
-  @max: 3;
+  .flex(column, center, center);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: clamp(1rem, 3rem, 3rem);
   width: 100%;
-  padding: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
-
-  &Content {
-    h2 {
-      margin-bottom: 5rem;
-    }
-
-    p {
-      text-align: justify;
-    }
-  }
 }
 
 .aboutUs {
   &-01 {
     .aboutUs;
-
-    .grid {
-      &-3 {
-        margin-top: 4rem;
-        align-items: flex-start !important;
-      }
-    }
 
     .aboutUs {
       background-image: url("@{background-image-About}");

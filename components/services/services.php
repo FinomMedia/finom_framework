@@ -2,7 +2,7 @@
     $servicesTitle = "Moje služby";
 ?>
 
-<div id="services" class="services">
+<div id="services" class="services-01">
   <div class="wrap">
     <h2>
         <?php echo $servicesTitle; ?>

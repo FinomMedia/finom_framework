@@ -49,20 +49,6 @@
   --primaryToTransparent: linear-gradient(180deg, #bb802b 0%, rgba(187, 128, 43, 0) 100%);
   --secondaryToTransparent: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
-.wrap {
-  margin: 0 auto;
-  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
-  width: 100%;
-  max-width: var(--wrap);
-}
-.wrapS {
-  margin: 0 auto;
-  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
-  width: 100%;
-  max-width: var(--wrap);
-  padding: 0;
-  max-width: var(--wrapS);
-}
 :root {
   --primary-75: rgba(var(--primary), 0.75);
   --primary-50: rgba(var(--primary), 0.5);
@@ -650,6 +636,75 @@ iframe {
 .hero-2 .scroll:hover {
   transform: translateY(-2rem) scale(1.2);
 }
+.mx-1 {
+  padding: 0 1rem;
+}
+.mx-2 {
+  padding: 0 2rem;
+}
+.mx-3 {
+  padding: 0 3rem;
+}
+.mxc-1 {
+  padding: 0 clamp(0.5rem, 1rem, 1rem);
+}
+.mxc-2 {
+  padding: 0 clamp(1rem, 2rem, 2rem);
+}
+.mxc-3 {
+  padding: 0 clamp(1rem, 3rem, 3rem);
+}
+.my-1 {
+  padding: 1rem 0;
+}
+.my-2 {
+  padding: 2rem 0;
+}
+.my-3 {
+  padding: 3rem 0;
+}
+.mb-1 {
+  padding-bottom: 1rem;
+}
+.mb-2 {
+  padding-bottom: 2rem;
+}
+.mb-3 {
+  padding-bottom: 3rem;
+}
+.mb-4 {
+  padding-bottom: 4rem;
+}
+.mb-5 {
+  padding-bottom: 5rem;
+}
+.px-1 {
+  padding: 0 1rem;
+}
+.px-2 {
+  padding: 0 2rem;
+}
+.px-3 {
+  padding: 0 3rem;
+}
+.pxc-1 {
+  padding: 0 clamp(0.5rem, 1rem, 1rem);
+}
+.pxc-2 {
+  padding: 0 clamp(1rem, 2rem, 2rem);
+}
+.pxc-3 {
+  padding: 0 clamp(1rem, 3rem, 3rem);
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
 .ais {
   --alignItems: normal;
 }
@@ -676,6 +731,20 @@ iframe {
 }
 .jce {
   --alignItems: flex-end;
+}
+.wrap {
+  margin: 0 auto;
+  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
+  width: 100%;
+  max-width: var(--wrap);
+}
+.wrapS {
+  margin: 0 auto;
+  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
+  width: 100%;
+  max-width: var(--wrap);
+  padding: 0;
+  max-width: var(--wrapS);
 }
 .grid {
   /* stylelint-disable */
@@ -729,78 +798,97 @@ iframe {
 .services {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: clamp(0.5rem, minmax(0.5rem, 3rem), 3rem);
   width: 100%;
-  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
 }
 .services h2 {
   text-align: center;
-  color: var(--white);
   margin-bottom: 5rem;
 }
-.servicesBox-01 {
-  padding: clamp(0rem, calc(0rem + (2 - 0) * var(--calcWidth)), 2rem);
+.services-01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(0.5rem, minmax(0.5rem, 3rem), 3rem);
+  width: 100%;
+}
+.services-01 h2 {
   text-align: center;
+  margin-bottom: 5rem;
+}
+.services-01 h2 {
   color: var(--white);
+}
+.servicesBox {
+  padding: clamp(0.5rem, 2rem, 2rem);
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+.servicesBox * {
+  transition: all 300ms ease-in-out;
+}
+.servicesBox img {
+  height: 3.5rem;
+}
+.servicesBox p {
+  font-size: 125%;
+}
+.servicesBox-01 {
+  padding: clamp(0.5rem, 2rem, 2rem);
+  text-align: center;
+  transition: all 300ms ease-in-out;
+  background-color: rgba(187, 128, 43, 0.3);
+  color: var(--white);
+}
+.servicesBox-01 * {
   transition: all 300ms ease-in-out;
 }
 .servicesBox-01 img {
   height: 3.5rem;
 }
-.servicesBox-01 h3 {
-  transition: all 300ms ease-in-out;
-}
 .servicesBox-01 p {
   font-size: 125%;
 }
-@media (min-width: 75rem) {
-  .servicesBox-01:hover {
-    background-color: rgba(187, 128, 43, 0.5);
-  }
-  .servicesBox-01:hover h3 {
-    color: var(--primary);
-    transform: scale(1.2);
-  }
+.servicesBox-01:hover {
+  background-color: rgba(187, 128, 43, 0.5);
+}
+.servicesBox-01:hover h3 {
+  transform: scale(1.2);
+  color: var(--primary);
 }
 .servicesBox-02 {
-  padding: clamp(0rem, calc(0rem + (2 - 0) * var(--calcWidth)), 2rem);
+  padding: clamp(0.5rem, 2rem, 2rem);
   text-align: center;
+  transition: all 300ms ease-in-out;
   background-color: rgba(187, 128, 43, 0.5);
   color: var(--white);
+}
+.servicesBox-02 * {
   transition: all 300ms ease-in-out;
 }
 .servicesBox-02 img {
   height: 3.5rem;
 }
-.servicesBox-02 h3 {
-  transition: all 300ms ease-in-out;
-}
 .servicesBox-02 p {
   font-size: 125%;
 }
-@media (min-width: 75rem) {
-  .servicesBox-02:hover {
-    background-color: transparent;
-  }
-  .servicesBox-02:hover h3 {
-    color: var(--primary);
-    transform: scale(1.2);
-  }
+.servicesBox-02:hover {
+  background-color: transparent;
+}
+.servicesBox-02:hover h3 {
+  transform: scale(1.2);
+  color: var(--primary);
 }
 .aboutUs {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: clamp(1rem, 3rem, 3rem);
   width: 100%;
-  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
-}
-.aboutUsContent h2 {
-  margin-bottom: 5rem;
-}
-.aboutUsContent p {
-  text-align: justify;
 }
 .aboutUs-01 {
   background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png");
@@ -822,10 +910,6 @@ iframe {
 }
 .aboutUs-01Content p {
   color: var(--white);
-}
-.aboutUs-01 .grid-3 {
-  margin-top: 4rem;
-  align-items: flex-start !important;
 }
 .aboutUs-01 .aboutUs {
   background-image: url("https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png");
