@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+name: 🚀 Deploy to staging master 
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+      
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: sftp://wmsc1-sftp.wedos.net:22/
+        username: w2932_cicd
+        password: ${{ secrets.PASSWORD }}
+        server-dir: 	/wwww/
