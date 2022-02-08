@@ -734,13 +734,13 @@ iframe {
 }
 .wrap {
   margin: 0 auto;
-  padding: clamp(1rem, 3rem, 3rem);
+  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
   width: 100%;
   max-width: var(--wrap);
 }
 .wrapS {
   margin: 0 auto;
-  padding: clamp(1rem, 3rem, 3rem);
+  padding: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
   width: 100%;
   max-width: var(--wrap);
   padding: 0;
@@ -800,7 +800,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(1rem, 3rem, 3rem);
+  padding: clamp(0.5rem, minmax(0.5rem, 3rem), 3rem);
   width: 100%;
 }
 .services h2 {
@@ -812,7 +812,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(1rem, 3rem, 3rem);
+  padding: clamp(0.5rem, minmax(0.5rem, 3rem), 3rem);
   width: 100%;
 }
 .services-01 h2 {

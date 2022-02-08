@@ -4,8 +4,11 @@
 @screenLg: 75rem;    //1200px
 
 .wrap {
+  @min: 1;
+  @max: 3;
+
   margin: 0 auto;
-  padding: clamp(1rem, 3rem, 3rem);
+  padding: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
   width: 100%;
   max-width: var(--wrap);
 }
