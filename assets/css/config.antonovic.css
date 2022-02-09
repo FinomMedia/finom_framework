@@ -404,7 +404,7 @@ iframe {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-image: url("var(--bgImageHero)");
+  background-image: url(@{backgroundImageHero});
   background-size: cover;
   background-repeat: no-repeat, repeat;
   z-index: 0;
@@ -528,7 +528,7 @@ iframe {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-image: url("var(--bgImageHero)");
+  background-image: url(@{backgroundImageHero});
   background-size: cover;
   background-repeat: no-repeat, repeat;
   z-index: 0;
@@ -3597,4 +3597,59 @@ button:focus {
   .skills-01 .skillsItem:hover {
     transform: scale(1.2);
   }
+}
+:root {
+  --spacer: 0.5rem;
+  --wrapS: 56.25rem;
+  --wrapM: 75rem;
+  --wrapL: 100rem;
+  --wrap: var(--wrapL);
+  --calcWidth: calc((100vw - 30rem) / (75 - 30));
+  --fontFamily: "Brandon Grotesque", helvetica, sans-serif;
+  --fontSizeH1Min: 2;
+  --fontSizeH1Max: 3;
+  --fontSizeH2Min: 1.5;
+  --fontSizeH2Max: 2;
+  --fontSizeH3Min: 1.25;
+  --fontSizeH3Max: 1.5;
+  --fontSizeH4Min: 1;
+  --fontSizeH4Max: 1;
+  --fontSizeH5Min: 0.9;
+  --fontSizeH5Max: 0.9;
+  --fontSizeSmallMin: 0.75;
+  --fontSizeSmallMax: 0.75;
+  --fontSizeParagraphMin: 0.8;
+  --fontSizeParagraphMax: 0.9;
+  --fontSizeNavMin: 0.9;
+  --fontSizeNavMax: 0.9;
+  --fontSizeButtonMin: 1;
+  --fontSizeButtonMax: 1;
+  --fontWeightLight: 300;
+  --fontWeightRegular: normal;
+  --fontWeightMedium: 500;
+  --fontWeightBold: bold;
+  --fontWeightBlack: 900;
+  --lineHeightSmall: calc(var(--lineHeightBase) * 0.75);
+  --lineHeightBase: calc(var(--spacer) * 3);
+  --lineHeightLarge: calc(var(--lineHeightBase) * 1.25);
+  --lineHeightExtraLarge: calc(var(--lineHeightBase) * 1.5);
+  --primary: #d47e21;
+  --secondary: #fff;
+  --typography: #000;
+  --white: #fff;
+  --black: #000;
+  --light: #ca9761;
+  --shadow: 0.15rem 0.15rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+  --primaryHover: #d47e21;
+  --secondaryHover: #000;
+  --typographyHover: #fff;
+  --whiteHover: #000;
+  --blackHover: #fff;
+  --lightHover: #ca9761;
+  --primaryToTransparent: linear-gradient(180deg, #bb802b 0%, rgba(187, 128, 43, 0) 100%);
+  --secondaryToTransparent: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  --bgImageHero: "https://res.cloudinary.com/patrik-vadura/image/upload/v1642059692/antonovic_web/background_with-foto_gcinn8.png";
+  --bgImageAbout: "https://res.cloudinary.com/patrik-vadura/image/upload/v1644236153/antonovic_web/background_theme_01_jsjklx.png";
+  --bgImageReference: "https://res.cloudinary.com/patrik-vadura/image/upload/v1644236153/antonovic_web/background_theme_01_jsjklx.png";
+  --scrollImage: url('data:image/svg+xml,%3Csvg width="100%25" height="100%25" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"%3E%3Cg transform="matrix(1,0,0,1,-127.72,-965.085)"%3E%3Cg%3E%3Ccircle cx="153.198" cy="990.564" r="25.478" style="fill:rgb(212,126,33);"/%3E%3Cg transform="matrix(2.12318,0,0,2.12318,127.72,965.085)"%3E%3Cpath d="M12,15.5C11.734,15.502 11.479,15.397 11.29,15.21L7.29,11.21C7.102,11.022 6.996,10.766 6.996,10.5C6.996,9.949 7.449,9.496 8,9.496C8.266,9.496 8.522,9.602 8.71,9.79L12,13.1L15.3,9.92C15.49,9.709 15.76,9.589 16.044,9.589C16.592,9.589 17.044,10.04 17.044,10.589C17.044,10.887 16.91,11.17 16.68,11.36L12.68,15.22C12.497,15.396 12.254,15.496 12,15.5Z" style="fill-rule:nonzero;"/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }

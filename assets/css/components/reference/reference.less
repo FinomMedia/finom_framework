@@ -1,4 +1,4 @@
-@background-image-Reference: "https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png";
+@bgImageReference: var(--bgImageReference);
 
 .reference {
   &Slider {
@@ -94,7 +94,7 @@
     }
 
     .reference {
-      background-image: url("@{background-image-About}");
+      background-image: url("@{bgImageReference}");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat, repeat;

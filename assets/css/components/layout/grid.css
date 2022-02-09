@@ -47,4 +47,12 @@
   row-gap: 2rem;
   overflow: hidden;
 }
-/*# sourceMappingURL=grid.css.map */
+.grid-7 {
+  display: grid;
+  align-items: var(--alignItems, center);
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  grid-column-gap: 2rem;
+  row-gap: 2rem;
+  overflow: hidden;
+}

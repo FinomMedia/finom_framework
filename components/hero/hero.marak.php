@@ -7,11 +7,11 @@
     <div class="wrap">
         <div>
             <div class="social">
-                <a href="https://www.facebook.com/ondrej.marak.5">
+                <a href="https://www.facebook.com/ondrej.marak.5" target="_blank">
                     <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912491/marak_web/icons/icon_02_aoi5lu.svg">
                 </a>
 
-                <a href="https://www.instagram.com/ondrej_marak/">
+                <a href="https://www.instagram.com/ondrej_marak/" target="_blank">
                     <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912489/marak_web/icons/icon_01_qdu0ol.svg">
                 </a>
             </div>

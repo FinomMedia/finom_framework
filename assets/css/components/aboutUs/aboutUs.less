@@ -1,4 +1,4 @@
-@background-image-About: "https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png";
+@bgImageAbout: --var(--bgImageAbout);
 
 .aboutUs {
   .flex(column, center, center);
@@ -12,7 +12,7 @@
     .aboutUs;
 
     .aboutUs {
-      background-image: url("@{background-image-About}");
+      background-image: url("@{bgImageAbout}");
       background-size: contain;
       background-position: top center;
       background-repeat: no-repeat, repeat;
@@ -34,6 +34,47 @@
 
         p {
           color: var(--white);
+        }
+      }
+    }
+  }
+
+  &-02 {
+    .aboutUs;
+
+    .aboutUs {
+      background-image: url("@{bgImageAbout}");
+      background-size: contain;
+      background-position: top center;
+      background-repeat: no-repeat, repeat;
+      width: 100%;
+
+      @media (min-width: @screenMd) {
+        background-position: center;
+      }
+
+
+      &Content {
+        h2 {
+          color: var(--white);
+        }
+
+        h4 {
+          color: var(--primary);
+        }
+
+        p {
+          color: var(--white);
+        }
+      }
+    }
+
+    .counter {
+      &Item {
+        color: var(--white);
+
+        span {
+          color: var(--primary);
         }
       }
     }
