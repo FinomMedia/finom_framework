@@ -1,5 +1,3 @@
-@bgImageAbout: --var(--bgImageAbout);
-
 .aboutUs {
   .flex(column, center, center);
 
@@ -12,7 +10,7 @@
     .aboutUs;
 
     .aboutUs {
-      background-image: url("@{bgImageAbout}");
+      background-image: var(--bgImageAbout);
       background-size: contain;
       background-position: top center;
       background-repeat: no-repeat, repeat;
@@ -43,7 +41,7 @@
     .aboutUs;
 
     .aboutUs {
-      background-image: url("@{bgImageAbout}");
+      background-image: var(--bgImageAbout);
       background-size: contain;
       background-position: top center;
       background-repeat: no-repeat, repeat;

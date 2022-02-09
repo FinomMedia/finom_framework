@@ -37,7 +37,7 @@
   position: absolute;
   width: 3rem;
   height: 3rem;
-  content: var(--scrolImage);
+  content: var(--scrollImage);
   right: 1rem;
   bottom: clamp(1rem, calc(1rem + (3 - 1) * var(--calcWidth)), 3rem);
   transform: rotate(180deg);
@@ -46,3 +46,4 @@
 .footer-01 .scroll:hover {
   transform: translateY(-2rem) scale(1.2) rotate(180deg);
 }
+/*# sourceMappingURL=footer.css.map */

@@ -1,5 +1,3 @@
-@bgImageReference: var(--bgImageReference);
-
 .reference {
   &Slider {
     .flex-justify(center, flex-end);
@@ -94,7 +92,7 @@
     }
 
     .reference {
-      background-image: url("@{bgImageReference}");
+      background-image: var(--bgImageReference);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat, repeat;

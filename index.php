@@ -33,7 +33,7 @@
         // aboutUs
         include 'components/aboutUs/aboutUs.antonovic.php';
 
-        // portfolio
+        // blog
         include 'components/blog/blog.antonovic.php';
 
         // reference
