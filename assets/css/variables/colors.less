@@ -1,3 +1,12 @@
+.colorPrepare(@name, @color) {
+  --@{name}: @color;
+  @red:red(@color);
+  @green: green(@color);
+  @blue:blue(@color);
+
+  --@{name}_rgb: @red,@green,@blue;
+}
+
 :root {
   //primary shades
   --primary-75: rgba(var(--primary), .75);

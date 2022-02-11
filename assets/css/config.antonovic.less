@@ -1,14 +1,13 @@
 @import "main";
 
 :root {
-  //layout
   //spacers
   --spacer: .5rem;
 
   //layout
-  --wrapS: 56.25rem;  //900px
-  --wrapM: 75rem;     //1200px
-  --wrapL: 100rem;    //1600px
+  --wrapS: 56.25rem;      //900px
+  --wrapM: 75rem;         //1200px
+  --wrapL: 100rem;        //1600px
   --wrap: var(--wrapL);
 
   //calculate
@@ -39,11 +38,11 @@
   --fontSizeButtonMax: 1;
 
   //font-weight
-  --fontWeightLight: 300;
-  --fontWeightRegular: normal;
-  --fontWeightMedium: 500;
-  --fontWeightBold: bold;
-  --fontWeightBlack: 900;
+  .typoPrepare(Weight, Light, 300);
+  .typoPrepare(Weight, Regular, normal);
+  .typoPrepare(Weight, Medium, 500);
+  .typoPrepare(Weight, Bold, bold);
+  .typoPrepare(Weight, Black, 900);
 
   //line-height
   --lineHeightSmall: calc(var(--lineHeightBase) * .75);
@@ -52,21 +51,22 @@
   --lineHeightExtraLarge: calc(var(--lineHeightBase) * 1.5);
 
   //colors
-  --primary: #d47e21;
-  --secondary: #fff;
-  --typography: #000;
-  --white: #fff;
-  --black: #000;
-  --light: #ca9761;
-  --shadow: .15rem .15rem .25rem 0 rgb(0 0 0 / 10%);
+  .colorPrepare(primary, #d47e21);
+  .colorPrepare(secondary, #ffffff);
+  .colorPrepare(typography, #000000);
+  .colorPrepare(black, #000000);
+  .colorPrepare(white, #ffffff);
+  .colorPrepare(light, #ca9761);
 
   //hoverStates
-  --primaryHover: #d47e21;
-  --secondaryHover: #000;
-  --typographyHover: #fff;
-  --whiteHover: #000;
-  --blackHover: #fff;
-  --lightHover: #ca9761;
+  .colorPrepare(primaryHover, #cc995d);
+  .colorPrepare(secondaryHover, #000000);
+  .colorPrepare(typographyHover, #ffffff);
+  .colorPrepare(blackHover, #ffffff);
+  .colorPrepare(whiteHover, #000000);
+  .colorPrepare(lightHover, #ca9761);
+
+  --shadow: .15rem .15rem .25rem 0 rgb(0 0 0 / 10%);
 
   //gradients
   --primaryToTransparent: linear-gradient(180deg, rgba(#bb802b, 1) 0%, rgba(#bb802b, 0) 100%);

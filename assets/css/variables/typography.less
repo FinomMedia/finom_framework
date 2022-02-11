@@ -1,3 +1,7 @@
+.typoPrepare(@state, @name, @size) {
+  --font@{state}@{name}: @size;
+}
+
 .fontSize(@min, @max) {
   font-size: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
 }

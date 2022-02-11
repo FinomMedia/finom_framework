@@ -36,11 +36,15 @@
   &-02 {
     .servicesBox;
 
-    background-color: var(--primary);
-    color: var(--black);
+    border: .25rem solid var(--primary);
+    color: var(--white);
+
+    h3 {
+      color: var(--primary);
+    }
 
     &:hover {
-      .hoverStateBackgroundColor(var(--white));
+      .hoverStateBorderColor(var(--primaryHover));
 
       h3 {
         .hoverStateScale(1.2);

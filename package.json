@@ -2,7 +2,7 @@
   "name": "finom_framework",
   "scripts": {
     "start": "lessc assets/css/config.marak.less assets/css/config.marak.css && lessc assets/css/config.antonovic.less assets/css/config.antonovic.css",
-    "watch": "less-watch-compiler assets/css assets/css config.marak.less && less-watch-compiler assets/css assets/css config.antonovic.less",
+    "watch": "less-watch-compiler assets/css assets/css *.less",
     "lint:style": "stylelint --fix \"**/*.less\" --custom-syntax postcss-less"
   },
   "dependencies": {

@@ -1,5 +1,5 @@
 <?php
-$servicesTitle = "Moje služby";
+    $servicesTitle = "Moje služby";
 ?>
 
 <div id="services" class="services-01">
@@ -17,7 +17,7 @@ $servicesTitle = "Moje služby";
                 </h3>
 
                 <p>
-                    Nejsem tak bohatý, abych se mohl spoléhat na stát. Pokud chcete mít své budoucí příjmy ve svých rukou, ozvěte se, rád vám představím jak dosáhnete svých finančních cílů.
+                    Historie ukázala, že nemovitosti jsou jednou z nejbezpečnějších forem investice, ale ne každý má takové možnosti, aby mohl koupit byt nebo celé obchodní centrum jako investici, která generuje pravidelný zisk. Ale díky našim realizovaným projektům se můžete stát investorem takové nemovitosti. Mít své peníze zajištěny nemovitostí a získat tak pravidelný pasivní příjem.
                 </p>
             </div>
 
@@ -25,11 +25,12 @@ $servicesTitle = "Moje služby";
                 <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912490/marak_web/icons/icon_04_wbkb8h.svg">
 
                 <h3>
-                    Development
+                    Pojištění
                 </h3>
 
                 <p>
-                    Dobrý developerský projekt začíná vždy dobrým pozemkem. K našim projektům přistupujeme jako vlastnímu domu, vyšší standart je pro nás samozřejmostí.
+                    Naší prací je předvídat a poradit vám, jaké životní situace vás mohou potkat, řádně vás zabezpečit a v případě nenadálé události být vám plně nápomocni.
+                    Chceme, aby klient byl naším rovnocenným partnerem a v konečném důsledku i spolutvůrcem finálního řešení dle jeho požadavků a potřeb.
                 </p>
             </div>
 
@@ -37,23 +38,12 @@ $servicesTitle = "Moje služby";
                 <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912491/marak_web/icons/icon_05_ws0yjs.svg">
 
                 <h3>
-                    Reality
+                    Úvěry
                 </h3>
 
                 <p>
-                    Nejsme klasická realitka. Nejsme odměněni přemrštěnou provizí, ale klient platí pouze za služby, které si dopředu sám vybere. Neplaťte za zajíce v pytli, ale za skutečně odvedenou práci.
-                </p>
-            </div>
-
-            <div class="servicesBox-02">
-                <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912490/marak_web/icons/icon_06_osewht.svg">
-
-                <h3>
-                    Pojištění
-                </h3>
-
-                <p>
-                    Zajištění úrazu, života a svého bydlení beru dnes jako samozřejmostí. Bohužel se denně, setkáváme se špatně nastavenými smlouvami a když rodina zůstane bez příjmu nebo střechy nad hlavou, dochází k druhému neštěstí.
+                    Díky zkušenostem našich specialistů víme, jaký produkt je pro Vaše potřeby ten nejvhodnější.
+                    Naši úvěroví specialisté řeší nespočet úvěrů každý měsíc, proto jsou těmi pravými, kdo vám může s výběrem úvěru poradit. Věříme, že naše úvěrové programy splní Vaše očekávání.
                 </p>
             </div>
         </div>
