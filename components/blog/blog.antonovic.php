@@ -11,12 +11,12 @@
         </div>
 
         <div class="grid-3 ais">
-            <div class="blogBox-02">
+            <div class="blogBox-01">
                 <div class="blogBoxImage">
                     <img src="https://images.unsplash.com/photo-1640622661329-67f406a77d53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
 
                     <h3>
-                        Lorem ipsum dolor sit amet
+                        Lorem ipsum dolor sit amet um dolor sit ame
                     </h3>
                 </div>
 
@@ -30,7 +30,7 @@
                     <img src="https://images.unsplash.com/photo-1644183422820-2b6d5bfe5033?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60">
 
                     <h3>
-                        Lorem ipsum dolor sit amet
+                        Lorem ipsum dolor sit amet amet um dolor sit ame
                     </h3>
                 </div>
 
