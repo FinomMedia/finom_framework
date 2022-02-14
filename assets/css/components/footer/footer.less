@@ -6,6 +6,11 @@
   width: 100%;
   background: var(--white);
   z-index: 0;
+
+  .wrap {
+    position: relative;
+    padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
+  }
 }
 
 .scroll (@width, @height) {
@@ -17,13 +22,6 @@
 
 .footer {
   &-01 {
-    .footer;
-
-    .wrap {
-      position: relative;
-      padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
-    }
-
     .credits {
       font-size: 1rem;
       font-weight: var(--fontWeightLight);

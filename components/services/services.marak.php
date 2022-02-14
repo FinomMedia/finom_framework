@@ -2,14 +2,14 @@
     $servicesTitle = "Moje služby";
 ?>
 
-<div id="services" class="services-01">
+<div id="services" class="services services-01">
   <div class="wrap">
     <h2>
         <?php echo $servicesTitle; ?>
     </h2>
 
     <div class="grid-3 ais">
-      <div class="servicesBox-01">
+      <div class="servicesBox servicesBox-01">
         <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912490/marak_web/icons/icon_03_oscuxh.svg">
 
         <h3>
@@ -21,7 +21,7 @@
         </p>
       </div>
 
-      <div class="servicesBox-01">
+      <div class="servicesBox servicesBox-01">
         <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912490/marak_web/icons/icon_04_wbkb8h.svg">
 
         <h3>
@@ -33,7 +33,7 @@
         </p>
       </div>
 
-      <div class="servicesBox-01">
+      <div class="servicesBox servicesBox-01">
         <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912491/marak_web/icons/icon_05_ws0yjs.svg">
 
         <h3>
@@ -45,7 +45,7 @@
         </p>
       </div>
 
-      <div class="servicesBox-01">
+      <div class="servicesBox servicesBox-01">
         <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912490/marak_web/icons/icon_06_osewht.svg">
 
         <h3>

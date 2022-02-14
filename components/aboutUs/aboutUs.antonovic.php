@@ -1,4 +1,4 @@
-<div id="about" class="aboutUs-02">
+<div id="about" class="aboutUs aboutUs-02">
     <div class="wrap">
         <div class="grid-2 mb-5">
             <div class="aboutUsContent">

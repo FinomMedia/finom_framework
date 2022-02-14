@@ -4,7 +4,7 @@
 ?>
 
 <div class="hero hero-1">
-    <div class="wrap">
+    <div class="wrap grid-2">
         <div>
             <div class="social">
                 <a href="https://www.facebook.com/ondrej.marak.5" target="_blank">

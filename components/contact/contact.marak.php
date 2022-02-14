@@ -2,7 +2,7 @@
     $contactTitle = "Kontaktujte mě";
 ?>
 
-<div id="contact" class="contact-01">
+<div id="contact" class="contact contact-01">
     <div class="wrap">
         <h2>
             <?php echo $contactTitle; ?>

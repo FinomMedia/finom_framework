@@ -1,14 +1,19 @@
-.hero () {
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: min(100vh, 70rem);
   background-image: var(--bgImageHero);
   background-size: cover;
   background-repeat: no-repeat, repeat;
   z-index: 0;
+
+  .wrap {
+    position: relative;
+    height: 100%;
+  }
 }
 
 .scroll (@width, @height) {
@@ -19,20 +24,8 @@
 }
 
 .hero {
-  .wrap {
-    position: relative;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1rem;
-    padding: 0 calc(1rem + (1 - 1) * var(--calcWidth));
-    height: 100%;
-  }
-
   //states
   &-1 {
-    .hero();
-
     color: var(--secondary);
 
     .social {
@@ -138,8 +131,6 @@
   }
 
   &-2 {
-    .hero();
-
     background-position: top right;
 
     @media (min-width: @screenLg) {

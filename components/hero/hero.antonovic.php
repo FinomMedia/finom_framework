@@ -5,7 +5,7 @@
 ?>
 
 <div class="hero hero-2">
-    <div class="wrap">
+    <div class="wrap grid-2">
         <div></div>
         <div>
             <h1>

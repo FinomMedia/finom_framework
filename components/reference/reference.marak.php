@@ -3,7 +3,7 @@
 ?>
 
 
-<div id="reference" class="reference-01">
+<div id="reference" class="reference reference-01">
     <div class="wrap">
         <h2>
             <?php echo $referenceTitle; ?>
