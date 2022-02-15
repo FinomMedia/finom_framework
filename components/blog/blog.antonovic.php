@@ -11,7 +11,7 @@
         </div>
 
         <div class="grid-3 ais">
-            <div class="blogBox blogBox-01">
+            <div class="blogBox blogBox-02">
                 <div class="blogBoxImage">
                     <img src="https://images.unsplash.com/photo-1640622661329-67f406a77d53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
 
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <a href="#" class="btn btnOutlinedPrimary mt-5" target="_blank">
+        <a href="#" class="btn btnOutlinedPrimary mt-3" target="_blank">
             Prohlédnout všechny články
         </a>
     </div>

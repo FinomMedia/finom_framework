@@ -59,6 +59,8 @@
         </div>
 
         <div class="wrapS">
+            <?php include 'components/contact/contactComplete.php'; ?>
+
             <form>
                 <div class="columns">
                     <div class="input" >

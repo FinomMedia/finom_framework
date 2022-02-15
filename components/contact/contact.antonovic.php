@@ -17,7 +17,7 @@ $contactTitle = "Kontaktujte mě";
                 </h4>
 
                 <p>
-                    Stojanova 1334, <br> Uherské Hradiště, 686 01
+                    Vavrečkova 7074, <br> Zlín, 760 01
                 </p>
             </div>
 
@@ -29,7 +29,7 @@ $contactTitle = "Kontaktujte mě";
                 </h4>
 
                 <p>
-                    +420 777 888 164
+                    +420 773 494 909
                 </p>
             </div>
 
@@ -41,7 +41,7 @@ $contactTitle = "Kontaktujte mě";
                 </h4>
 
                 <p>
-                    marak@finomgroup.cz
+                    antonovic@finomgroup.cz
                 </p>
             </div>
 
@@ -53,12 +53,14 @@ $contactTitle = "Kontaktujte mě";
                 </h4>
 
                 <p>
-                    finomgroup.cz
+                    finom.cz
                 </p>
             </div>
         </div>
 
         <div class="wrapS">
+            <?php include 'components/contact/contactComplete.php'; ?>
+
             <form>
                 <div class="columns">
                     <div class="input" >
