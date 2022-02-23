@@ -17,8 +17,7 @@
                 </h3>
 
                 <p>
-                    Historie ukázala, že nemovitosti jsou jednou z nejbezpečnějších forem investice, ale ne každý má takové možnosti, aby mohl koupit byt nebo celé obchodní centrum jako investici, která generuje pravidelný zisk. Ale díky našim realizovaným projektům se můžete stát investorem takové nemovitosti. Mít své peníze zajištěny nemovitostí a získat tak pravidelný pasivní příjem.
-                </p>
+                    Jsme specialisté na investice. Díky tomuto zaměření u nás najdete nejen tradiční spořící produkty, ale hlavně možnost vstoupit do velmi výnosných investičních projektů. I malé peníze zasluhují velkou pozornost, proto přistupujeme ke každé investici velmi zodpovědně a peníze vždy diverzifikujeme do více oblastí, které i v případě propadu jedné oblasti trhu, ochrání investovaný kapitál.                </p>
             </div>
 
             <div class="servicesBox servicesBox-02">
@@ -29,8 +28,7 @@
                 </h3>
 
                 <p>
-                    Naší prací je předvídat a poradit vám, jaké životní situace vás mohou potkat, řádně vás zabezpečit a v případě nenadálé události být vám plně nápomocni.
-                    Chceme, aby klient byl naším rovnocenným partnerem a v konečném důsledku i spolutvůrcem finálního řešení dle jeho požadavků a potřeb.
+                    Součástí našich služeb je odborné zabezpečení klienta v případě propadu nebo výpadku příjmu z důvodu nemoci či úrazu. Zabezpečení majetku před nahodilými událostmi a kompletní zajištění občanské, zaměstnanecké, popřípadě podnikatelské odpovědnosti. Naším cílem je řádně vás zabezpečit a v případě nenadálé události být vám plně nápomocni.
                 </p>
             </div>
 
@@ -42,8 +40,7 @@
                 </h3>
 
                 <p>
-                    Díky zkušenostem našich specialistů víme, jaký produkt je pro Vaše potřeby ten nejvhodnější.
-                    Naši úvěroví specialisté řeší nespočet úvěrů každý měsíc, proto jsou těmi pravými, kdo vám může s výběrem úvěru poradit. Věříme, že naše úvěrové programy splní Vaše očekávání.
+                    Díky našim zkušenostem víme, jaký produkt je pro Vaše potřeby ten nejvhodnější. Naši úvěrový specialisté řeší nespočet úvěrů každý měsíc, proto jsou těmi pravými, kdo vám může s výběrem úvěru poradit. Věříme, že naše úvěrové programy splní Vaše očekávání.
                 </p>
             </div>
         </div>

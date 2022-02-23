@@ -1,0 +1,61 @@
+.cooperation {
+  background-image: var(--bgImageReference);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+
+  @media (min-width: @screenLg) {
+    width: 100%;
+  }
+}
+
+.cooperation {
+  &-01 {
+    padding: 2rem;
+
+    .imageBox {
+      @media (min-width: @screenMd) {
+        position: relative;
+        margin-bottom: 5rem;
+      }
+    }
+
+    .description {
+      @media (min-width: @screenMd) {
+        position: absolute;
+        bottom: -5rem;
+        left: 0;
+        max-width: 90%;
+        z-index: 5;
+      }
+
+      h2 {
+        color: var(--primary);
+      }
+
+      p {
+        color: var(--white);
+
+        @media (min-width: @screenLg) {
+          font-size: 140%;
+        }
+      }
+    }
+
+    .desktopImage {
+      display: none;
+
+      @media (min-width: @screenMd) {
+        display: block;
+      }
+    }
+
+    .mobileImage {
+      display: block;
+
+      @media (min-width: @screenMd) {
+        display: none;
+      }
+    }
+  }
+}

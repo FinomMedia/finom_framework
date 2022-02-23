@@ -34,10 +34,10 @@
         include 'components/aboutUs/aboutUs.antonovic.php';
 
         // blog
-        include 'components/blog/blog.antonovic.php';
+        // include 'components/blog/blog.antonovic.php';
 
         // reference
-        include 'components/reference/reference.antonovic.php';
+        include 'components/cooperation/cooperation.antonovic.php';
 
         // contact
         include 'components/contact/contact.antonovic.php';

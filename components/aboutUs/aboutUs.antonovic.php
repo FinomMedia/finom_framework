@@ -1,20 +1,28 @@
 <div id="about" class="aboutUs aboutUs-02">
     <div class="wrap">
-        <div class="grid-2 mb-5">
+        <div class="grid-2 mb-3">
             <div class="aboutUsContent">
-                <h2 class="mb-3">
+                <h2 class="mb-2">
                     O mně
                 </h2>
 
                 <p>
-                    Je zajímavé ohlédnout se zpět a hodnotit sám sebe. Svá rozhodnutí, své úspěchy, a hlavně uznat chyby a hodnotit i své neúspěchy.  Ve 21 letech, kdy jsem začínal podnikat, máte naivní představy o životě a o podnikání. Nikdo Vám nedá manuál na úspěch – ten si musíte vytvořit vlastní cestou.
+                    Má cesta k poradenství vedla od kariéry profesionálního sportovce. Kdy se mně zeptali, zdali vím co budu dělat pokud se mi stane úraz, který mi nedovolí pokračovat v kariéře a zdali vím jaké budou mé příjmy po jejím skončení. Jelikož jsem nevěděl jak na tuto otázku odpovědět, věděl jsem, že je potřeba tenhle problém řešit.
                 </p>
 
                 <p>
-                    Život Vám bude dávat pořád tu samou zkoušku, dokud ji nesložíte den za dnem. Vtip je v tom, že i když uděláte vše správně, nezaručí Vám to automaticky Váš cíl. Vím jedině to, že pokud to přestanete zkoušet, tak se to určitě nestane.
+                    Při řešení jsem zjistil dvě věci. Že nejsem opravdu zajištěný a že nejsem sám kdo v mém okolí  řeší stejný problém. Začal jsem se v oblasti financí vzdělávat a finance mi byly natolik blízké, že po ukončení sportovní kariéry se staly pro mně jasnou volbou.
                 </p>
 
-                <div class="counter-02 mt-5">
+                <p>
+                    Po 10 letech praxe si dovolím říct, že znám finanční trh velmi dobře a ne vždy je ve finančních společnostech na prvním místě klient. Proto bylo pro mě velmi důležité zvolit společnost, kde mi nediktují produkty, ale hledáme správné řešení pro klienta.
+                </p>
+
+                <p>
+                    Díky partnerství se společností finom dokážu svým klientům nezávisle poradit a vybrat vhodný produkt pro potřeby klienta.
+                </p>
+
+                <div class="counter-02 mt-3">
                     <div class="grid-7">
                         <div class="counterItem">
                     <span class="counterItemNumber more">

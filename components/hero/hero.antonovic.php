@@ -12,10 +12,6 @@
                 <?php echo $heroTitle; ?>
             </h1>
 
-            <p class="description">
-                <?php echo $heroDescription; ?>
-            </p>
-
             <a href="#services" class="scroll"></a>
         </div>
     </div>
