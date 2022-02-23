@@ -1,4 +1,8 @@
-# finom_framework
+# PHP / LESS - framework
 
-## Staging
-https://finommedia.github.io/finom_framework/
+## Staging (SFTP deploy)
+### Radim Antonovič
+http://owtest.finomapp.cz/index.php?web=antonovic
+
+### Ondřej Mařák
+http://owtest.finomapp.cz/index.php?web=marak
