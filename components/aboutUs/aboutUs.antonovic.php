@@ -26,7 +26,7 @@
                     <div class="grid-7">
                         <div class="counterItem">
                     <span class="counterItemNumber more">
-                        500
+                        1500
                     </span>
 
                             Klientů
