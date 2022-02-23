@@ -1,0 +1,26 @@
+.blog {
+  padding: clamp(.5rem, 2rem, 2rem);
+  width: 100%;
+
+  .wrap {
+    .flex (column, center, center);
+  }
+}
+
+.blog {
+  &-01 {
+    background-color: ~"rgba(var(--primary_rgb), .2)";
+
+    h2 {
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 3rem;
+    }
+
+    .description {
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 5rem;
+    }
+  }
+}

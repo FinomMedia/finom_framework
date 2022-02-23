@@ -210,12 +210,8 @@
   }
 
   &-2 {
-    background: var(--white);
+    background: var(--black);
     text-transform: uppercase;
-
-    @media (min-width: @screenSm) {
-      background: transparent;
-    }
 
     .topBar {
       .topBar;
@@ -228,21 +224,16 @@
     ul {
       .flex(column, center, flex-start);
 
-      background: var(--white);
+      background: transparent;
 
       @media (min-width: @screenSm) {
         flex-direction: row;
-        background: transparent;
       }
 
       li a {
         font-size: var(--fontSizeNav);
         font-weight: var(--fontWeightRegular);
-        color: var(--typography);
-
-        @media (min-width: @screenSm) {
-          color: var(--white);
-        }
+        color: var(--white);
 
         &:hover {
           color: var(--primary);
@@ -259,6 +250,7 @@
         img {
           width: 1.5rem;
           height: 1.5rem;
+          vertical-align: middle;
         }
       }
     }

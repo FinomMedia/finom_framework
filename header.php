@@ -12,10 +12,25 @@
             <?php echo $pageTitle; ?>
         </title>
 
-        <link rel="stylesheet" href="assets/css/main.css">
+        <?php
+            $web = $_GET['web'];
+
+            echo "<link rel='stylesheet/less' href='assets/css/config.$web.less'>";
+        ?>
+
         <link rel="stylesheet" href="<?php echo $fontFace; ?>">
+        <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
         <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     </head>
 
     <body id="body">
-        <?php include 'components/header/header.php';?>
+
+        <?php
+            if ($_GET['web'] == 'marak') {
+                include 'components/header/header.marak.php';
+            }
+
+            if ($_GET['web'] == 'antonovic') {
+                include 'components/header/header.antonovic.php';
+            }
+        ?>

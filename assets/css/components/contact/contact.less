@@ -55,12 +55,22 @@
       }
     }
   }
+
+  &Complete {
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
 }
 
 .contact {
   &-01 {
-    .contact;
-
     .wrapS {
       margin-bottom: 4rem;
       padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
@@ -78,6 +88,12 @@
       a {
         text-transform: uppercase;
       }
+    }
+
+    .contactComplete {
+      padding-top: 2rem;
+      border-top: .25rem solid var(--primary);
+      color: var(--white);
     }
   }
 }

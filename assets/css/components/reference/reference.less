@@ -1,6 +1,13 @@
-@background-image-Reference: "https://res.cloudinary.com/patrik-vadura/image/upload/v1643800299/marak_web/bg_texture_03_ek6txy.png";
-
 .reference {
+  background-image: var(--bgImageReference);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat, repeat;
+
+  @media (min-width: @screenLg) {
+    width: 100%;
+  }
+
   &Slider {
     .flex-justify(center, flex-end);
 
@@ -84,8 +91,6 @@
 
 .reference {
   &-01 {
-    .reference;
-
     padding: 2rem;
 
     h2 {
@@ -93,28 +98,13 @@
       color: var(--white);
     }
 
-    .reference {
-      background-image: url("@{background-image-About}");
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat, repeat;
-
-      @media (min-width: @screenLg) {
-        width: 100%;
-      }
-
+    .referenceSlider {
       &Caption {
         color: var(--white);
       }
 
-      .referenceSlider {
-        &Caption {
-          color: var(--white);
-        }
-
-        &Txt {
-          color: var(--white);
-        }
+      &Txt {
+        color: var(--white);
       }
     }
   }

@@ -1,8 +1,7 @@
 .counter {
   &Item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .flex(column, center, center);
+
     text-transform: uppercase;
 
     &Number {
@@ -15,6 +14,22 @@
 
   &-01 {
     .counterItem {
+      font-size: 1rem;
+
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &-02 {
+    .counterItem {
+      .flex(column, flex-start, flex-start);
+
+      @media (max-width: @screenSm) {
+        .flex(column, center, center);
+      }
+
       font-size: 1rem;
 
       span {

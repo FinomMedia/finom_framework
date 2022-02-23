@@ -1,8 +1,8 @@
 <?php
-    $logoImage = "https://res.cloudinary.com/patrik-vadura/image/upload/v1641824770/marak_web/logo/marak_logo_square_amhaxk.png";
+    $logoImage = "https://res.cloudinary.com/patrik-vadura/image/upload/v1642059695/antonovic_web/logo/logo_antonovic_oguqow.png";
 ?>
 
-<header class="header header-1">
+<header class="header header-2">
     <div class="wrap">
         <a href="#" class="logo">
             <img src="<?php echo $logoImage; ?>" />
@@ -14,6 +14,6 @@
             <span class="navIcon"></span>
         </label>
 
-        <?php include 'headerLinks.php';?>
+        <?php include 'headerLinks.antonovic.php';?>
     </div>
 </header>

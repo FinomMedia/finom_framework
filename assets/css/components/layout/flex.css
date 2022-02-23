@@ -17,12 +17,11 @@
   --alignSelf: flex-end;
 }
 .jcs {
-  --alignItems: normal;
+  --justifyContent: normal;
 }
 .jcc {
-  --alignItems: center;
+  --justifyContent: center;
 }
 .jce {
-  --alignItems: flex-end;
+  --justifyContent: flex-end;
 }
-/*# sourceMappingURL=flex.css.map */

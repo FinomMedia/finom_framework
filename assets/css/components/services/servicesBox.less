@@ -1,5 +1,5 @@
 .servicesBox {
-  padding: clamp(.5rem, 2rem, 2rem);
+  padding: 2rem;
   text-align: center;
   transition: all 300ms ease-in-out;
 
@@ -18,9 +18,6 @@
 
 .servicesBox {
   &-01 {
-    .servicesBox;
-
-    background-color: rgba(#bb802b, .3);
     color: var(--white);
 
     &:hover {
@@ -34,13 +31,15 @@
   }
 
   &-02 {
-    .servicesBox;
-
-    background-color: rgba(#bb802b, .5);
+    border: .25rem solid var(--primary);
     color: var(--white);
 
+    h3 {
+      color: var(--primary);
+    }
+
     &:hover {
-      .hoverStateBackgroundColor(transparent);
+      .hoverStateBorderColor(var(--primaryHover));
 
       h3 {
         .hoverStateScale(1.2);
