@@ -11,6 +11,11 @@
   position: relative;
   padding: clamp(1rem, calc(1rem + (1.5 - 1) * var(--calcWidth)), 1.5rem);
 }
+.footer.cp {
+  position: fixed;
+  bottom: 0;
+  background: transparent;
+}
 .footer-01 .credits {
   font-size: 1rem;
   font-weight: var(--fontWeightLight);
@@ -36,5 +41,22 @@
 }
 .footer-01 .scroll:hover {
   transform: translateY(-2rem) scale(1.2) rotate(180deg);
+}
+.footer-cp-01 {
+  padding-bottom: clamp(0.5rem, calc(0.5rem + (2 - 0.5) * var(--calcWidth)), 2rem);
+}
+.footer-cp-01 .credits {
+  font-size: 1rem;
+  font-weight: var(--fontWeightLight);
+  color: var(--white);
+}
+.footer-cp-01 .credits span {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--white);
+}
+.footer-cp-01 .credits img {
+  margin-left: 0.5rem;
+  height: 1.25rem;
 }
 /*# sourceMappingURL=footer.css.map */

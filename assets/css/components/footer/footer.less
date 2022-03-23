@@ -11,6 +11,12 @@
     position: relative;
     padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
   }
+
+  &.cp {
+    position: fixed;
+    bottom: 0;
+    background: transparent;
+  }
 }
 
 .scroll (@width, @height) {
@@ -48,6 +54,29 @@
 
       &:hover {
         transform: translateY(-2rem) scale(1.2) rotate(180deg);
+      }
+    }
+  }
+
+  &-cp {
+    &-01 {
+      padding-bottom: clamp(unit(.5, rem), calc(unit(.5, rem) + (2 - .5) * var(--calcWidth)), unit(2, rem));
+
+      .credits {
+        font-size: 1rem;
+        font-weight: var(--fontWeightLight);
+        color: var(--white);
+
+        span {
+          margin-left: .5rem;
+          padding-left: .5rem;
+          border-left: 1px solid var(--white);
+        }
+
+        img {
+          margin-left: .5rem;
+          height: 1.25rem;
+        }
       }
     }
   }
