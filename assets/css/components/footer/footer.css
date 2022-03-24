@@ -11,11 +11,6 @@
   position: relative;
   padding: clamp(1rem, calc(1rem + (1.5 - 1) * var(--calcWidth)), 1.5rem);
 }
-.footer.cp {
-  position: fixed;
-  bottom: 0;
-  background: transparent;
-}
 .footer-01 .credits {
   font-size: 1rem;
   font-weight: var(--fontWeightLight);
@@ -43,6 +38,9 @@
   transform: translateY(-2rem) scale(1.2) rotate(180deg);
 }
 .footer-cp-01 {
+  position: fixed;
+  bottom: 0;
+  background: transparent;
   padding-bottom: clamp(0.5rem, calc(0.5rem + (2 - 0.5) * var(--calcWidth)), 2rem);
 }
 .footer-cp-01 .credits {

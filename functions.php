@@ -1,8 +1,8 @@
 <?php
-    function component($folder, $filename) {
-        $directory = "components/";
+    function data($arg) {
+        $web = $_GET['web'];
+        $data = json_decode(file_get_contents("data/".$web.".json"));
 
-        if (is_file($filename)) {
-            include $directory . $folder . $filename;
-        }
+        print $data->$arg;
     }
+?>

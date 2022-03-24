@@ -20,7 +20,7 @@
 
 .comingSoon {
   //states
-  &-1 {
+  &-01 {
     .background {
       video,
       img {
@@ -99,11 +99,7 @@
         .grid(16, 2, 2);
       }
 
-      margin: 4rem 0;
-
-      @media (max-width: @screenSm) {
-        margin: 1.5rem 0;
-      }
+      margin: clamp(unit(1.5, rem), calc(unit(1.5, rem) + (4 - 1.5) * var(--calcWidth)), unit(4, rem)) 0;
 
       &Item {
         .flex(row, flex-start, center);

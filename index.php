@@ -57,7 +57,7 @@
         include 'components/contact/contact.antonovic.php';
     }
 
-    if ($_GET['web'] == 'finomsportCP') {
+    if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
         // coming soon
         include 'components/comingsoon/comingsoon.finomsport.php';
     }

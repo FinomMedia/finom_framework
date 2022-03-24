@@ -45,16 +45,6 @@
       max-height: none;
     }
 
-    &.comingsoon {
-      li a {
-        border: none;
-
-        &:hover {
-          border: none;
-        }
-      }
-    }
-
     &Icon {
       cursor: pointer;
       display: inline-block;
@@ -369,6 +359,19 @@
       &:checked {
         ~ .navigation {
           margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  //states CP
+  &-cp {
+    &-1 {
+      li a {
+        border: none !important;
+
+        &:hover {
+          border: none !important;
         }
       }
     }

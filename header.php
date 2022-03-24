@@ -38,7 +38,7 @@
                 include 'components/header/header.finomsport.php';
             }
 
-            if ($_GET['web'] == 'finomsportCP') {
-                include 'components/header/comingsoon/header.finomsport.php';
+            if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
+                include 'components/header/comingsoon/header.finomsportCP.php';
             }
         ?>

@@ -1,16 +1,15 @@
 <?php
-    $footerCredits = "© 2021 Finom Sport";
-    $footerLogo = "https://res.cloudinary.com/patrik-vadura/image/upload/v1642160813/FINOM%20GROUP/Finom%20Media/logo/svg/finom-media_logo_claim_negative_nukouh.svg";
+    $data = json_decode(file_get_contents("data/".$web.".json"));
 ?>
 
-<div class="footer cp footer-cp-01">
+<div class="footer footer-cp-01">
     <div class="wrap">
         <div class="credits">
-            <?php echo $footerCredits; ?>
+            <?php echo $data->footer->credits; ?>
 
 
             <span>
-                <img src="<?php echo $footerLogo; ?>">
+                <img src="<?php echo $data->footer->logo; ?>">
             </span>
         </div>
     </div>

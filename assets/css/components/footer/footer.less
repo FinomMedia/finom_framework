@@ -11,12 +11,12 @@
     position: relative;
     padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
   }
+}
 
-  &.cp {
-    position: fixed;
-    bottom: 0;
-    background: transparent;
-  }
+.cp (@background) {
+  position: fixed;
+  bottom: 0;
+  background: @background;
 }
 
 .scroll (@width, @height) {
@@ -27,6 +27,7 @@
 }
 
 .footer {
+  //states
   &-01 {
     .credits {
       font-size: 1rem;
@@ -58,8 +59,11 @@
     }
   }
 
+  //states CP
   &-cp {
     &-01 {
+      .cp (transparent);
+
       padding-bottom: clamp(unit(.5, rem), calc(unit(.5, rem) + (2 - .5) * var(--calcWidth)), unit(2, rem));
 
       .credits {
