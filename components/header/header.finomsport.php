@@ -1,11 +1,12 @@
 <?php
-    $logoImage = "https://res.cloudinary.com/patrik-vadura/image/upload/v1647938524/Finom%20Sport/logo/logo_finomsport_default_vtvtmv.png";
+    $web = $_GET['web'];
+    $data = json_decode(file_get_contents("data/".$web.".json"));
 ?>
 
 <header class="header header-3">
     <div class="wrap">
         <a href="#" class="logo">
-            <img src="<?php echo $logoImage; ?>" />
+            <img src="<?php echo $data->logo; ?>" />
         </a>
 
         <input class="navigationBtn" type="checkbox" id="navigationBtn" />
@@ -14,6 +15,16 @@
             <span class="navIcon"></span>
         </label>
 
-        <?php include 'headerLinks.finomsport.php';?>
+        <ul class="navigation">
+            <?php
+                foreach ($data->header->links as $item) { ?>
+                    <li>
+                        <a href="<?php echo $item->link; ?>">
+                            <?php echo $item->title; ?>
+                        </a>
+                    </li>
+                <?php }
+            ?>
+        </ul>
     </div>
 </header>

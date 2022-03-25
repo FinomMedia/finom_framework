@@ -37,6 +37,35 @@
 .footer-01 .scroll:hover {
   transform: translateY(-2rem) scale(1.2) rotate(180deg);
 }
+.footer-02 {
+  background: var(--secondaryGradient);
+}
+.footer-02 .credits {
+  font-size: 1rem;
+  font-weight: var(--fontWeightLight);
+}
+.footer-02 .credits span {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--black);
+}
+.footer-02 .credits img {
+  margin-left: 0.5rem;
+  height: 1.5rem;
+}
+.footer-02 .scroll {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  content: var(--scrollImage);
+  right: 1rem;
+  bottom: 1rem;
+  transform: rotate(180deg);
+  transition: all 300ms ease-in-out;
+}
+.footer-02 .scroll:hover {
+  transform: translateY(-1rem) scale(1.2) rotate(180deg);
+}
 .footer-cp-01 {
   position: fixed;
   bottom: 0;

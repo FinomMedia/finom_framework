@@ -73,7 +73,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  background: var(--black);
+  background: var(--pageBg);
   color: var(--typography);
   overflow-x: hidden;
   white-space: normal;
@@ -142,8 +142,9 @@ iframe {
   color: var(--secondary);
 }
 .btnOutlinedSecondary:hover {
-  background: var(--primary);
-  color: var(--secondary);
+  box-shadow: inset 0 0 0 0.25rem var(--secondaryHover);
+  background: transparent;
+  color: var(--secondaryHover);
 }
 .header {
   display: flex;
@@ -187,12 +188,6 @@ iframe {
     float: right;
     max-height: none;
   }
-}
-.header .navigation.comingsoon li a {
-  border: none;
-}
-.header .navigation.comingsoon li a:hover {
-  border: none;
 }
 .header .navigationIcon {
   cursor: pointer;
@@ -453,6 +448,12 @@ iframe {
 }
 .header-3 .navigationBtn:checked ~ .navigation {
   margin-top: 1rem;
+}
+.header-cp-1 li a {
+  border: none !important;
+}
+.header-cp-1 li a:hover {
+  border: none !important;
 }
 .hero {
   display: flex;
@@ -2962,6 +2963,117 @@ iframe {
   row-gap: 2rem;
   overflow: hidden;
 }
+.comingSoon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: min(100vh, 70rem);
+  z-index: 0;
+}
+.comingSoon .wrap {
+  position: relative;
+  height: 100%;
+}
+.comingSoon .grid-2 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.comingSoon-01 {
+  /* Add some content at the bottom of the video/page */
+}
+.comingSoon-01 .background video,
+.comingSoon-01 .background img {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.comingSoon-01 .background.bw img,
+.comingSoon-01 .background.bw video {
+  filter: grayscale(1) blur(1rem);
+}
+.comingSoon-01 .overlay {
+  position: fixed;
+  bottom: 0;
+  background: var(--primary);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+.comingSoon-01 .image {
+  position: relative;
+  display: none;
+  height: 100%;
+}
+@media (min-width: 62rem) {
+  .comingSoon-01 .image {
+    display: inherit;
+  }
+}
+.comingSoon-01 .image img {
+  position: absolute;
+  max-height: 80vh;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.comingSoon-01 h1 {
+  font-size: clamp(3rem, calc(3rem + (8 - 3) * var(--calcWidth)), 8rem);
+  line-height: 0.75;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.comingSoon-01 h2 {
+  font-size: clamp(1.25rem, calc(1.25rem + (3 - 1.25) * var(--calcWidth)), 3rem);
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.comingSoon-01 hr {
+  margin-left: 0;
+  max-width: 50%;
+  background-color: var(--secondary);
+  height: 0.25rem;
+  border: 0;
+}
+.comingSoon-01 .benefits {
+  display: grid;
+  align-items: var(--alignItems, center);
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+  grid-column-gap: 1rem;
+  row-gap: 1rem;
+  overflow: hidden;
+  margin: clamp(1.5rem, calc(1.5rem + (4 - 1.5) * var(--calcWidth)), 4rem) 0;
+}
+@media (min-width: 62rem) {
+  .comingSoon-01 .benefits {
+    display: grid;
+    align-items: var(--alignItems, center);
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    grid-column-gap: 2rem;
+    row-gap: 2rem;
+    overflow: hidden;
+  }
+}
+.comingSoon-01 .benefitsItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: clamp(0.75rem, calc(0.75rem + (1.5 - 0.75) * var(--calcWidth)), 1.5rem);
+  color: var(--white);
+  text-transform: uppercase;
+}
+.comingSoon-01 .benefitsItem img {
+  margin-right: clamp(0.5rem, calc(0.5rem + (1 - 0.5) * var(--calcWidth)), 1rem);
+  width: clamp(1.75rem, calc(1.75rem + (2.5 - 1.75) * var(--calcWidth)), 2.5rem);
+}
 .services {
   display: flex;
   flex-direction: column;
@@ -3387,6 +3499,55 @@ iframe {
 .footer-01 .scroll:hover {
   transform: translateY(-2rem) scale(1.2) rotate(180deg);
 }
+.footer-02 {
+  background: var(--secondary);
+}
+.footer-02 .credits {
+  font-size: 1rem;
+  font-weight: var(--fontWeightLight);
+}
+.footer-02 .credits span {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--black);
+}
+.footer-02 .credits img {
+  margin-left: 0.5rem;
+  height: 1.5rem;
+}
+.footer-02 .scroll {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  content: var(--scrollImage);
+  right: 1rem;
+  bottom: 1rem;
+  transform: rotate(180deg);
+  transition: all 300ms ease-in-out;
+}
+.footer-02 .scroll:hover {
+  transform: translateY(-1rem) scale(1.2) rotate(180deg);
+}
+.footer-cp-01 {
+  position: fixed;
+  bottom: 0;
+  background: transparent;
+  padding-bottom: clamp(0.5rem, calc(0.5rem + (2 - 0.5) * var(--calcWidth)), 2rem);
+}
+.footer-cp-01 .credits {
+  font-size: 1rem;
+  font-weight: var(--fontWeightLight);
+  color: var(--white);
+}
+.footer-cp-01 .credits span {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--white);
+}
+.footer-cp-01 .credits img {
+  margin-left: 0.5rem;
+  height: 1.25rem;
+}
 .contact {
   display: flex;
   flex-direction: column;
@@ -3395,9 +3556,6 @@ iframe {
   width: 100%;
   z-index: 0;
 }
-.contact .grid-4 {
-  padding: 2rem 0;
-}
 .contact .columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
@@ -3405,8 +3563,6 @@ iframe {
 }
 .contactBox {
   padding: 2rem;
-  text-align: center;
-  color: var(--white);
 }
 .contactBox img {
   height: 3rem;
@@ -3421,19 +3577,9 @@ iframe {
 .contactBox a {
   font-size: 95%;
   line-height: 1.5;
-  color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
   transition: all 300ms ease-in-out;
-}
-@media (min-width: 75rem) {
-  .contactBox:hover {
-    background-color: rgba(187, 128, 43, 0.5);
-  }
-  .contactBox:hover h4 {
-    color: var(--primary);
-    transform: scale(1.2);
-  }
 }
 .contactComplete {
   text-align: center;
@@ -3448,6 +3594,9 @@ iframe {
   margin-bottom: 4rem;
   padding: clamp(1rem, calc(1rem + (1.5 - 1) * var(--calcWidth)), 1.5rem);
 }
+.contact-01 .grid-4 {
+  padding: 2rem 0;
+}
 .contact-01 h2 {
   text-align: center;
   color: var(--white);
@@ -3459,10 +3608,67 @@ iframe {
 .contact-01 .action a {
   text-transform: uppercase;
 }
+.contact-01 .contactBox {
+  text-align: center;
+  color: var(--white);
+}
+.contact-01 .contactBox p,
+.contact-01 .contactBox a {
+  color: var(--white);
+}
+@media (min-width: 75rem) {
+  .contact-01 .contactBox:hover {
+    background-color: rgba(187, 128, 43, 0.5);
+  }
+  .contact-01 .contactBox:hover h4 {
+    color: var(--primary);
+    transform: scale(1.2);
+  }
+}
 .contact-01 .contactComplete {
   padding-top: 2rem;
   border-top: 0.25rem solid var(--primary);
   color: var(--white);
+}
+.contact-02 .grid-2 {
+  padding: 2rem 0;
+}
+.contact-02 h2 {
+  font-weight: var(--fontWeightMedium);
+  color: var(--typography);
+}
+.contact-02 .action {
+  display: flex;
+  justify-content: flex-start;
+}
+.contact-02 .action a {
+  text-transform: uppercase;
+}
+.contact-02 .contactBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 2rem;
+  text-align: left;
+  color: var(--primary);
+}
+.contact-02 .contactBox p,
+.contact-02 .contactBox a {
+  color: var(--primary);
+}
+.contact-02 .contactBox .content {
+  padding-left: 1rem;
+}
+@media (min-width: 75rem) {
+  .contact-02 .contactBox:hover h4 {
+    color: var(--secondary);
+  }
+}
+.contact-02 .contactComplete {
+  padding-top: 2rem;
+  border-top: 0.25rem solid var(--secondary);
+  color: var(--typography);
 }
 input:focus,
 button:focus {
@@ -3510,6 +3716,21 @@ button:focus {
 }
 .input textarea {
   width: 100%;
+}
+.input-01 .input__label {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.input-01 .input__box {
+  background: var(--light);
+}
+.input-01 .input__box:hover,
+.input-01 .input__box:focus-within {
+  background: var(--lightHover);
+  outline: none;
+}
+.input-01 .input__box::-webkit-input-placeholder {
+  color: var(--primary);
 }
 .counterItem {
   display: flex;

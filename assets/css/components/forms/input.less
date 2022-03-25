@@ -53,3 +53,28 @@ button:focus {
     width: 100%;
   }
 }
+
+.input {
+  &-01 {
+    .input {
+      &__label {
+        text-transform: uppercase;
+        color: var(--primary);
+      }
+
+      &__box {
+        background: var(--light);
+
+        &:hover,
+        &:focus-within {
+          background: var(--lightHover);
+          outline: none;
+        }
+
+        &::-webkit-input-placeholder {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

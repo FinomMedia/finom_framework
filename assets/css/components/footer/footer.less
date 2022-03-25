@@ -59,6 +59,39 @@
     }
   }
 
+  &-02 {
+    background: var(--secondaryGradient);
+
+    .credits {
+      font-size: 1rem;
+      font-weight: var(--fontWeightLight);
+
+      span {
+        margin-left: .5rem;
+        padding-left: .5rem;
+        border-left: 1px solid var(--black);
+      }
+
+      img {
+        margin-left: .5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .scroll {
+      .scroll (3rem, 3rem);
+
+      right: 1rem;
+      bottom: 1rem;
+      transform: rotate(180deg);
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        transform: translateY(-1rem) scale(1.2) rotate(180deg);
+      }
+    }
+  }
+
   //states CP
   &-cp {
     &-01 {

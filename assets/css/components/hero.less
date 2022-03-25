@@ -20,6 +20,23 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  .box {
+    position: relative;
+  }
+
+  .background {
+    video,
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
 }
 
 .scroll (@width, @height) {
@@ -179,6 +196,122 @@
 
       &:hover {
         .hoverStateTranslateYScale(-2rem, 1.2);
+      }
+    }
+  }
+
+  &-3 {
+    height: 90vh;
+
+    @media (max-width: @screenSm) {
+      margin-top: 3rem;
+      height: 100vh;
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, unit(min(100%, 12), rem)), 1fr));
+      grid-column-gap: 0;
+      row-gap: 0;
+
+      @media (max-width: @screenSm) {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, unit(min(100%, 16), rem)), 1fr));
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .box {
+      .flex(column, flex-end, flex-start);
+
+      padding: 2rem;
+      margin-top: 5rem;
+      height: calc(80vh - 5rem);
+      transition: all 300ms ease-in-out;
+
+      @media (max-width: @screenSm) {
+        justify-content: center;
+        padding: 1rem;
+        margin: 0;
+        height: calc((80vh - 3rem) / 4);
+      }
+
+      h1 {
+        .fontSize(1.5, 3);
+
+        margin-bottom: .5rem;
+        color: var(--secondary);
+        font-weight: var(--fontWeightRegular);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      p {
+        .fontSize(1, 1.5);
+
+        display: none;
+        color: var(--primary);
+      }
+
+      img {
+        display: block;
+        transition: all 300ms ease-in-out;
+
+        &.hover {
+          display: none;
+          transition: all 300ms ease-in-out;
+        }
+      }
+
+      &:hover {
+        img {
+          display: none;
+
+          @media (max-width: @screenSm) {
+            display: block;
+          }
+
+          &.hover {
+            display: block;
+
+            @media (max-width: @screenSm) {
+              display: none;
+            }
+          }
+        }
+
+        h1 {
+          color: var(--primary);
+
+          @media (max-width: @screenSm) {
+            color: var(--secondary);
+          }
+        }
+
+        p {
+          display: block;
+
+          @media (max-width: @screenSm) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .heroClaim {
+      .flex(column, center, center);
+      .fontSize(1, 2.5);
+
+      margin: 0;
+      padding: 2rem 1rem;
+      background: var(--secondaryGradient);
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media (max-width: @screenSm) {
+        padding: 1rem;
       }
     }
   }

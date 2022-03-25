@@ -33,7 +33,7 @@
         // aboutUs
         include 'components/aboutUs/aboutUs.antonovic.php';
 
-        // reference
+        // cooperation
         include 'components/cooperation/cooperation.antonovic.php';
 
         // contact
@@ -42,19 +42,16 @@
 
     if ($_GET['web'] == 'finomsport') {
         // hero
-        include 'components/hero/hero.antonovic.php';
+        include 'components/hero/hero.finomsport.php';
 
-        // services
-        include 'components/services/services.antonovic.php';
+        // blog
+        include 'components/blog/blog.finomsport.php';
 
-        // aboutUs
-        include 'components/aboutUs/aboutUs.antonovic.php';
-
-        // reference
-        include 'components/cooperation/cooperation.antonovic.php';
+        // cooperation
+        include 'components/cooperation/cooperation.finomsport.php';
 
         // contact
-        include 'components/contact/contact.antonovic.php';
+        include 'components/contact/contact.finomsport.php';
     }
 
     if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {

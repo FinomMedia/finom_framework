@@ -19,7 +19,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  background: var(--black);
+  background: var(--pageBg);
   color: var(--typography);
   overflow-x: hidden;
   white-space: normal;
@@ -30,3 +30,4 @@ iframe {
   vertical-align: middle;
   border: 0;
 }
+/*# sourceMappingURL=global.css.map */

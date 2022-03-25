@@ -1,0 +1,148 @@
+{
+  "title": "Již brzy",
+  "subtitle": "Zabezpečujeme finanční budoucnost pro",
+  "mediaContent": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648036271/Finom%20Sport/backgrounds/background_web_blue_01_ij4dpf.png",
+  "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648035910/Finom%20Sport/logo/finom-invest_logo_horizontal_2x_jk3sxt.png",
+  "header": {
+    "links": [
+      {
+        "title": "Mladý sportovec",
+        "link": "mlady-sportovec.php"
+      },
+      {
+        "title": "Profesionál",
+        "link": "profesional.php"
+      },
+      {
+        "title": "Sportovní klub",
+        "link": "sportovni-klub.php"
+      },
+      {
+        "title": "Agent",
+        "link": "agent.php"
+      },
+      {
+        "title": "Spolupráce",
+        "link": "spoluprace.php"
+      },
+      {
+        "title": "Finom",
+        "link": "https://finom.cz"
+      },
+      {
+        "title": "Kontakt",
+        "link": "index.php#contact"
+      }
+    ]
+  },
+  "hero": {
+    "claim": "Zabezpečujeme vaši finanční budoucnost.",
+    "items": [
+      {
+        "title": "Mladý sportovec",
+        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_01_zv06or.jpg",
+        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_01_hover_otnzzj.jpg",
+        "link": "/"
+      },
+      {
+        "title": "Profesionál",
+        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_02_wr34ki.jpg",
+        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_02_hover_njs1bg.jpg",
+        "link": "/"
+      },
+      {
+        "title": "Sportovní klub",
+        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_03_yxvki5.jpg",
+        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_03_hover_veyaav.jpg",
+        "link": "/"
+      },
+      {
+        "title": "Agent, trenér",
+        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_04_zizhc1.jpg",
+        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_04_hover_axspmw.jpg",
+        "link": "/"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "send": "Odeslat",
+    "items": [
+      {
+        "title": "Adresa",
+        "content": "Vavrečkova 7074, <br> Zlín, 760 01",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648196835/Finom%20Sport/icon_address_xrpvql.svg"
+      },
+      {
+        "title": "Telefon",
+        "content": "+420 773 494 909",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648196835/Finom%20Sport/icon_phone_kpkn8u.svg"
+      },
+      {
+        "title": "Email",
+        "content": "antonovic@finomgroup.cz",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648196835/Finom%20Sport/icon_email_rxg3sv.svg"
+      }
+    ],
+    "form": [
+      {
+        "label": "Celé jméno *",
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "label": "Email *",
+        "type": "email",
+        "name": "email"
+      },
+      {
+        "label": "Předmět *",
+        "type": "text",
+        "name": "subject"
+      },
+      {
+        "label": "Vaše zpráva *",
+        "rows": "4",
+        "name": "message"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Příběhy",
+    "items": [
+      {
+        "title": "Martin Zaťovič",
+        "description": "S Radimem z Finomu spolupracuji již řadu let. Pomohl mi vyřešit ochranu příjmu, což je pro profesionálního sportovce zcela zásadní. Dále mi vytvořil finanční plán tak, abych zabezpečil sebe i svou rodinu do budoucna.",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648207573/Finom%20Sport/blog/blog_img_01_erm2fx.jpg",
+        "link": "profesional.php#zatovic"
+      },
+      {
+        "title": "Kryštof Daněk",
+        "description": "Uvědomuji si, že kariéra profesionální sportovce je velmi krátká. Zatím nevím, jak bude vypadat můj život po fotbalové kariéře. Každopádně díky spolupráci s Finom Sport se můžu dlouhodobě připravovat a finančně se dostatečně zajistit.",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648207573/Finom%20Sport/blog/blog_img_02_qiwc5s.jpg",
+        "link": "mladysportovec.php#danek"
+      },
+      {
+        "title": "Pavel Sedláček",
+        "description": "Jsem velice rád za tuto spolupráci. Kluci z Finom Sport mi ukázali, jak předčasně splatit hypotéku, abych profesionální kariéru mohl skončit bez finančních závazků.",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648207573/Finom%20Sport/blog/blog_img_03_pjspl0.jpg",
+        "link": "profesional.php#sedlacek"
+      }
+    ]
+  },
+  "cooperation": {
+    "title": "Spolupracujeme",
+    "subtitle": "s finančním specialistou",
+    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642152972/FINOM%20GROUP/Finom%20Finance/logo/png/finom-invest_logo_claim_monochrom_2x_h76rkj.png",
+    "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648205241/Finom%20Sport/backgrounds/spoluprace_bg_pzjcnz.jpg"
+  },
+  "footer": {
+    "createdBy": "Created by",
+    "credits": "© 2021 Finom Sport",
+    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642160813/FINOM%20GROUP/Finom%20Media/logo/svg/finom-media_logo_claim_monochrom_l2lexn.svg"
+  }
+}
