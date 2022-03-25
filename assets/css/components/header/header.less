@@ -289,4 +289,91 @@
       }
     }
   }
+
+  &-3 {
+    background: var(--white);
+    text-transform: uppercase;
+
+    .topBar {
+      .topBar;
+
+      background: var(--primary);
+      color: var(--secondary);
+      font-size: var(--fontSizeParagraph);
+    }
+
+    ul {
+      .flex(column, center, flex-start);
+
+      background: transparent;
+
+      @media (min-width: @screenSm) {
+        margin-top: 0;
+        flex-direction: row;
+      }
+
+      li a {
+        font-size: var(--fontSizeNav);
+        font-weight: var(--fontWeightRegular);
+        color: var(--primary);
+        border-top: .25rem solid transparent;
+
+        &:hover {
+          color: var(--secondary);
+          border-top: .25rem solid var(--secondary);
+        }
+
+        &:active {
+          color: var(--secondary);
+        }
+      }
+    }
+
+    .logo img {
+      @min: 9;
+      @max: 12;
+
+      width: clamp(unit(@min, rem), calc(unit(@min, rem) + (@max - @min) * var(--calcWidth)), unit(@max, rem));
+    }
+
+    .navigation {
+      float: left;
+
+      @media (min-width: @screenSm) {
+        float: right;
+      }
+
+      &Icon {
+        .navIcon {
+          background: var(--primary);
+
+          &::before,
+          &::after {
+            background: var(--primary);
+          }
+        }
+      }
+    }
+
+    .navigationBtn {
+      &:checked {
+        ~ .navigation {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  //states CP
+  &-cp {
+    &-1 {
+      li a {
+        border: none !important;
+
+        &:hover {
+          border: none !important;
+        }
+      }
+    }
+  }
 }

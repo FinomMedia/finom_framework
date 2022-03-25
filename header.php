@@ -33,4 +33,12 @@
             if ($_GET['web'] == 'antonovic') {
                 include 'components/header/header.antonovic.php';
             }
+
+            if ($_GET['web'] == 'finomsport') {
+                include 'components/header/header.finomsport.php';
+            }
+
+            if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
+                include 'components/header/comingsoon/header.finomsportCP.php';
+            }
         ?>

@@ -13,6 +13,12 @@
   }
 }
 
+.cp (@background) {
+  position: fixed;
+  bottom: 0;
+  background: @background;
+}
+
 .scroll (@width, @height) {
   position: absolute;
   width: @width;
@@ -21,6 +27,7 @@
 }
 
 .footer {
+  //states
   &-01 {
     .credits {
       font-size: 1rem;
@@ -48,6 +55,32 @@
 
       &:hover {
         transform: translateY(-2rem) scale(1.2) rotate(180deg);
+      }
+    }
+  }
+
+  //states CP
+  &-cp {
+    &-01 {
+      .cp (transparent);
+
+      padding-bottom: clamp(unit(.5, rem), calc(unit(.5, rem) + (2 - .5) * var(--calcWidth)), unit(2, rem));
+
+      .credits {
+        font-size: 1rem;
+        font-weight: var(--fontWeightLight);
+        color: var(--white);
+
+        span {
+          margin-left: .5rem;
+          padding-left: .5rem;
+          border-left: 1px solid var(--white);
+        }
+
+        img {
+          margin-left: .5rem;
+          height: 1.25rem;
+        }
       }
     }
   }
