@@ -1,5 +1,5 @@
 <?php
-    $data = json_decode(file_get_contents("data/".$web.".json"));
+    $data = json_decode(file_get_contents("data/finomsportCP.json"));
 ?>
 
 <header class="header header-3 header-cp-1">

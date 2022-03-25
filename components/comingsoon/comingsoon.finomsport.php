@@ -1,5 +1,5 @@
 <?php
-    $data = json_decode(file_get_contents("data/".$web.".json"));
+    $data = json_decode(file_get_contents("data/finomsportCP.json"));
 ?>
 
 <div class="comingSoon comingSoon-01">
