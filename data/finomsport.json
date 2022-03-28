@@ -7,7 +7,7 @@
     "links": [
       {
         "title": "Mladý sportovec",
-        "link": "mlady-sportovec.php"
+        "link": "mladysportovec.php"
       },
       {
         "title": "Profesionál",
@@ -109,7 +109,12 @@
         "rows": "4",
         "name": "message"
       }
-    ]
+    ],
+    "cta": {
+      "title": "Nechte si poradit",
+      "subtitle": "od špiček ve svém oboru",
+      "btn": "Kontaktujte nás"
+    }
   },
   "blog": {
     "title": "Příběhy",
@@ -144,5 +149,88 @@
     "createdBy": "Created by",
     "credits": "© 2021 Finom Sport",
     "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642160813/FINOM%20GROUP/Finom%20Media/logo/svg/finom-media_logo_claim_monochrom_l2lexn.svg"
+  },
+  "pages": {
+    "mladysportovec": {
+      "hero": {
+        "title": "Mladý sportovec",
+        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_03_yxvki5.jpg"
+      },
+      "posts": [
+        {
+          "title": "Kryštof Daněk",
+          "subtitle": "SK Sigma Olomouc",
+          "sport": "Fotbal",
+          "description": "„Uvědomuji si, že kariéra profesionální sportovce je velmi krátká. Zatím nevím, jak bude vypadat můj život po fotbalové kariéře. Každopádně díky spolupráci s Finom Sport se můžu dlouhodobě připravovat a finančně se dostatečně zajistit.“",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648462351/Finom%20Sport/post/post_img_01_ajov33.jpg"
+        },
+        {
+          "title": "Sebastian Daňo",
+          "subtitle": "Esport SInners",
+          "sport": "Esport",
+          "description": "„Ve světě Esportu profesionální hráči mohou dosahovat velkých příjmů již v mladém věku.  Proto mi Lukáš z Finom Sport ukázal možnost, jak si zajistit bydlení bez nutnosti jakékoliv dalšího zadlužení.“",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648462351/Finom%20Sport/post/post_img_02_mosrsj.jpg"
+        },
+        {
+          "title": "Jáchym Šíp",
+          "subtitle": "SK Sigma Olomouc",
+          "sport": "Fotbal",
+          "description": "Jsem teprve na začátku cesty profesionálního hráče. Nicméně vnímám důležitost navazovat spolupráce, které mi pomohou k úspěšnější sportovní kariéře i rozšíření obzorů mimo fotbal.  Proto jsem velice rád za spolupráci s Lukášem z FinomSport, jakožto mým finančním koučem. Společně řešíme otázky spojené s mou kariérou i životem po ní.“",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648462351/Finom%20Sport/post/post_img_03_kjvejj.jpg"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Nezáleží na věku ani příjmu"
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        }
+      ]
+    },
+    "profesional": {
+      "hero": {
+        "title": "Profesionál",
+        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648465037/Finom%20Sport/hero/simple/hero-simple_profesional_j0xhrk.jpg"
+      },
+      "posts": [
+        {
+          "title": "Martin Zaťovič",
+          "subtitle": "HC Kometa Brno",
+          "sport": "Hokej",
+          "description": "S Radimem z Finomu spolupracuji již řadu let. Pomohl mi vyřešit ochranu příjmu, což je pro profesionálního sportovce zcela zásadní. Dále mi vytvořil finanční plán tak, abych zabezpečil sebe i svou rodinu do budoucna.",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648465607/Finom%20Sport/post/post_img_04_w80lkg.jpg"
+        },
+        {
+          "title": "Pavel Sedláček",
+          "subtitle": "HC Berani Zlín",
+          "sport": "Hokej",
+          "description": "„Jsem velice rád za tuto spolupráci. Kluci z Finom Sport mi ukázali, jak předčasně splatit hypotéku, abych profesionální kariéru mohl skončit bez finančních závazků.“",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648465607/Finom%20Sport/post/post_img_05_w7f9ru.jpg"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Nezáleží na věku ani příjmu"
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        }
+      ]
+    }
   }
 }

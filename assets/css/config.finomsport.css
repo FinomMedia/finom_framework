@@ -182,7 +182,7 @@ iframe {
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-@media (min-width: 48rem) {
+@media (min-width: 75rem) {
   .header .navigation {
     clear: none;
     float: right;
@@ -197,7 +197,7 @@ iframe {
   position: relative;
   user-select: none;
 }
-@media (min-width: 48rem) {
+@media (min-width: 75rem) {
   .header .navigationIcon {
     display: none;
   }
@@ -647,17 +647,26 @@ iframe {
   transform: translateY(-2rem) scale(1.2);
 }
 .hero-3 {
-  height: 80vh;
+  height: 90vh;
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
   .hero-3 {
-    margin-top: 3rem;
-    height: 95vh;
+    margin-top: 5vh;
+    height: 100vh;
   }
 }
 .hero-3 .grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
   grid-column-gap: 0;
   row-gap: 0;
+}
+@media (max-width: 75rem) {
+  .hero-3 .grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+.hero-3 a {
+  text-decoration: none;
 }
 .hero-3 .box {
   display: flex;
@@ -669,14 +678,17 @@ iframe {
   height: calc(80vh - 5rem);
   transition: all 300ms ease-in-out;
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
   .hero-3 .box {
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     margin: 0;
-    height: calc((95vh - 3rem) / 4);
+    height: calc((80vh - 5vh) / 4);
   }
 }
 .hero-3 .box h1 {
+  font-size: clamp(1.5rem, calc(1.5rem + (3 - 1.5) * var(--calcWidth)), 3rem);
   margin-bottom: 0.5rem;
   color: var(--secondary);
   font-weight: var(--fontWeightRegular);
@@ -699,7 +711,7 @@ iframe {
 .hero-3 .box:hover img {
   display: none;
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
   .hero-3 .box:hover img {
     display: block;
   }
@@ -707,7 +719,7 @@ iframe {
 .hero-3 .box:hover img.hover {
   display: block;
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
   .hero-3 .box:hover img.hover {
     display: none;
   }
@@ -715,7 +727,7 @@ iframe {
 .hero-3 .box:hover h1 {
   color: var(--primary);
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
   .hero-3 .box:hover h1 {
     color: var(--secondary);
   }
@@ -723,9 +735,27 @@ iframe {
 .hero-3 .box:hover p {
   display: block;
 }
-@media (max-width: 48rem) {
+@media (max-width: 75rem) {
   .hero-3 .box:hover p {
     display: none;
+  }
+}
+.hero-3 .heroClaim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, calc(1rem + (2.5 - 1) * var(--calcWidth)), 2.5rem);
+  margin: 0;
+  padding: clamp(1rem, calc(1rem + (2 - 1) * var(--calcWidth)), 2rem) 1rem;
+  background: var(--secondaryGradient);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 62rem) {
+  .hero-3 .heroClaim {
+    padding: 1rem;
   }
 }
 .mt-1 {
@@ -3332,12 +3362,22 @@ iframe {
 .blogBox-02:hover h3 {
   color: var(--primary);
 }
+@media (max-width: 48rem) {
+  .blogBox-03 {
+    padding: 0;
+  }
+}
 .blogBox-03 .blogBoxImage {
   height: 22rem;
   border-width: 0;
   border-bottom-width: 0.5rem;
   border-style: solid;
   border-image: linear-gradient(to right, #e79020, #9f5a00) 1;
+}
+@media (max-width: 48rem) {
+  .blogBox-03 .blogBoxImage {
+    height: 15rem;
+  }
 }
 .blogBox-03 .blogBoxImage img {
   position: absolute;

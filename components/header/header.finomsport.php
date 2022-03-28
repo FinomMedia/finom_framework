@@ -5,7 +5,7 @@
 
 <header class="header header-3">
     <div class="wrap">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
             <img src="<?php echo $data->logo; ?>" />
         </a>
 
