@@ -300,6 +300,37 @@
           "title": "Nezáleží na věku ani příjmu, jde o základní principy."
         }
       ]
+    },
+    "contact": {
+      "hero": {
+        "title": "Kontakt",
+        "description": "Poznejte blíže členy našeho týmu, nasbírejte potřebné kontakty nebo nám pomocí kontaktního formuláře, zanechte zprávu.",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648471090/Finom%20Sport/hero/simple/hero-simple_contact_aqmx9o.jpg"
+      },
+      "aboutUs": {
+        "title": "O nás",
+        "description": "Má cesta k poradenství vedla od kariéry profesionálního sportovce. Kdy se mně zeptali, zdali vím co budu dělat pokud se mi stane úraz, který mi nedovolí pokračovat v kariéře a zdali vím jaké budou mé příjmy po jejím skončení. Jelikož jsem nevěděl jak na tuto otázku odpovědět, věděl jsem, že je potřeba tenhle problém řešit.",
+        "team": [
+          {
+            "name": "Mgr. Lukáš Ďurďa",
+            "phone": "+420 602 380 003",
+            "email": "durda@finom.cz",
+            "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648472147/Finom%20Sport/team/profile_01_n6gxqt.jpg"
+          },
+          {
+            "name": "František Geist",
+            "phone": "+420 737 957 291",
+            "email": "Geist@finom.cz",
+            "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648472146/Finom%20Sport/team/profile_02_xxbwbe.jpg"
+          },
+          {
+            "name": "Dušan Dostál",
+            "phone": "+420 737 103 758",
+            "email": "dostal@finom.cz",
+            "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648472147/Finom%20Sport/team/profile_03_i5yzec.jpg"
+          }
+        ]
+      }
     }
   }
 }

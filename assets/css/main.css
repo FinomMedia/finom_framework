@@ -3501,6 +3501,13 @@ iframe {
 .aboutUs-02 .counterItem span {
   color: var(--primary);
 }
+.aboutUs-03 .aboutUsContent h2,
+.aboutUs-03 .aboutUsContent p {
+  color: var(--primary);
+}
+.aboutUs-03 .aboutUsContent h4 {
+  color: var(--primary);
+}
 .post1col {
   display: flex;
   flex-direction: column;
@@ -4213,24 +4220,23 @@ button:focus {
   height: 3rem;
   float: left;
 }
-.benefits {
+.logos {
   padding: clamp(2rem, calc(2rem + (4 - 2) * var(--calcWidth)), 4rem) 1rem;
+  text-align: center;
   width: 100%;
 }
-.benefits .item {
+.logos .item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.benefits-01 {
-  font-size: 1rem;
+.logos-01 {
   text-transform: uppercase;
 }
-.benefits-01 img {
-  margin-right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  float: left;
+.logos-01 .item img {
+  width: auto;
+  height: 15rem;
+  filter: grayscale(1);
 }
 /*# sourceMappingURL=main.css.map */
