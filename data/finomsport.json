@@ -155,7 +155,7 @@
       "hero": {
         "title": "Mladý sportovec",
         "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
-        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_03_yxvki5.jpg"
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467680/Finom%20Sport/hero/simple/hero-simple_mladysportovec_vr3ghz.jpg"
       },
       "posts": [
         {
@@ -215,6 +215,75 @@
           "sport": "Hokej",
           "description": "„Jsem velice rád za tuto spolupráci. Kluci z Finom Sport mi ukázali, jak předčasně splatit hypotéku, abych profesionální kariéru mohl skončit bez finančních závazků.“",
           "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648465607/Finom%20Sport/post/post_img_05_w7f9ru.jpg"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Nezáleží na věku ani příjmu"
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+        }
+      ]
+    },
+    "klub": {
+      "hero": {
+        "title": "Sportovní klub",
+        "description": "",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467913/Finom%20Sport/hero/simple/hero-simple_klub_g9exly.jpg"
+      },
+      "posts": [
+        {
+          "title": "Spolupráce s kluby",
+          "description": "Nejen jednotlivci ale i kluby s námi můžou spolupracovat. Intenzivně vyhledáváme a navazujeme spolupráci s amatérskými i profesionálními týmy.",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648466852/Finom%20Sport/post/post_img_06_stkg6z.jpg"
+        }
+      ],
+      "logos": [
+        {
+          "link": "https://www.dracisumperk.cz/index.asp",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648469279/Finom%20Sport/post/club/logo_club_01_ptwdnb.jpg"
+        },
+        {
+          "link": "/",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648469279/Finom%20Sport/post/club/logo_club_02_mvoned.jpg"
+        },
+        {
+          "link": "/",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648469279/Finom%20Sport/post/club/logo_club_03_czhsck.jpg"
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Nezáleží na věku ani příjmu"
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu"
+        },
+        {
+          "title": "Nezáleží na věku ani příjmu"
+        }
+      ]
+    },
+    "agent": {
+      "hero": {
+        "title": "Agent / trenér",
+        "description": "",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467575/Finom%20Sport/hero/simple/hero-simple_agent_sjatpb.jpg"
+      },
+      "posts": [
+        {
+          "title": "Tomáš Malušek",
+          "subtitle": "Finom Group",
+          "sport": "Trenér",
+          "description": "I přes to, že se zaměřuji na zlepšení sportovních výkonů, vnímám také důležitost finanční gramotnosti ve sportu. Spolupráce s kluky z Finom Sport pomůže našim svěřencům jak ze strany aktivní výživy, tak finančního coaching pro sportovce.",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648466852/Finom%20Sport/post/post_img_06_stkg6z.jpg"
         }
       ],
       "benefits": [
