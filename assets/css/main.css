@@ -3143,6 +3143,15 @@ iframe {
   row-gap: 2rem;
   overflow: hidden;
 }
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
 .comingSoon {
   display: flex;
   flex-direction: column;
@@ -3501,7 +3510,10 @@ iframe {
 .aboutUs-02 .counterItem span {
   color: var(--primary);
 }
-.aboutUs-03 .aboutUsContent h2,
+.aboutUs-03 .aboutUsContent h2 {
+  font-weight: var(--fontWeightMedium);
+  color: var(--primary);
+}
 .aboutUs-03 .aboutUsContent p {
   color: var(--primary);
 }
@@ -4238,5 +4250,59 @@ button:focus {
   width: auto;
   height: 15rem;
   filter: grayscale(1);
+}
+.team {
+  padding: clamp(2rem, calc(2rem + (4 - 2) * var(--calcWidth)), 4rem) 0;
+  width: 100%;
+}
+.team .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.team-01 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.team-01 .item img {
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 100%;
+  filter: grayscale(1);
+  transition: all 0.3s ease-in-out;
+}
+.team-01 .item h3 {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--primary);
+  border-bottom: 0.25rem solid var(--secondary);
+  transition: all 0.3s ease-in-out;
+}
+.team-01 .item h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-weight: var(--fontWeightLight);
+  color: var(--primary);
+}
+.team-01 .item:hover img {
+  transform: scale(1.1);
+  border-radius: 0;
+  filter: grayscale(0);
+}
+.team-01 .item:hover h3 {
+  color: var(--secondary);
+  border-color: transparent;
+}
+.titleSubpage h2 {
+  font-size: clamp(1.5rem, calc(1.5rem + (2 - 1.5) * var(--calcWidth)), 2rem);
+  font-weight: var(--fontWeightMedium);
+  color: var(--primary);
+}
+.titleSubpage h3 {
+  font-size: clamp(1.5rem, calc(1.5rem + (2 - 1.5) * var(--calcWidth)), 2rem);
+  font-weight: var(--fontWeightMedium);
+  color: var(--primary);
 }
 /*# sourceMappingURL=main.css.map */

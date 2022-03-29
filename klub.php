@@ -24,9 +24,27 @@
         ?>
     </div>
 
+    <div class="titleSubpage-03">
+        <div class="wrapS">
+            <div class="grid-2">
+                <img src="<?php echo $data->pages->klub->features->feature1->img; ?>">
+
+                <div>
+                    <h2>
+                        <?php echo $data->pages->klub->features->feature1->title; ?>
+                    </h2>
+
+                    <h3>
+                        <?php echo $data->pages->klub->features->feature1->subtitle; ?>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="benefits benefits-01">
         <div class="wrapS">
-            <div class="grid-4">
+            <div class="grid-2">
                 <?php
                 foreach ($data->pages->klub->benefits as $item) { ?>
                     <div class="item">

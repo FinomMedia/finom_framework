@@ -157,6 +157,16 @@
         "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467680/Finom%20Sport/hero/simple/hero-simple_mladysportovec_vr3ghz.jpg"
       },
+      "features": {
+        "feature1": {
+          "title": "Připravila tě škola na to, co udělat s penězi po sportu?",
+          "subtitle": "Stejně jako se sportem je potřeba naučit se základy. <br /> <b>My ti ukážeme jak na to.</b>"
+        },
+        "feature2": {
+          "title": "Co kdyby sis mohl zajistit celý život z příjmů své profesionální kariéry?",
+          "subtitle": "S námi vybuduješ majetek, který ti pomůže splnit své sny a zajistit tě na život po kariéře."
+        }
+      },
       "posts": [
         {
           "title": "Kryštof Daněk",
@@ -182,24 +192,34 @@
       ],
       "benefits": [
         {
-          "title": "Nezáleží na věku ani příjmu"
+          "title": "Komplexní a bezplatná spolupráce."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Nastavení finančního portfolia na míru."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Pravidelné konzultace a vzdělávání ve finanční gramotnosti."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Rozšíření služeb pro sportovce."
         }
       ]
     },
     "profesional": {
       "hero": {
         "title": "Profesionál",
-        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "description": "Drtivá většina sportovců není schopna hospodařit se svými příjmy tak aby si zajistila život po kariéře.",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648465037/Finom%20Sport/hero/simple/hero-simple_profesional_j0xhrk.jpg"
+      },
+      "features": {
+        "feature1": {
+          "title": "Rád by jsi zajistil sebe a svou rodinu díky příjmům ze své kariéry?",
+          "subtitle": "Zajisti si díky profesionální kariéře celý život!"
+        },
+        "feature2": {
+          "title": "Co by jsi dělal, kdyby ti zranění náhle ukončilo kariéru?",
+          "subtitle": "Poradíme ti jak si užít kariéru do posledního momentu."
+        }
       },
       "posts": [
         {
@@ -219,29 +239,36 @@
       ],
       "benefits": [
         {
-          "title": "Nezáleží na věku ani příjmu"
+          "title": "Komplexní a bezplatná spolupráce."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Nastavení finančního portfolia na míru."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Pravidelné konzultace a vzdělávání ve finanční gramotnosti."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Rozšíření služeb pro sportovce."
         }
       ]
     },
     "klub": {
       "hero": {
         "title": "Sportovní klub",
-        "description": "",
+        "description": "Spolupráce s námi je jednoduchá a bezstarostná.",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467913/Finom%20Sport/hero/simple/hero-simple_klub_g9exly.jpg"
+      },
+      "features": {
+        "feature1": {
+          "title": "Zajištění seminářů na půdě klubu s tématy finanční gramotnosti a přípravy života po kariéře.",
+          "subtitle": "Zajistíme seminář pro jakoukoli věcnou skupinu od žákovských až po seniorské kategorie.",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648544610/Finom%20Sport/seminar_01_dcqk5k.jpg"
+        }
       },
       "posts": [
         {
-          "title": "Spolupráce s kluby",
-          "description": "Nejen jednotlivci ale i kluby s námi můžou spolupracovat. Intenzivně vyhledáváme a navazujeme spolupráci s amatérskými i profesionálními týmy.",
+          "title": "Chcete zajistit pro své hráče lepší budoucnost?",
+          "description": "Nelíbí se vám, jak hráči zacházejí se svými příjmy? <br /><b>Posuňme společně služby o sportovce o level výše.</b>",
           "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648466852/Finom%20Sport/post/post_img_06_stkg6z.jpg"
         }
       ],
@@ -261,21 +288,36 @@
       ],
       "benefits": [
         {
-          "title": "Nezáleží na věku ani příjmu"
+          "title": "Komplexní, bezplatná a dlouhodobá spolupráce."
         },
         {
-          "title": "Nezáleží na věku ani příjmu"
+          "title": "Domluvíme termín, vše ostatní už zajistíme my."
         },
         {
-          "title": "Nezáleží na věku ani příjmu"
+          "title": "Pravidelné konzultace."
+        },
+        {
+          "title": "Zlepšení image a rozšíření služeb pro váš klub."
         }
       ]
     },
     "agent": {
       "hero": {
         "title": "Agent / trenér",
-        "description": "",
+        "description": "Pojďme sportovcům společně zajistit ty nejlepší podmínky pro kariéru.",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467575/Finom%20Sport/hero/simple/hero-simple_agent_sjatpb.jpg"
+      },
+      "features": {
+        "feature1": {
+          "title": "Trenéři sestavují plány na kariéru - my na život po kariéře.",
+          "subtitle": "Možnost spolupráce a vyniknutí další služby pro sportovce.",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648544610/Finom%20Sport/seminar_01_dcqk5k.jpg"
+        },
+        "feature2": {
+          "title": "Agenti zajišťují hráčům příjmy - my zajišťujeme jejich správu.",
+          "subtitle": "Nabízíme možnost prémiových služeb pro vaše klienty a rozšíření pole vaší působnosti.",
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648544610/Finom%20Sport/seminar_01_dcqk5k.jpg"
+        }
       },
       "posts": [
         {
@@ -288,16 +330,16 @@
       ],
       "benefits": [
         {
-          "title": "Nezáleží na věku ani příjmu"
+          "title": "Dlouhodobá spolupráce."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Doplnění služeb pro vaše klienty."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Provázanost klientely."
         },
         {
-          "title": "Nezáleží na věku ani příjmu, jde o základní principy."
+          "title": "Možnost mimořádných benefitů."
         }
       ]
     },

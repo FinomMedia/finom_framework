@@ -8,6 +8,18 @@
     $data = json_decode(file_get_contents("data/".$web.".json"));
     // content
 ?>
+    <div class="titleSubpage-01">
+        <div class="wrapS tac">
+            <h2>
+                <?php echo $data->pages->agent->features->feature1->title; ?>
+            </h2>
+
+            <h3>
+                <?php echo $data->pages->agent->features->feature1->subtitle; ?>
+            </h3>
+        </div>
+    </div>
+
     <div class="wrap post2col post2col-01">
         <?php
             foreach ($data->pages->agent->posts as $item) { ?>
@@ -37,6 +49,18 @@
                 </div>
             <?php }
         ?>
+    </div>
+
+    <div class="titleSubpage-01">
+        <div class="wrapS tac">
+            <h2>
+                <?php echo $data->pages->agent->features->feature2->title; ?>
+            </h2>
+
+            <h3>
+                <?php echo $data->pages->agent->features->feature2->subtitle; ?>
+            </h3>
+        </div>
     </div>
 
     <div class="benefits benefits-01">
