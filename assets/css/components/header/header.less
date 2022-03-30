@@ -95,7 +95,7 @@
         margin-top: 2rem;
         max-height: 100vh;
 
-        @media (min-width: @screenSm) {
+        @media (min-width: @screenMd) {
           margin-top: inherit;
         }
 
@@ -158,10 +158,14 @@
           border: none;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           opacity: 1;
+          border-left: .25rem solid var(--primary);
+
 
           @media (min-width: @screenSm) {
+            border-left: none;
             border-top: .25rem solid var(--primary);
           }
         }
@@ -238,6 +242,11 @@
         &:hover {
           color: var(--primary);
         }
+
+        &:hover,
+        &.active {
+          color: var(--primary);
+        }
       }
     }
 
@@ -312,19 +321,27 @@
         flex-direction: row;
       }
 
-      li a {
-        font-size: var(--fontSizeNav);
-        font-weight: var(--fontWeightRegular);
-        color: var(--primary);
-        border-top: .25rem solid transparent;
+      li {
+        a {
+          font-size: var(--fontSizeNav);
+          font-weight: var(--fontWeightRegular);
+          color: var(--primary);
 
-        &:hover {
-          color: var(--secondary);
-          border-top: .25rem solid var(--secondary);
-        }
+          @media (min-width: @screenSm) {
+            border-top: .25rem solid transparent;
+          }
 
-        &:active {
-          color: var(--secondary);
+          &:hover,
+          &.active {
+            color: var(--secondary);
+            border-left: .25rem solid var(--secondary);
+
+
+            @media (min-width: @screenSm) {
+              border-left: none;
+              border-top: .25rem solid var(--secondary);
+            }
+          }
         }
       }
     }

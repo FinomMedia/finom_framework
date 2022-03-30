@@ -19,7 +19,10 @@
             <?php
                 foreach ($data->header->links as $item) { ?>
                     <li>
-                        <a href="<?php echo $item->link; ?>">
+                        <a
+                            href="<?php echo $item->link; ?>"
+                            class="<?php echo (substr($_SERVER['REQUEST_URI'], 17) == $item->link ? "active" : "")?>"
+                        >
                             <?php echo $item->title; ?>
                         </a>
                     </li>
