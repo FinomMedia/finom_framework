@@ -21,7 +21,7 @@
                     <li>
                         <a
                             href="<?php echo $item->link; ?>"
-                            class="<?php echo (substr($_SERVER['REQUEST_URI'], 17) == $item->link ? "active" : "")?>"
+                            class="<?php echo (substr($_SERVER['REQUEST_URI'], 1) == $item->link ? "active" : "")?>"
                         >
                             <?php echo $item->title; ?>
                         </a>
