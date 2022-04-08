@@ -4,9 +4,9 @@
 ?>
 
 <div id="about" class="aboutUs aboutUs-03">
-    <div class="wrap">
+    <div class="wrapS">
         <div class="grid-1">
-            <div class="aboutUsContent">
+            <div class="aboutUsContent tac">
                 <h2 class="mb-2">
                     <?php echo $data->pages->contact->aboutUs->title; ?>
                 </h2>
@@ -15,7 +15,11 @@
                     <?php echo $data->pages->contact->aboutUs->description; ?>
                 </p>
             </div>
+        </div>
+    </div>
 
+    <div class="wrap">
+        <div class="grid-1">
             <div class="team team-01">
                 <div class="grid-4 mt-3">
                     <?php

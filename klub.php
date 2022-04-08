@@ -26,8 +26,10 @@
 
     <div class="titleSubpage-03">
         <div class="wrapS">
-            <div class="grid-2">
-                <img src="<?php echo $data->pages->klub->features->feature1->img; ?>">
+            <div class="grid-1">
+                <div class="mb-3">
+                    <img src="<?php echo $data->pages->klub->features->feature1->img; ?>">
+                </div>
 
                 <div>
                     <h2>

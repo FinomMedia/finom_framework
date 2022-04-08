@@ -8,31 +8,33 @@
     "links": [
       {
         "title": "Mladý sportovec",
-        "link": "mladysportovec.php?web=finomsport"
+        "link": "mladysportovec.php?web=finomsport",
+        "target": false
       },
       {
         "title": "Profesionál",
-        "link": "profesional.php?web=finomsport"
+        "link": "profesional.php?web=finomsport",
+        "target": false
       },
       {
         "title": "Sportovní klub",
-        "link": "klub.php?web=finomsport"
+        "link": "klub.php?web=finomsport",
+        "target": false
       },
       {
         "title": "Agent",
-        "link": "agent.php?web=finomsport"
-      },
-      {
-        "title": "Spolupráce",
-        "link": "spoluprace.php?web=finomsport"
+        "link": "agent.php?web=finomsport",
+        "target": false
       },
       {
         "title": "Finom",
-        "link": "https://finom.cz"
+        "link": "https://finom.cz",
+        "target": true
       },
       {
         "title": "Kontakt",
-        "link": "contact.php?web=finomsport"
+        "link": "contact.php?web=finomsport",
+        "target": false
       }
     ]
   },
@@ -75,17 +77,17 @@
     "items": [
       {
         "title": "Adresa",
-        "content": "Vavrečkova 7074, <br> Zlín, 760 01",
+        "content": "Olomouc tř. Svobody 43/39, <br>779 00 Olomouc",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648196835/Finom%20Sport/icon_address_xrpvql.svg"
       },
       {
         "title": "Telefon",
-        "content": "+420 773 494 909",
+        "content": "+420 602 380 003",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648196835/Finom%20Sport/icon_phone_kpkn8u.svg"
       },
       {
         "title": "Email",
-        "content": "antonovic@finomgroup.cz",
+        "content": "info@finomsport.cz",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648196835/Finom%20Sport/icon_email_rxg3sv.svg"
       }
     ],
@@ -155,7 +157,7 @@
     "mladysportovec": {
       "hero": {
         "title": "Mladý sportovec",
-        "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
+        "description": "Už víš, co budeš dělat po kariéře?<br>Víš, co to obnáší být profesionálním hráčem?<br>Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467913/Finom%20Sport/hero/simple/hero-simple_mladysportovec_dhae2w.jpg"
       },
       "features": {
@@ -193,23 +195,23 @@
       ],
       "benefits": [
         {
-          "title": "Komplexní a bezplatná spolupráce."
+          "title": "Komplexní a bezplatná spolupráce"
         },
         {
-          "title": "Nastavení finančního portfolia na míru."
+          "title": "Nastavení finančního portfolia na míru"
         },
         {
-          "title": "Pravidelné konzultace a vzdělávání ve finanční gramotnosti."
+          "title": "Pravidelné konzultace a vzdělávání ve finanční gramotnosti"
         },
         {
-          "title": "Rozšíření služeb pro sportovce."
+          "title": "Rozšíření služeb pro sportovce"
         }
       ]
     },
     "profesional": {
       "hero": {
         "title": "Profesionál",
-        "description": "Drtivá většina sportovců není schopna hospodařit se svými příjmy tak aby si zajistila život po kariéře.",
+        "description": "Drtivá většina sportovců není schopna hospodařit se svými příjmy tak aby si zajistila život po kariéře",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648465037/Finom%20Sport/hero/simple/hero-simple_profesional_j0xhrk.jpg"
       },
       "features": {
@@ -240,30 +242,30 @@
       ],
       "benefits": [
         {
-          "title": "Komplexní a bezplatná spolupráce."
+          "title": "Komplexní a bezplatná spolupráce"
         },
         {
-          "title": "Nastavení finančního portfolia na míru."
+          "title": "Nastavení finančního portfolia na míru"
         },
         {
-          "title": "Pravidelné konzultace a vzdělávání ve finanční gramotnosti."
+          "title": "Pravidelné konzultace a vzdělávání ve finanční gramotnosti"
         },
         {
-          "title": "Rozšíření služeb pro sportovce."
+          "title": "Rozšíření služeb pro sportovce"
         }
       ]
     },
     "klub": {
       "hero": {
         "title": "Sportovní klub",
-        "description": "Spolupráce s námi je jednoduchá a bezstarostná.",
+        "description": "Spolupráce s námi je jednoduchá a bezstarostná",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467913/Finom%20Sport/hero/simple/hero-simple_klub_g9exly.jpg"
       },
       "features": {
         "feature1": {
           "title": "Zajištění seminářů na půdě klubu s tématy finanční gramotnosti a přípravy života po kariéře.",
           "subtitle": "Zajistíme seminář pro jakoukoli věcnou skupinu od žákovských až po seniorské kategorie.",
-          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648544610/Finom%20Sport/seminar_01_dcqk5k.jpg"
+          "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1649415423/Finom%20Sport/seminar_02_megpfy.jpg"
         }
       },
       "posts": [
@@ -289,34 +291,34 @@
       ],
       "benefits": [
         {
-          "title": "Komplexní, bezplatná a dlouhodobá spolupráce."
+          "title": "Komplexní, bezplatná a dlouhodobá spolupráce"
         },
         {
-          "title": "Domluvíme termín, vše ostatní už zajistíme my."
+          "title": "Domluvíme termín, vše ostatní už zajistíme my"
         },
         {
-          "title": "Pravidelné konzultace."
+          "title": "Pravidelné konzultace"
         },
         {
-          "title": "Zlepšení image a rozšíření služeb pro váš klub."
+          "title": "Zlepšení image a rozšíření služeb pro váš klub"
         }
       ]
     },
     "agent": {
       "hero": {
         "title": "Agent / trenér",
-        "description": "Pojďme sportovcům společně zajistit ty nejlepší podmínky pro kariéru.",
+        "description": "Pojďme sportovcům společně zajistit ty nejlepší podmínky pro kariéru",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467575/Finom%20Sport/hero/simple/hero-simple_agent_sjatpb.jpg"
       },
       "features": {
         "feature1": {
-          "title": "Trenéři sestavují plány na kariéru - my na život po kariéře.",
-          "subtitle": "Možnost spolupráce a vyniknutí další služby pro sportovce.",
+          "title": "Trenéři sestavují plány na kariéru - my na život po kariéře",
+          "subtitle": "Možnost spolupráce a vyniknutí další služby pro sportovce",
           "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648544610/Finom%20Sport/seminar_01_dcqk5k.jpg"
         },
         "feature2": {
-          "title": "Agenti zajišťují hráčům příjmy - my zajišťujeme jejich správu.",
-          "subtitle": "Nabízíme možnost prémiových služeb pro vaše klienty a rozšíření pole vaší působnosti.",
+          "title": "Agenti zajišťují hráčům příjmy - my zajišťujeme jejich správu",
+          "subtitle": "Nabízíme možnost prémiových služeb pro vaše klienty a rozšíření pole vaší působnosti",
           "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648544610/Finom%20Sport/seminar_01_dcqk5k.jpg"
         }
       },
@@ -331,23 +333,23 @@
       ],
       "benefits": [
         {
-          "title": "Dlouhodobá spolupráce."
+          "title": "Dlouhodobá spolupráce"
         },
         {
-          "title": "Doplnění služeb pro vaše klienty."
+          "title": "Doplnění služeb pro vaše klienty"
         },
         {
-          "title": "Provázanost klientely."
+          "title": "Provázanost klientely"
         },
         {
-          "title": "Možnost mimořádných benefitů."
+          "title": "Možnost mimořádných benefitů"
         }
       ]
     },
     "contact": {
       "hero": {
         "title": "Kontakt",
-        "description": "Poznejte blíže členy našeho týmu, nasbírejte potřebné kontakty nebo nám pomocí kontaktního formuláře, zanechte zprávu.",
+        "description": "Poznejte blíže členy našeho týmu, nasbírejte potřebné kontakty nebo nám pomocí kontaktního formuláře, zanechte zprávu",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648471090/Finom%20Sport/hero/simple/hero-simple_contact_aqmx9o.jpg"
       },
       "aboutUs": {

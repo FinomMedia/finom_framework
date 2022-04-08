@@ -241,6 +241,7 @@
       @media (max-width: @screenLg) {
         justify-content: center;
         align-items: center;
+        text-align: center;
         padding: 1rem;
         margin: 0;
         height: calc((80vh - 5vh) / 4);
@@ -254,6 +255,11 @@
         font-weight: var(--fontWeightRegular);
         line-height: 1;
         text-transform: uppercase;
+        word-break: break-word;
+
+        @media (max-width: @screenXl) {
+          font-size: 2rem;
+        }
       }
 
       p {
@@ -318,6 +324,10 @@
       width: 100%;
       text-align: center;
       text-transform: uppercase;
+
+      @media (max-width: @screenXl) {
+        padding: 1rem;
+      }
 
       @media (max-width: @screenMd) {
         padding: 1rem;
