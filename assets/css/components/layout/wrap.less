@@ -10,6 +10,10 @@
   margin: 0 auto;
   width: 100%;
   max-width: var(--wrap);
+
+  &:has(.col) {
+    .flex(row, inherit, inherit);
+  }
 }
 
 .wrapS {
@@ -17,4 +21,8 @@
   margin: 0 auto;
   width: 100%;
   max-width: var(--wrapS);
+
+  &:has(.col) {
+    .flex(row, inherit, inherit);
+  }
 }

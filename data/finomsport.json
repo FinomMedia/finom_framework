@@ -39,35 +39,35 @@
     ]
   },
   "hero": {
-    "claim": "Zabezpečujeme vaši finanční budoucnost.",
+    "background": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467913/Finom%20Sport/hero/simple/hero-simple_klub_g9exly.jpg",
+    "claim": {
+      "title": "Hrej v&nbsp;klidu!",
+      "subtitle": "Profesionální ochrana příjmů a budování majetku na život po kariéře."
+    },
     "items": [
       {
         "title": "Mladý sportovec",
         "description": "Už víš, co budeš dělat po kariéře? Víš, co to obnáší být profesionálním hráčem? Co by jsi dělal, kdyby přišlo zranění, které ti ukončí kariéru?",
-        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_01_zv06or.jpg",
-        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_01_hover_otnzzj.jpg",
-        "link": "/"
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1650894334/Finom%20Sport/hero_circle_01_xfspwc.png",
+        "link": "mladysportovec.php?web=finomsport"
       },
       {
         "title": "Profesionál",
         "description": "Uvědomuji si, že kariéra profesionální sportovce je velmi krátká. Zatím nevím, jak bude vypadat můj život po fotbalové kariéře. Každopádně díky spolupráci s Finom Sport se můžu dlouhodobě připravovat a finančně se dostatečně zajistit.",
-        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_02_wr34ki.jpg",
-        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_02_hover_njs1bg.jpg",
-        "link": "/"
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1650894334/Finom%20Sport/hero_circle_02_ljkqhp.png",
+        "link": "profesional.php?web=finomsport"
       },
       {
         "title": "Sportovní klub",
-        "description": "Spolupráce s námi je jednoduchá a bezstarostná.",
-        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_03_yxvki5.jpg",
-        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_03_hover_veyaav.jpg",
-        "link": "/"
+        "description": "Využijte služby pro sportovce inspirované západoevropskými standarty.",
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1650894335/Finom%20Sport/hero_circle_03_vcznyr.png",
+        "link": "klub.php?web=finomsport"
       },
       {
         "title": "Agent, trenér",
         "description": "Pojďme sportovcům společně zajistit ty nejlepší podmínky pro kariéru.",
-        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_04_zizhc1.jpg",
-        "imgHover": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648215407/Finom%20Sport/hero/hero_item_04_hover_axspmw.jpg",
-        "link": "/"
+        "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1650894335/Finom%20Sport/hero_circle_04_erae2k.png",
+        "link": "agent.php?web=finomsport"
       }
     ]
   },
