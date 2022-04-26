@@ -46,6 +46,7 @@
         ?>
 
         <link rel="stylesheet" href="<?php echo $fontFace; ?>">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
         <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     </head>

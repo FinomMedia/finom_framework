@@ -22,23 +22,23 @@
         <div class="col col-7">
             <div class="grid-3">
                 <?php
-                foreach ($data->hero->items as $item) { ?>
-                    <a href="<?php echo $item->link; ?>">
-                        <div class="box">
-                            <img class="boxImage" src="<?php echo $item->img; ?>">
+                    foreach ($data->hero->items as $item) { ?>
+                        <a href="<?php echo $item->link; ?>">
+                            <div class="box">
+                                <img class="boxImage" src="<?php echo $item->img; ?>">
 
-                            <div class="boxContent">
-                                <h3>
-                                    <?php echo $item->title; ?>
-                                </h3>
+                                <div class="boxContent">
+                                    <h3>
+                                        <?php echo $item->title; ?>
+                                    </h3>
 
-                                <p>
-                                    <?php echo $item->description; ?>
-                                </p>
+                                    <p>
+                                        <?php echo $item->description; ?>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                <?php }
+                        </a>
+                    <?php }
                 ?>
             </div>
         </div>

@@ -258,20 +258,20 @@
     "klub": {
       "hero": {
         "title": "Sportovní klub",
-        "description": "Spolupráce s námi je jednoduchá a bezstarostná",
+        "description": "Využijte služby pro sportovce inspirované západoevropskými standarty.",
         "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648467913/Finom%20Sport/hero/simple/hero-simple_klub_g9exly.jpg"
       },
       "features": {
         "feature1": {
           "title": "Zajištění seminářů na půdě klubu s tématy finanční gramotnosti a přípravy života po kariéře.",
-          "subtitle": "Zajistíme seminář pro jakoukoli věcnou skupinu od žákovských až po seniorské kategorie.",
+          "subtitle": "Poskytujeme semináře pro jakoukoli věkovou kategorii od žákovských, až po seniorské kategorie.",
           "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1649415423/Finom%20Sport/seminar_02_megpfy.jpg"
         }
       },
       "posts": [
         {
-          "title": "Chcete zajistit pro své hráče lepší budoucnost?",
-          "description": "Nelíbí se vám, jak hráči zacházejí se svými příjmy? <br /><b>Posuňme společně služby o sportovce o level výše.</b>",
+          "title": "Zahraniční kluby odkládají svým svěřencům část výplaty k životu po ukončení kariéry.",
+          "description": "Zajímá vás, jak stejnou službu zajistit i pro váš klub? <br /><b>Společnou edukací posouváme výkon vašich hráčů o level výše!</b>",
           "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648466852/Finom%20Sport/post/post_img_06_stkg6z.jpg"
         }
       ],
