@@ -1,5 +1,8 @@
 <?php
     $web = $_GET['web'];
+    if($_SERVER['SERVER_NAME']=="finomsport.cz") {
+        $web="finomsport";
+    }
     $data = json_decode(file_get_contents("data/".$web.".json"));
 ?>
 

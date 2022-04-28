@@ -1,5 +1,8 @@
 <?php
     $web = $_GET['web'];
+    if($_SERVER['SERVER_NAME']=="finomsport.cz") {
+        $web="finomsport";
+    }
     $data = json_decode(file_get_contents("data/".$web.".json"));
 ?>
 
@@ -10,6 +13,7 @@
                 <h2>
                     <?php echo $data->contact->title; ?>
                 </h2>
+
 
                 <form>
                     <div class="columns">
@@ -57,7 +61,7 @@
                     ?>
 
                     <div class="action">
-                        <a class="btn btnOutlinedSecondary" type="submit" value="Submit">
+                        <a class="btn btnOutlinedSecondary disabled" type="submit" value="Submit">
                             <?php echo $data->contact->send; ?>
                         </a>
                     </div>

@@ -4,7 +4,7 @@
   "mediaContent": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648036271/Finom%20Sport/backgrounds/background_web_blue_01_ij4dpf.png",
   "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648035910/Finom%20Sport/logo/finom-invest_logo_horizontal_2x_jk3sxt.png",
   "header": {
-    "homePath": "index.php?web=finomsport",
+    "homePath": "/",
     "links": [
       {
         "title": "Mladý sportovec",
@@ -357,7 +357,7 @@
         "description": "Má cesta k poradenství vedla od kariéry profesionálního sportovce. Kdy se mně zeptali, zdali vím co budu dělat pokud se mi stane úraz, který mi nedovolí pokračovat v kariéře a zdali vím jaké budou mé příjmy po jejím skončení. Jelikož jsem nevěděl jak na tuto otázku odpovědět, věděl jsem, že je potřeba tenhle problém řešit.",
         "team": [
           {
-            "name": "Mgr. Lukáš Ďurďa",
+            "name": "<span>Mgr.</span> Lukáš Ďurďa",
             "phone": "+420 602 380 003",
             "email": "durda@finom.cz",
             "img": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648472147/Finom%20Sport/team/profile_01_n6gxqt.jpg"
