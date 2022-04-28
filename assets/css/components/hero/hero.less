@@ -203,7 +203,6 @@
 
   &-3 {
     padding-top: 3rem;
-    height: 100vh;
     background: var(--primary);
 
     a {
@@ -211,19 +210,16 @@
     }
 
     h1 {
-      .fontSize(2.5, 4.5);
+      .fontSize(2, 4.5);
 
       font-weight: var(--fontWeightMedium);
       color: var(--secondary);
       text-transform: uppercase;
-
-      @media (max-width: @screenLg) {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
 
     h2 {
-      .fontSize(1.25, 2.5);
+      .fontSize(1.2, 2.25);
 
       color: var(--transparentWhite);
       text-transform: none;
@@ -239,8 +235,12 @@
 
     .col {
       &-3 {
+        .flex(column, center, flex-start);
+
+        padding-right: 2rem;
+
         @media (max-width: @screenLg) {
-          width: 50%;
+          width: calc((10% * 5) - 2rem);
         }
 
         @media (max-width: @screenMd) {
@@ -253,7 +253,7 @@
 
         @media (max-width: @screenLg) {
           padding-left: 1rem;
-          width: 50%;
+          width: calc((10% * 5) - 2rem);
         }
 
         @media (max-width: @screenMd) {
@@ -292,13 +292,18 @@
 
       &Image {
         margin-right: 1rem;
-        width: 10rem;
+        width: 10rem !important;
         border: .5rem solid var(--secondary);
         border-radius: 50%;
         transition: all 300ms ease-in-out;
 
         @media (max-width: @screenLg) {
           display: none;
+          width: 8rem !important;
+        }
+
+        @media (max-width: @screenMd) {
+          width: 5rem !important;
         }
       }
 
@@ -306,7 +311,7 @@
         .flex(column, flex-end, flex-start);
 
         h3 {
-          .fontSize(1, 1.8);
+          .fontSize(1, 1.5);
 
           margin: 0;
           font-weight: var(--fontWeightRegular);

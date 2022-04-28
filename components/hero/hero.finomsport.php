@@ -8,7 +8,7 @@
         <img src="<?php echo $data->hero->background; ?>">
     </div>
 
-    <div class="wrap">
+    <div class="row">
         <div class="col col-3 border-r-secondary pr-1">
             <h1>
                 <?php echo $data->hero->claim->title; ?>
