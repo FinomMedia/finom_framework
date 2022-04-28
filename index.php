@@ -40,7 +40,7 @@
         include 'components/contact/contact.antonovic.php';
     }
 
-    if ($_GET['web'] == 'finomsport') {
+    if ($_GET['web'] == 'finomsport' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
         // hero
         include 'components/hero/hero.finomsport.php';
 
@@ -54,7 +54,7 @@
         include 'components/contact/contact.finomsport.php';
     }
 
-    if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
+    if ($_GET['web'] == 'finomsportCP') {
         // coming soon
         include 'components/comingsoon/comingsoon.finomsport.php';
     }
