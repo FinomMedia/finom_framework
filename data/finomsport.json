@@ -8,22 +8,22 @@
     "links": [
       {
         "title": "Mladý sportovec",
-        "link": "mladysportovec.php?web=finomsport",
+        "link": "mladysportovec.php",
         "target": false
       },
       {
         "title": "Profesionál",
-        "link": "profesional.php?web=finomsport",
+        "link": "profesional.php",
         "target": false
       },
       {
         "title": "Sportovní klub",
-        "link": "klub.php?web=finomsport",
+        "link": "klub.php",
         "target": false
       },
       {
         "title": "Agent",
-        "link": "agent.php?web=finomsport",
+        "link": "agent.php",
         "target": false
       },
       {
@@ -33,7 +33,7 @@
       },
       {
         "title": "Kontakt",
-        "link": "contact.php?web=finomsport",
+        "link": "contact.php",
         "target": false
       }
     ]
