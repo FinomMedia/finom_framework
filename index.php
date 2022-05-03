@@ -2,8 +2,6 @@
     include 'header.php';
 
     if ($_GET['web'] == 'marak') {
-        $component = 01;
-
         // hero
         include 'components/hero/hero.marak.php';
 
@@ -57,6 +55,23 @@
     if ($_GET['web'] == 'finomsportCP') {
         // coming soon
         include 'components/comingsoon/comingsoon.finomsport.php';
+    }
+
+    if ($_GET['web'] == 'finomenergy') {
+        // hero
+        include 'components/hero/hero.finomenergy.php';
+
+        // services
+        include 'components/services/services.antonovic.php';
+
+        // aboutUs
+        include 'components/aboutUs/aboutUs.antonovic.php';
+
+        // cooperation
+        include 'components/cooperation/cooperation.antonovic.php';
+
+        // contact
+        include 'components/contact/contact.antonovic.php';
     }
 
     include 'footer.php';

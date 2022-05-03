@@ -23,9 +23,18 @@ body {
   margin: 0;
   padding: 0;
   background: var(--pageBg);
-  color: var(--typography);
+  color: var(--bodyTextColor);
   overflow-x: hidden;
   white-space: normal;
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: var(--linkDecoration);
+
+  &:hover {
+    text-decoration: var(--linkHoverDecoration);
+  }
 }
 
 img,
