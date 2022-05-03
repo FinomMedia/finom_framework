@@ -24,6 +24,10 @@
                 if ($_GET['web'] == 'finomsportCP') {
                     echo "Finom Sport";
                 }
+
+                if ($_GET['web'] == 'finomenergy') {
+                    echo "Finom Energy";
+                }
             ?>
         </title>
 
@@ -43,12 +47,17 @@
             if ($_GET['web'] == 'finomsportCP') {
                 echo "<link rel='stylesheet/less' href='assets/css/config.finomsportCP.less'>";
             }
+
+            if ($_GET['web'] == 'finomenergy') {
+                echo "<link rel='stylesheet/less' href='assets/css/config.finomenergy.less'>";
+            }
         ?>
 
         <link rel="stylesheet" href="<?php echo $fontFace; ?>">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
         <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
 
     <body id="body">
@@ -68,5 +77,9 @@
 
             if ($_GET['web'] == 'finomsportCP') {
                 include 'components/header/comingsoon/header.finomsportCP.php';
+            }
+
+            if ($_GET['web'] == 'finomenergy') {
+                include 'components/header/header.finomenergy.php';
             }
         ?>
