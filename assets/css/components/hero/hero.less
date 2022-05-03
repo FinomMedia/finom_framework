@@ -6,20 +6,15 @@
   justify-content: center;
   width: 100%;
   height: min(100vh, 70rem);
-  background-image: var(--bgImageHero);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat, repeat;
   z-index: 0;
 
   .wrap {
     position: relative;
     height: 100%;
-  }
 
-  .grid-2 {
-    padding-top: 0;
-    padding-bottom: 0;
+    :only-child {
+      max-width: 50%;
+    }
   }
 
   .box {
@@ -38,310 +33,19 @@
       z-index: -1;
     }
   }
-}
 
-.scroll (@width, @height) {
-  position: absolute;
-  width: @width;
-  height: @height;
-  content: var(--scrollImage);
-}
+  h1 {
+    .fontSize(3, 5.5);
 
-.hero {
-  //states
-  &-1 {
-    color: var(--secondary);
-
-    .social {
-      .flex(row, flex-start, center);
-
-      margin-bottom: 1rem;
-
-      img {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1rem;
-        object-fit: contain;
-      }
-    }
-
-    .special {
-      position: relative;
-
-      span {
-        .flex-justify(center, center);
-
-        position: absolute;
-        top: -0;
-        padding: calc(1rem + (1.5 - 1) * var(--calcWidth)) calc(2rem + (3.5 - 1) * var(--calcWidth));
-        width: fit-content;
-        font-size: clamp(unit(2.75, rem), calc(unit(2.75, rem) + (4 - 2.75) * var(--calcWidth)), unit(4, rem));
-        font-weight: var(--fontWeightLight);
-        color: var(--primary);
-        border: .25rem solid var(--primary);
-        text-transform: uppercase;
-        opacity: 0;
-        animation: rotateWord 18s linear infinite 0s; // doba trvani = 3s * pocet slov
-
-        @media (min-width: @screenLg) {
-          padding: calc(var(--spacer) * 3) calc(var(--spacer) * 7);
-        }
-
-        &:nth-child(2) {
-          animation-delay: 3s;
-        }
-
-        &:nth-child(3) {
-          animation-delay: 6s;
-        }
-
-        &:nth-child(4) {
-          animation-delay: 9s;
-        }
-
-        &:nth-child(5) {
-          animation-delay: 12s;
-        }
-
-        &:nth-child(6) {
-          animation-delay: 15s;
-        }
-      }
-
-      @keyframes rotateWord {
-        0% { opacity: 0; }
-        2% { opacity: 0; transform: translateY(-2rem); }
-        5% { opacity: 1; transform: translateY(0); }
-        17% { opacity: 1; transform: translateY(0); }
-        20% { opacity: 0; transform: translateY(2rem); }
-        80% { opacity: 0; }
-        100% { opacity: 0; }
-      }
-    }
-
-    p {
-      display: none;
-    }
-
-    .image {
-      position: relative;
-      display: none;
-      height: 100%;
-
-      @media (min-width: @screenMd) {
-        display: inherit;
-      }
-
-      img {
-        position: absolute;
-        max-height: 80vh;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-      }
-    }
-
-    .scroll {
-      .scroll (3rem, 3rem);
-
-      left: 1rem;
-      bottom: 1rem;
-      transition: all 300ms ease-in-out;
-
-      &:hover {
-        .hoverStateTranslateYScale(-2rem, 1.2);
-      }
-    }
+    color: var(--heroH1TextColor);
+    font-weight: var(--heroH1TextWeight);
+    text-transform: var(--heroH1TextTransform);
   }
 
-  &-2 {
-    @media (max-width: @screenSm) {
-      background-position: top right;
-    }
-
-    color: var(--white);
-
-    .social,
-    .special {
-      display: none;
-    }
-
-    h1 {
-      text-transform: uppercase;
-    }
-
-    p {
-      font-size: clamp(unit(1.5, rem), calc(unit(1.5, rem) + (2.5 - 1.5) * var(--calcWidth)), unit(2.5, rem));
-    }
-
-    .image {
-      position: relative;
-      display: none;
-      height: 100%;
-
-      @media (min-width: @screenMd) {
-        display: inherit;
-      }
-
-      img {
-        display: none;
-      }
-    }
-
-    .scroll {
-      .scroll (3rem, 3rem);
-
-      left: 1rem;
-      bottom: 1rem;
-      transition: all 300ms ease-in-out;
-
-      &:hover {
-        .hoverStateTranslateYScale(-2rem, 1.2);
-      }
-    }
-  }
-
-  &-3 {
-    padding-top: 3rem;
-    background: var(--primary);
-
-    a {
-      text-decoration: none;
-    }
-
-    h1 {
-      .fontSize(2, 4.5);
-
-      font-weight: var(--fontWeightMedium);
-      color: var(--secondary);
-      text-transform: uppercase;
-      margin-bottom: 0;
-    }
-
-    h2 {
-      .fontSize(1.2, 2.25);
-
-      color: var(--transparentWhite);
-      text-transform: none;
-    }
-
-    .wrap {
-      &:has(.col) {
-        @media (max-width: @screenMd) {
-          .flex(column, inherit, inherit);
-        }
-      }
-    }
-
-    .col {
-      &-3 {
-        .flex(column, center, flex-start);
-
-        padding-right: 2rem;
-
-        @media (max-width: @screenLg) {
-          width: calc((10% * 5) - 2rem);
-        }
-
-        @media (max-width: @screenMd) {
-          width: 100%;
-        }
-      }
-
-      &-7 {
-        padding-left: 2rem;
-
-        @media (max-width: @screenLg) {
-          padding-left: 1rem;
-          width: calc((10% * 5) - 2rem);
-        }
-
-        @media (max-width: @screenMd) {
-          padding-left: 0;
-          width: 100%;
-        }
-      }
-    }
-
-    .border-r-secondary {
-      @media (max-width: @screenMd) {
-        border-right: none;
-        border-bottom: .15rem solid var(--secondary);
-      }
-    }
-
-    .grid {
-      &-3 {
-        .grid(20, 4, 1);
-
-        @media (max-width: @screenLg) {
-          .grid(20, 2, 0);
-        }
-      }
-    }
-
-    .box {
-      .flex(row, flex-start, center);
-
-      padding: 1rem;
-      transition: all 300ms ease-in-out;
-
-      @media (max-width: @screenSm) {
-        padding: 1rem 0;
-      }
-
-      &Image {
-        margin-right: 1rem;
-        width: 10rem !important;
-        border: .5rem solid var(--secondary);
-        border-radius: 50%;
-        transition: all 300ms ease-in-out;
-
-        @media (max-width: @screenLg) {
-          display: none;
-          width: 8rem !important;
-        }
-
-        @media (max-width: @screenMd) {
-          width: 5rem !important;
-        }
-      }
-
-      &Content {
-        .flex(column, flex-end, flex-start);
-
-        h3 {
-          .fontSize(1, 1.5);
-
-          margin: 0;
-          font-weight: var(--fontWeightRegular);
-          color: var(--secondary);
-          text-transform: uppercase;
-          transition: all 300ms ease-in-out;
-        }
-
-        p {
-          .fontSize(1, 1);
-
-          color: var(--transparentWhite);
-
-          @media (max-width: @screenMd) {
-            display: none;
-          }
-        }
-      }
-
-      &:hover {
-        background: var(--transparentDark);
-
-        h3 {
-          color: var(--secondaryHover);
-        }
-
-        .boxImage {
-          border: .5rem solid var(--secondaryHover);
-        }
-      }
-    }
+  .scroll (@width, @height) {
+    position: absolute;
+    width: @width;
+    height: @height;
+    content: var(--scrollImage);
   }
 }

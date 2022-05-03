@@ -41,6 +41,14 @@
   background: var(--primary);
   color: var(--secondary);
 }
+.btnWhite {
+  background: var(--white);
+  color: var(--primary);
+}
+.btnWhite:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
 .btnOutlinedPrimary {
   box-shadow: inset 0 0 0 0.25rem var(--primary);
   background: transparent;
