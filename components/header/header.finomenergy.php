@@ -3,6 +3,11 @@
     $logoScrollImage = "https://res.cloudinary.com/patrik-vadura/image/upload/v1651573385/Finom%20Energy%20-%20web/logo/logo-horizontal_scroll_wityod.svg";
 ?>
 
+<?php
+    $web = $_GET['web'];
+    $data = json_decode(file_get_contents("data/".$web.".json"));
+?>
+
 <header id="header" class="header">
     <div class="wrap">
         <a href="/" class="logo">
@@ -19,7 +24,21 @@
             <span class="navIcon"></span>
         </label>
 
-        <?php include 'headerLinks.finomenergy.php';?>
+        <ul class="navigation">
+            <?php
+                foreach ($data->header->links as $item) { ?>
+                    <li>
+                        <a
+                                href="<?php echo $item->link; ?>"
+                                class="<?php if($item->class) { echo $item->class; }; echo (substr($_SERVER['REQUEST_URI'], 1) == $item->link ? "active" : "")?>"
+                                target="<?php echo ($item->target == true ? "_blank" : "_self"); ?>"
+                        >
+                            <?php echo $item->title; ?>
+                        </a>
+                    </li>
+                <?php }
+            ?>
+        </ul>
     </div>
 </header>
 

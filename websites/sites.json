@@ -1,0 +1,16 @@
+{
+    "sites": [
+        {
+            "title": "Framework",
+            "folder": "framework",
+            "getweb": "framework",
+            "servername": "test.local"
+        },
+        {
+            "title": "Finom Energy",
+            "folder": "finomenergy",
+            "getweb": "finomenergy",
+            "servername": "test.local"
+        }
+    ]
+}

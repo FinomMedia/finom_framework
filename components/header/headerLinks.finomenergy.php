@@ -1,7 +1,15 @@
 <ul class="navigation">
-    <li><a href="#cons">Výhody</a></li>
-    <li><a href="#caseStudie">Případová studie</a></li>
-    <li><a href="#benefits">Benefity</a></li>
-    <li><a href="#realisation">Průběh realizace</a></li>
-    <li><a href="#contact" class="special">Poptávka</a></li>
+    <?php
+        foreach ($data->header->links as $item) { ?>
+            <li>
+                <a
+                        href="<?php echo $item->link; ?>"
+                        class="<?php echo (substr($_SERVER['REQUEST_URI'], 1) == $item->link ? "active" : "")?>"
+                        target="<?php echo ($item->target == true ? "_blank" : "_self"); ?>"
+                >
+                    <?php echo $item->title; ?>
+                </a>
+            </li>
+        <?php }
+    ?>
 </ul>
