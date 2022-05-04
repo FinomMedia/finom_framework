@@ -1,0 +1,23 @@
+.icon {
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  //layout states
+  &Horizontal {
+    .flex(row, flex-start, center);
+
+    img {
+      margin-right: .5rem;
+    }
+  }
+
+  &Vertical {
+    .flex(column, center, flex-start);
+
+    p {
+      display: block;
+    }
+  }
+}

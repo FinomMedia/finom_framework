@@ -14,6 +14,10 @@
             if ($_GET['web'] == 'finomsportCP') {
                 include 'components/footer/comingsoon/footer.finomsportCP.php';
             }
+
+            if ($_GET['web'] == 'finomenergy') {
+                include 'components/footer/footer.default.php';
+            }
         ?>
     </body>
 </html>

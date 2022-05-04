@@ -6,7 +6,7 @@ h1 span {
   font-weight: var(--fontWeightBold);
 }
 h2 {
-  font-size: clamp(2rem, calc(2rem + (3 - 2) * var(--calcWidth)), 3rem);
+  font-size: clamp(2rem, calc(2rem + (2.25 - 2) * var(--calcWidth)), 2.25rem);
   font-weight: var(--fontWeightLight);
   text-transform: uppercase;
 }

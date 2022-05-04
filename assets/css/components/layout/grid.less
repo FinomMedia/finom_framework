@@ -19,11 +19,24 @@
   /* stylelint-enable */
 }
 
-.row {
-  .pcf(1, 1.5);
+.gap {
+  &Row {
+    &None {
+      row-gap: 0 !important;
+    }
+  }
 
+  &Col {
+    &None {
+      grid-column-gap: 0 !important;
+    }
+  }
+}
+
+.row {
   display: flex;
   flex-wrap: wrap;
+  align-items: var(--alignItems, center);
   gap: 1rem;
   max-width: var(--wrap);
 }
@@ -31,7 +44,15 @@
 .col {
   .colConfig (@i) {
     &-@{i} {
-      width: calc((10% * @i) - 1rem); /* (10% * @i) - @gap */
+      width: 100%;
+
+      @media (min-width: @screenMd) {
+        width: 50%;
+      }
+
+      @media (min-width: @screenLg) {
+        width: calc((10% * @i) - 1rem); /* (10% * @i) - @gap */
+      }
     }
   }
 
