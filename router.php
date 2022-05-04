@@ -13,4 +13,4 @@
     include "test.php";*/
 
 
-    include 'websites/'.Site::$conf->folder."/index_old.php";
+    include 'websites/'.Site::$conf->folder."/index.php";

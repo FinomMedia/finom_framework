@@ -8,10 +8,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>
-            Finom Energy - Energetická nezávislost pro váš život
+            <?=$data->meta->title;?>
         </title>
 
-        <link rel='stylesheet/less' href='/assets/css/config.finomsport.less'>
+        <link rel='stylesheet/less' href='/websites/<?=Site::$conf->folder?>/config.less'>
 
 
         <link rel="stylesheet" href="<?=$fontFace?>">
