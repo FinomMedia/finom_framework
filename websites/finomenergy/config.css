@@ -4238,7 +4238,7 @@ button:focus {
   --lineHeightBase: calc(var(--spacer) * 3);
   --lineHeightLarge: calc(var(--lineHeightBase) * 1.25);
   --lineHeightExtraLarge: calc(var(--lineHeightBase) * 1.5);
-  --primary: #001b72;
+  --primary: #000000;
   --primary_rgb: 0,27,114;
   --secondary: #ffcd44;
   --secondary_rgb: 255,205,68;

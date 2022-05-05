@@ -164,3 +164,29 @@
     }
   }
 }
+
+.contact-simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+
+  //states
+  &-01 {
+    h2 {
+      text-align: center;
+      color: var(--primary);
+    }
+
+    h4 {
+      color: var(--secondary);
+    }
+
+    .wrapS {
+      margin-bottom: 4rem;
+      padding: clamp(unit(1, rem), calc(unit(1, rem) + (1.5 - 1) * var(--calcWidth)), unit(1.5, rem));
+    }
+  }
+}

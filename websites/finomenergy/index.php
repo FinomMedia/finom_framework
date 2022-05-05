@@ -1,18 +1,20 @@
 <?php
     include 'partials/header.php';
-?>
 
-<div class="test" style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
-    <div style="background:#f0f0f0">
-        <?php component("blog.likefinomsport",$data->blog); ?>
-    </div>
+    component("hero.fullpage-01", $data->hero);
+    component("boxedWrap.translated", $data->cons);
+    customComponent("caseStudies.2colsModal", $data->caseStudies);
+    component("benefits.3col-bgImage", $data->benefits);
+    component("timeline.vertical", $data->timeline);
+    customComponent("form.boxed", $data->form);
+    customComponent("contact.simple", $data->contact);
 
+    /*
+        component(
+            name: "contact.simple",
+            data: $data->contact
+            id: contact
+        );
+    */
 
-    <div style="background:#c5c5c5">
-        <?php customComponent("blog.newlikefinomsport"); ?>
-    </div>
-
-    <div style="background:#c5c5c5">
-        <?php customComponent("blog.newlikefinomsportdata",$data->blog); ?>
-    </div>
-<div>
+    include 'partials/footer.php';

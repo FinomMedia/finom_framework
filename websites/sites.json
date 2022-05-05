@@ -7,6 +7,12 @@
             "servername": "test.local"
         },
         {
+            "title": "Finom Sport",
+            "folder": "finomsport",
+            "getweb": "finomsport",
+            "servername": "finomsport.cz"
+        },
+        {
             "title": "Finom Energy",
             "folder": "finomenergy",
             "getweb": "finomenergy",

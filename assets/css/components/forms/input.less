@@ -10,23 +10,26 @@ button:focus {
     display: flex;
     align-items: center;
     width: 100%;
-    background: var(--white);
+    background: var(--inputBackground);
     padding: 1rem;
+    outline: var(--inputOutline);
 
     &:hover,
     &:focus-within {
-      outline: .25rem solid var(--primary);
+      background: var(--inputBackgroundHover);
+      outline: var(--inputOutlineHover);
     }
 
     &::-webkit-input-placeholder {
-      color: var(--secondary);
+      color: var(--inputPlaceholderTextColor);
     }
   }
 
   &__label {
     padding-bottom: .5rem;
     font-size: 1rem;
-    color: var(--white);
+    text-transform: var(--inputLabelTextTransform);
+    color: var(--inputLabelTextColor);
   }
 
   &__icon {
@@ -45,36 +48,11 @@ button:focus {
     transition: .1s linear;
 
     &::-webkit-input-placeholder {
-      color: var(--secondary);
+      color: var(--inputPlaceholderTextColor);
     }
   }
 
   textarea {
     width: 100%;
-  }
-}
-
-.input {
-  &-01 {
-    .input {
-      &__label {
-        text-transform: uppercase;
-        color: var(--primary);
-      }
-
-      &__box {
-        background: var(--light);
-
-        &:hover,
-        &:focus-within {
-          background: var(--lightHover);
-          outline: none;
-        }
-
-        &::-webkit-input-placeholder {
-          color: var(--primary);
-        }
-      }
-    }
   }
 }

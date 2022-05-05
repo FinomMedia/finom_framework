@@ -1,4 +1,5 @@
-@import "main";
+@import "../../assets/css/main";
+@import "styles/custom";
 
 :root {
   //spacers
@@ -51,26 +52,28 @@
   --lineHeightExtraLarge: calc(var(--lineHeightBase) * 1.5);
 
   //colors
-  .colorPrepare(primary, #001b72);
-  .colorPrepare(secondary, #ffcd44);
-  .colorPrepare(typography, #292929);
+  .colorPrepare(primary, #001f3b);
+  .colorPrepare(secondary, #E79020);
+  .colorPrepare(typography, #000000);
   .colorPrepare(black, #000000);
   .colorPrepare(white, #ffffff);
-  .colorPrepare(light, #ca9761);
+  .colorPrepare(light, #f2f2f2);
 
   //hoverStates
-  .colorPrepare(primaryHover, #0a1a4d);
-  .colorPrepare(secondaryHover, #d5a523);
+  .colorPrepare(primaryHover, #003560);
+  .colorPrepare(secondaryHover, #b46c0d);
   .colorPrepare(typographyHover, #ffffff);
   .colorPrepare(blackHover, #ffffff);
   .colorPrepare(whiteHover, #000000);
-  .colorPrepare(lightHover, #ca9761);
+  .colorPrepare(lightHover, #dadada);
 
+  --transparentWhite: rgba(255, 255, 255, .65);
+  --transparentDark: rgba(0, 0, 0, .3);
   --shadow: .15rem .15rem .25rem 0 rgb(0 0 0 / 10%);
 
   //gradients
-  --primaryToTransparent: linear-gradient(180deg, rgba(#bb802b, 1) 0%, rgba(#bb802b, 0) 100%);
-  --secondaryToTransparent: linear-gradient(180deg, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
+  --secondaryGradient: linear-gradient(90deg, rgba(#e79020, 1) 0%, rgba(#9f5a00, 1) 100%);
+  --secondaryToTransparent: linear-gradient(90deg, rgba(#e79020, 1) 0%, rgba(#9f5a00, 0) 100%);
 
   //GLOBAL
   --pageBg: var(--white);
@@ -80,7 +83,7 @@
   --linkHoverDecoration: none;
 
   //HEADER
-  --headerBackgroundColor: transparent;
+  --headerBackgroundColor: var(--white);
   --headerScrollBackground: var(--white);
   --headerShadow: true;
   --headerLinkColor: var(--white);
@@ -92,15 +95,15 @@
   --headerLinkSpecialHoverColor: var(--primaryHover);
   --headerLinkSize: 1rem;
   --fontWeightRegular: var(--fontWeightRegular);
-  --headerLinkTransform: none;
+  --headerLinkTransform: uppercase;
   --headerLinkBorderSize: .25rem;
   --headerLinkBorderColor: transparent;
-  --headerLinkBorderColorHover: transparent;
+  --headerLinkBorderColorHover: var(--secondaryHover);
 
   // Header - mobile navigation
   --headerMobileNavBackgroundColor: var(--white);
-  --headerMobileNavIconColor: var(--secondary);
-  --headerMobileScrollNavIconColor: var(--primary);
+  --headerMobileNavIconColor: var(--white);
+  --headerMobileScrollNavIconColor: var(--white);
   --headerMobileLinkColor: var(--typography);
 
   //HERO
@@ -110,8 +113,8 @@
   --heroH1TextWeight: var(--fontWeightLight);
 
   //FOOTER
-  --footerBackground: var(--primary);
-  --footerCreditsTextColor: var(--white);
+  --footerBackground: var(--secondaryGradient);
+  --footerCreditsTextColor: var(--typography);
   --footerCreditsTextSize: 1rem;
   --footerCreditsTextWeight: var(--fontWeightLight);
   --footerCreditsTextTransform: none;

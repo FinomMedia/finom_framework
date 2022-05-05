@@ -1,0 +1,69 @@
+.form {
+  &-manual {
+    padding: 1rem 0;
+    .item {
+      h3 {
+        text-align: center;
+        font-weight: var(--fontWeightMedium);
+
+        span {
+          display: block;
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+
+  &-boxed {
+    b {
+      color: var(--primary);
+      font-size: 110%
+    }
+  }
+}
+
+.timeline {
+  h2,
+  h3 {
+    color: var(--primary);
+  }
+}
+
+.caseStudies {
+  .desktopImage {
+    display: block;
+
+    @media (max-width: @screenSm) {
+      display: none;
+    }
+  }
+  .mobileImage {
+    display: none;
+
+    @media (max-width: @screenSm) {
+      display: block;
+    }
+  }
+
+  .first {
+    color: var(--primary);
+
+    h2 {
+      span {
+        float: left;
+
+        img {
+          width: 2.5rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .second {
+    @media (min-width: @screenMd) {
+      text-align: right;
+      float: right;
+    }
+  }
+}

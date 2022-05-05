@@ -180,6 +180,18 @@
       }
     }
 
+    .navigationBtn {
+      &:checked {
+        ~ .navigation {
+          &Icon {
+            .navIcon {
+              background: transparent !important;
+            }
+          }
+        }
+      }
+    }
+
     .logo {
       display: none !important;
 
