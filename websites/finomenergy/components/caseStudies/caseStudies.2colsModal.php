@@ -1,5 +1,5 @@
 <div id="<?=$componentId?>" class="caseStudies">
-    <div class="wrap">
+    <div id="modalTrigger" class="wrap">
         <div class="tabbed">
             <input type="radio" id="tab1" name="css-tabs" checked>
             <input type="radio" id="tab2" name="css-tabs">
@@ -17,113 +17,232 @@
                 </li>
             </ul>
 
-            <?php foreach ($content as $item):?>
-                <div class="tab-content">
-                    <div class="row mt-3 mb-3">
-                        <div class="col-3 first">
-                            <h2>
-                                <span>
-                                    <img src="<?=$item->pumps->icon?>">
-                                </span>
-                                <?=$item->pumps->title?>
-                            </h2>
+            <!-- PERSONAL -->
+            <div class="tab-content">
+                <div class="row mt-3 mb-3">
+                    <div class="col-3 first">
+                        <h2>
+                            <span>
+                                <img src="<?=$personal->pumps->icon?>">
+                            </span>
 
-                            <h4>
-                                <?=$item->pumps->return?>
-                            </h4>
+                            <?=$personal->pumps->title?>
+                        </h2>
 
-                            <ul class="cons">
-                                <?php foreach ($item->pumps->cons as $item):?>
-                                    <li>
-                                <span>
-                                    <?=$item->number?>
-                                </span>
-                                        <?=$item->title?>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
+                        <h4>
+                            <?=$personal->pumps->return?>
+                        </h4>
 
-                            <div class="price">
-                                <div class="priceItem">
-                                    <?=$item->pumps->price->withoutDPH->label?>
-
-                                    <span class="secondary">
-                                        <?=$item->pumps->price->withoutDPH->price?>
+                        <ul class="cons">
+                            <?php foreach ($personal->pumps->cons as $item):?>
+                                <li>
+                                    <span>
+                                        <?=$item->number?>
                                     </span>
-                                </div>
 
-                                <div class="priceItem">
-                                    <?=$item->pumps->price->withDPH->label?>
+                                    <?=$item->title?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
 
-                                    <span class="primary">
-                                        <?=$item->pumps->price->withDPH->price?>
-                                    </span>
-                                </div>
+                        <div class="price">
+                            <div class="priceItem">
+                                <?=$personal->pumps->price->withoutDPH->label?>
+
+                                <span class="secondary">
+                                    <?=$personal->pumps->price->withoutDPH->price?>
+                                </span>
                             </div>
 
-                            <a href="#<?=$item->pumps->modalId?>" class="btn btnPrimary mt-2">
-                                <?=$detailButton?>
-                            </a>
+                            <div class="priceItem">
+                                <?=$personal->pumps->price->withDPH->label?>
 
-                            <?php component("modal.fullwidth-bottom", $data->caseStudies->personal->pumps); ?>
-                        </div>
-
-                        <div class="col-4">
-                            <img src="<?=$image->desktop?>" class="desktopImage">
-                            <img src="<?=$image->mobile?>" class="mobileImage">
-                        </div>
-
-                        <div class="col-3 second">
-                            <h2>
-                                <?=$item->solarPanels->title?>
-
-                                <span>
-                                    <img src="<?=$item->solarPanels->icon?>">
+                                <span class="primary">
+                                    <?=$personal->pumps->price->withDPH->price?>
                                 </span>
-                            </h2>
+                            </div>
+                        </div>
 
-                            <h4>
-                                <?=$item->solarPanels->return?>
-                            </h4>
+                        <a class="btn btnPrimary mt-2" href="#<?=$personal->pumps->modalId?>">
+                            <?=$detailButton?>
+                        </a>
+                    </div>
 
-                            <ul class="cons">
-                                <?php foreach ($item->solarPanels->cons as $item):?>
-                                    <li>
-                                        <span>
-                                            <?=$item->number?>
-                                        </span>
-                                        <?=$item->title?>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
+                    <div class="col-4">
+                        <img src="<?=$image->desktop?>" class="desktopImage">
+                        <img src="<?=$image->mobile?>" class="mobileImage">
+                    </div>
 
-                            <div class="price">
-                                <div class="priceItem">
-                                    <?=$item->solarPanels->price->withoutDPH->label?>
+                    <div class="col-3 second">
+                        <h2>
+                            <span>
+                                <img src="<?=$personal->solarPanels->icon?>">
+                            </span>
 
-                                    <span class="secondary">
-                                        <?=$item->solarPanels->price->withoutDPH->price?>
+                            <?=$personal->solarPanels->title?>
+                        </h2>
+
+                        <h4>
+                            <?=$personal->solarPanels->return?>
+                        </h4>
+
+                        <ul class="cons">
+                            <?php foreach ($personal->solarPanels->cons as $item):?>
+                                <li>
+                                    <span>
+                                        <?=$item->number?>
                                     </span>
-                                </div>
 
-                                <div class="priceItem">
-                                    <?=$item->solarPanels->price->withDPH->label?>
+                                    <?=$item->title?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
 
-                                    <span class="primary">
-                                        <?=$item->solarPanels->price->withDPH->price?>
-                                    </span>
-                                </div>
+                        <div class="price">
+                            <div class="priceItem">
+                                <?=$personal->solarPanels->price->withoutDPH->label?>
+
+                                <span class="secondary">
+                                    <?=$personal->solarPanels->price->withoutDPH->price?>
+                                </span>
                             </div>
 
-                            <a href="#<?=$item->solarPanels->modalId?>" class="btn btnSecondary mt-2">
-                                <?=$detailButton?>
-                            </a>
+                            <div class="priceItem">
+                                <?=$personal->solarPanels->price->withDPH->label?>
 
-                            <?php component("modal.fullwidth-bottom", $data->caseStudies->personal->solarPanels); ?>
+                                <span class="primary">
+                                    <?=$personal->solarPanels->price->withDPH->price?>
+                                </span>
+                            </div>
                         </div>
+
+                        <a href="#<?=$personal->solarPanels->modalId?>" class="btn btnSecondary mt-2">
+                            <?=$detailButton?>
+                        </a>
+                    </div>
+
+                    <div class="col-10">
+                        <p class="note">
+                            <?=$note?>
+                        </p>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            </div>
+
+            <!-- COMPANY -->
+            <div class="tab-content">
+                <div class="row mt-3 mb-3">
+                    <div class="col-3 first">
+                        <h2>
+                            <span>
+                                <img src="<?=$company->pumps->icon?>">
+                            </span>
+
+                            <?=$company->pumps->title?>
+                        </h2>
+
+                        <h4>
+                            <?=$company->pumps->return?>
+                        </h4>
+
+                        <ul class="cons">
+                            <?php foreach ($company->pumps->cons as $item):?>
+                                <li>
+                                    <span>
+                                        <?=$item->number?>
+                                    </span>
+                                    <?=$item->title?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+
+                        <div class="price">
+                            <div class="priceItem">
+                                <?=$company->pumps->price->withoutDPH->label?>
+
+                                <span class="secondary">
+                                        <?=$company->pumps->price->withoutDPH->price?>
+                                    </span>
+                            </div>
+
+                            <div class="priceItem">
+                                <?=$company->pumps->price->withDPH->label?>
+
+                                <span class="primary">
+                                    <?=$company->pumps->price->withDPH->price?>
+                                </span>
+                            </div>
+                        </div>
+
+                        <a href="#<?=$company->pumps->modalId?>" class="btn btnPrimary mt-2">
+                            <?=$detailButton?>
+                        </a>
+                    </div>
+
+                    <div class="col-4">
+                        <img src="<?=$image->desktop?>" class="desktopImage">
+                        <img src="<?=$image->mobile?>" class="mobileImage">
+                    </div>
+
+                    <div class="col-3 second">
+                        <h2>
+                            <span>
+                                <img src="<?=$company->solarPanels->icon?>">
+                            </span>
+
+                            <?=$company->solarPanels->title?>
+                        </h2>
+
+                        <h4>
+                            <?=$company->solarPanels->return?>
+                        </h4>
+
+                        <ul class="cons">
+                            <?php foreach ($company->solarPanels->cons as $item):?>
+                                <li>
+                                    <span>
+                                        <?=$item->number?>
+                                    </span>
+                                    <?=$item->title?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+
+                        <div class="price">
+                            <div class="priceItem">
+                                <?=$company->solarPanels->price->withoutDPH->label?>
+
+                                <span class="secondary">
+                                    <?=$company->solarPanels->price->withoutDPH->price?>
+                                </span>
+                            </div>
+
+                            <div class="priceItem">
+                                <?=$company->solarPanels->price->withDPH->label?>
+
+                                <span class="primary">
+                                    <?=$company->solarPanels->price->withDPH->price?>
+                                </span>
+                            </div>
+                        </div>
+
+                        <a href="#<?=$company->solarPanels->modalId?>" class="btn btnSecondary mt-2">
+                            <?=$detailButton?>
+                        </a>
+                    </div>
+
+                    <div class="col-10">
+                        <p class="note">
+                            <?=$note?>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <?php component("modal.fullwidth-bottom", $personal->pumps); ?>
+        <?php component("modal.fullwidth-bottom", $personal->solarPanels); ?>
+        <?php component("modal.fullwidth-bottom", $company->pumps); ?>
+        <?php component("modal.fullwidth-bottom", $company->solarPanels); ?>
     </div>
 </div>
