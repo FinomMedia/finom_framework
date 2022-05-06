@@ -81,15 +81,26 @@
   "caseStudies": {
     "componentId": "caseStudies",
     "personalTitle": "Osobní",
-    "corporateTitle": "Pro firmy",
+    "companyTitle": "Pro firmy",
+    "detailButton": "Detailní specifikace",
     "image": {
       "desktop": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498753/Finom%20Energy%20-%20web/image_building_01_2x_rrhgjo.png",
       "mobile": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498750/Finom%20Energy%20-%20web/image_biulding_mobile_01_2x_hsqh0y.png"
     },
+    "content": [
+      {
+        "title": "personal"
+      },
+      {
+        "title": "company"
+      }
+    ],
     "personal": {
       "pumps": {
         "title": "Tepelná čerpadla",
         "return": "Návratnost 3 roky",
+        "modalId": "personalPumps",
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498687/Finom%20Energy%20-%20web/icons/icon_cerpadlo_mah6cp.svg",
         "backgroundImage": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498749/Finom%20Energy%20-%20web/cerpadla_image_01_2x_z2gebp.jpg",
         "graph": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651562540/Finom%20Energy%20-%20web/graphs/graph_cerpadlo_2x_uov2mm.png",
         "cons": [
@@ -114,6 +125,197 @@
           "withDPH": {
             "label": "Cena včetně DPH",
             "price": "232 243 Kč"
+          }
+        },
+        "description": {
+          "title": "Popis",
+          "items": [
+            {
+              "title": "Výkon tepelného čerpadla",
+              "description": "6,1 kW"
+            },
+            {
+              "title": "Topné výkony",
+              "description": "6,02 kW při A7 / W35"
+            },
+            {
+              "title": "Prodloužená záruka",
+              "description": "4,43 kW při A2 / W35"
+            }
+          ]
+        },
+        "specification": {
+          "title": "Detailní specifikace",
+          "items": [
+            {
+              "title": "5 - 10 let prodloužená záruka"
+            },
+            {
+              "title": "Možnost chlazení"
+            },
+            {
+              "title": "Vicare - Možnost regulace přes aplikaci"
+            }
+          ]
+        }
+      },
+      "solarPanels": {
+        "title": "Fotovoltaické elektrárny",
+        "return": "Návratnost 6,5 let",
+        "modalId": "personalSolarPanels",
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498687/Finom%20Energy%20-%20web/icons/icon_solar_diae0c.svg",
+        "backgroundImage": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498749/Finom%20Energy%20-%20web/cerpadla_image_01_2x_z2gebp.jpg",
+        "graph": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651562540/Finom%20Energy%20-%20web/graphs/graph_cerpadlo_2x_uov2mm.png",
+        "cons": [
+          {
+            "number": "6,3 kWp",
+            "title": "Instalovaný výkon FVE"
+          },
+          {
+            "number": "14",
+            "title": "Počet panelů"
+          },
+          {
+            "number": "11,6 kWh",
+            "title": "Kapacita baterií"
+          }
+        ],
+        "price": {
+          "withoutDPH": {
+            "label": "Cena včetně DPH",
+            "price": "495 000 Kč"
+          },
+          "withDPH": {
+            "label": "Cena po odečtení dotace",
+            "price": "290 000 Kč"
+          }
+        },
+        "description": {
+          "title": "Popis",
+          "items": [
+            {
+              "title": "Výkon tepelného čerpadla",
+              "description": "6,1 kW"
+            },
+            {
+              "title": "Topné výkony",
+              "description": "6,02 kW při A7 / W35"
+            },
+            {
+              "title": "Prodloužená záruka",
+              "description": "4,43 kW při A2 / W35"
+            }
+          ]
+        },
+        "specification": {
+          "title": "Detailní specifikace",
+          "items": [
+            {
+              "title": "5 - 10 let prodloužená záruka"
+            },
+            {
+              "title": "Možnost chlazení"
+            },
+            {
+              "title": "Vicare - Možnost regulace přes aplikaci"
+            }
+          ]
+        }
+      }
+    },
+    "company": {
+      "pumps": {
+        "title": "Tepelná čerpadla",
+        "return": "Návratnost 3 roky",
+        "modalId": "personalPumps",
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498687/Finom%20Energy%20-%20web/icons/icon_cerpadlo_mah6cp.svg",
+        "backgroundImage": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498749/Finom%20Energy%20-%20web/cerpadla_image_01_2x_z2gebp.jpg",
+        "graph": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651562540/Finom%20Energy%20-%20web/graphs/graph_cerpadlo_2x_uov2mm.png",
+        "cons": [
+          {
+            "number": "6,1 kW",
+            "title": "Instalovaný výkon TČ"
+          },
+          {
+            "number": "6,02 kW",
+            "title": "Topný výkon"
+          },
+          {
+            "number": "50 dB",
+            "title": "Akustický tlak"
+          }
+        ],
+        "price": {
+          "withoutDPH": {
+            "label": "Cena bez DPH",
+            "price": "820 000 Kč"
+          },
+          "withDPH": {
+            "label": "Cena po odečtení dotace bez DPH",
+            "price": "574 000 Kč"
+          }
+        },
+        "description": {
+          "title": "Popis",
+          "items": [
+            {
+              "title": "Výkon tepelného čerpadla",
+              "description": "6,1 kW"
+            },
+            {
+              "title": "Topné výkony",
+              "description": "6,02 kW při A7 / W35"
+            },
+            {
+              "title": "Prodloužená záruka",
+              "description": "4,43 kW při A2 / W35"
+            }
+          ]
+        },
+        "specification": {
+          "title": "Detailní specifikace",
+          "items": [
+            {
+              "title": "5 - 10 let prodloužená záruka"
+            },
+            {
+              "title": "Možnost chlazení"
+            },
+            {
+              "title": "Vicare - Možnost regulace přes aplikaci"
+            }
+          ]
+        }
+      },
+      "solarPanels": {
+        "title": "Fotovoltaické elektrárny",
+        "return": "Návratnost 6,5 let",
+        "modalId": "personalSolarPanels",
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498687/Finom%20Energy%20-%20web/icons/icon_solar_diae0c.svg",
+        "backgroundImage": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498749/Finom%20Energy%20-%20web/cerpadla_image_01_2x_z2gebp.jpg",
+        "graph": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651562540/Finom%20Energy%20-%20web/graphs/graph_cerpadlo_2x_uov2mm.png",
+        "cons": [
+          {
+            "number": "6,3 kWp",
+            "title": "Instalovaný výkon FVE"
+          },
+          {
+            "number": "14",
+            "title": "Počet panelů"
+          },
+          {
+            "number": "11,6 kWh",
+            "title": "Kapacita baterií"
+          }
+        ],
+        "price": {
+          "withoutDPH": {
+            "label": "Cena bez DPH",
+            "price": "2 790 000 Kč"
+          },
+          "withDPH": {
+            "label": "Cena po odečtení dotace bez DPH",
+            "price": "1 814 000 Kč"
           }
         },
         "description": {

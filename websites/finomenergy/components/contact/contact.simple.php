@@ -1,5 +1,5 @@
 <div id="<?=$componentId?>" class="contact-simple contact-simple-01">
-    <div class="wrap">
+    <div class="wrap ais">
         <h2>
             <?=$title?>
         </h2>
