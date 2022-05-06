@@ -48,4 +48,42 @@
     height: @height;
     content: var(--scrollImage);
   }
+
+  //variants
+  &-01 {
+   //
+  }
+
+  &-02 {
+    .wrap {
+      .flex(column, center, flex-start);
+
+      position: relative;
+      height: 100%;
+
+      @media (min-width: @screenMd) {
+        .flex(column, center, flex-end);
+
+        text-align: right;
+      }
+
+      :only-child {
+        @media (min-width: @screenMd) {
+          max-width: 60%;
+        }
+      }
+    }
+
+    h1 {
+      .fontSize(2.5, 4.5);
+
+      span {
+        display: block;
+
+        @media (min-width: @screenMd) {
+          float: right;
+        }
+      }
+    }
+  }
 }

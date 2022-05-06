@@ -13,10 +13,6 @@
                     echo "Ondřej Mařák";
                 }
 
-                if ($_GET['web'] == 'antonovic') {
-                    echo "Radim Antonovič";
-                }
-
                 if ($_GET['web'] == 'finomsportCP') {
                     echo "Finom Sport";
                 }
@@ -26,10 +22,6 @@
         <?php
             if ($_GET['web'] == 'marak') {
                 echo "<link rel='stylesheet/less' href='assets/css/config.marak.less'>";
-            }
-
-            if ($_GET['web'] == 'antonovic') {
-                echo "<link rel='stylesheet/less' href='assets/css/config.antonovic.less'>";
             }
 
             if ($_GET['web'] == 'finomsportCP') {
@@ -49,10 +41,6 @@
         <?php
             if ($_GET['web'] == 'marak') {
                 include 'components/header/header.marak.php';
-            }
-
-            if ($_GET['web'] == 'antonovic') {
-                include 'components/header/header.antonovic.php';
             }
 
             if ($_GET['web'] == 'finomsportCP') {

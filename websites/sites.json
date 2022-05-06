@@ -1,9 +1,9 @@
 {
     "sites": [
         {
-            "title": "Framework",
-            "folder": "framework",
-            "getweb": "framework",
+            "title": "Antonovič",
+            "folder": "antonovic",
+            "getweb": "antonovic",
             "servername": "test.local"
         },
         {
