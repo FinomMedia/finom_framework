@@ -20,7 +20,7 @@
             </div>
 
             <div>
-                <a href="/contact.php" class="btn btnOutlinedSecondary">
+                <a href="/websites/finomsport/contact.php" class="btn btnOutlinedSecondary">
                     <?php echo $data->contact->cta->btn; ?>
                 </a>
             </div>
