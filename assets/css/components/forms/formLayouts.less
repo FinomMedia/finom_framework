@@ -16,5 +16,10 @@
   &-boxed {
     padding: clamp(1rem, calc(1rem + (2 - 1) * var(--calcWidth)), 2rem);
     background: var(--formBackground);
+
+    .grid {
+      &-3 { .grid(24, 1, 1); }
+      &-4 { .grid(16, 1, 1); }
+    }
   }
 }

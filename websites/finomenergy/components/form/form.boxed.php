@@ -1,4 +1,95 @@
+<?php
+
+if (isset($_POST['contactform'])){
+
+
+    /*$datafields = $data->contact->form->fields;
+
+    foreach($datafields as &$datafield){
+        $datafield = get_object_vars($datafield);
+    }
+
+    $fields = array();
+
+    foreach($datafields as $datafield){
+
+        if(isset($_POST[$datafield["name"]])){
+            $field["label"] = $datafield["label"];
+            $field["value"] = $_POST[$datafield["name"]];
+        }
+        $fields[]=$field;
+    }
+
+    $sendtos = explode(",",$data->contact->form->sendto);
+    $subject = $data->contact->form->subject;
+    $sendfrom = $data->contact->form->sendfrom;
+    $sendto = $data->contact->form->sendto;
+
+    $text = "";
+
+    foreach($fields as $field){
+        $text.=$field["label"].": ".$field["value"]."\n";
+    }
+
+    if(isset($_GET["debug"])){
+        echo "<br><br>Pole do emailu: <br><br>";
+        var_dump($fields);
+        echo "<br><br>Od: $sendfrom<br><br>";
+        echo "<br><br>Pro: $sendto<br><br>";
+        echo "<br><br>Předmět: $subject<br><br>";
+        echo "<br><br>Text: $text<br><br>";
+    }
+
+    foreach($sendtos as $sendto){
+        mail($sendto,$subject,$text);
+    }*/
+
+    //var_dump($_POST);
+
+    $fields = array();
+    foreach($_POST as $key => $value){
+        $field["name"]= $key;
+        $field["value"]= $value=="on" ? "Ano" : $value;
+        $fields[]=$field;
+
+    }
+    //echo "<br><br>";
+    //var_dump($fields);
+
+    $sendtos = explode(",",$sendto);
+    $subject = $subject;
+    $sendfrom = $sendfrom;
+    $sendto = $sendto;
+
+    $text = "";
+
+    foreach($fields as $field){
+        if($field["name"]!="contactform"){
+            $text.=$field["name"].": ".$field["value"]."\n";
+        }
+    }
+
+    //echo "<br><br>";
+    //var_dump($text);
+
+    foreach($sendtos as $sendto){
+        mail($sendto,$subject,$text);
+    }
+}
+
+
+
+?>
+
+
 <div id="<?=$componentId?>" class="form">
+
+
+<?php if (isset($_POST['contactform'])):?>
+                    <div style="padding: 2rem; background: lime;">Děkujeme za odeslaný formulář</div>
+                <?php endif;?>
+
+
     <div class="wrap">
         <div class="grid-1">
             <h2>
@@ -23,16 +114,16 @@
                 <?php endforeach; ?>
             </div>
 
-            <form class="form-boxed">
-                <div class="row">
-                    <div class="col-10">
-                        <b>
-                            <?=$contactInfo->title?>
-                        </b>
-                    </div>
+            <form class="form-boxed" method="post">
+                <div class="grid">
+                    <b>
+                        <?=$contactInfo->title?>
+                    </b>
+                </div>
 
+                <div class="grid-3">
                     <?php foreach ($contactInfo->items as $item):?>
-                        <div class="input col-5">
+                        <div class="input smaller">
                             <div class="input__label">
                                 <?=$item->label?>
                             </div>
@@ -44,75 +135,61 @@
                     <?php endforeach; ?>
                 </div>
 
-                <div class="row mt-3">
-                    <div class="col-10">
-                        <b>
-                            <?=$timeInterval->title?>
-                        </b>
-                    </div>
+                <div class="grid mt-2">
+                    <b>
+                        <?=$timeInterval->title?>
+                    </b>
+                </div>
 
+                <div class="grid-4">
                     <?php foreach ($timeInterval->items as $item):?>
-                        <div class="col-2">
-                            <label class="checkbox">
-                                <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    <?=($item->checked == true) ? "checked" : ""?>
-                                />
+                        <label class="radio">
+                            <?=$item->label?>
 
-                                <span class="checkbox__checkbox">
-                              <svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6.5L9 17.5L4 12.5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </span>
-
-                                <p class="checkbox__text">
-                                    <?=$item->label?>
-                                </p>
-                            </label>
-                        </div>
+                            <input
+                                type="radio"
+                                id="<?=$item->name?>"
+                                name="time-interval"
+                                value="<?=$item->name?>"
+                                <?=($item->checked == true) ? "checked" : ""?>
+                            />
+                            <span class="icon"></span>
+                        </label>
                     <?php endforeach; ?>
                 </div>
 
-                <div class="row mt-3">
-                    <div class="col-10">
-                        <b>
-                            <?=$services->title?>
-                        </b>
-                    </div>
+                <div class="grid mt-2">
+                    <b>
+                        <?=$services->title?>
+                    </b>
+                </div>
 
+                <div class="grid-4">
                     <?php foreach ($services->items as $item):?>
-                        <div class="col-2">
-                            <label class="checkbox">
-                                <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    <?=($item->checked == true) ? "checked" : ""?>
-                                />
+                        <label class="radio">
+                            <?=$item->label?>
 
-                                <span class="checkbox__checkbox">
-                              <svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6.5L9 17.5L4 12.5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </span>
-
-                                <p class="checkbox__text">
-                                    <?=$item->label?>
-                                </p>
-                            </label>
-                        </div>
+                            <input
+                                type="radio"
+                                id="<?=$item->name?>"
+                                name="services"
+                                value="<?=$item->name?>"
+                                <?=($item->checked == true) ? "checked" : ""?>
+                            />
+                            <span class="icon"></span>
+                        </label>
                     <?php endforeach; ?>
                 </div>
 
-                <div class="row mt-3">
-                    <div class="col-10">
-                        <b>
-                            <?=$moreInfo->title?>
-                        </b>
-                    </div>
+                <div class="grid mt-2">
+                    <b>
+                        <?=$moreInfo->title?>
+                    </b>
+                </div>
 
+                <div class="grid">
                     <?php foreach ($moreInfo->items as $item):?>
-                        <div class="input col-10">
+                        <div class="input smaller">
                             <div class="input__box">
                                 <textarea name="<?=$item->name?>" rows="<?=$item->rows?>" required></textarea>
                             </div>
@@ -120,15 +197,15 @@
                     <?php endforeach; ?>
                 </div>
 
-                <div class="row mt-2">
-                    <div class="col-10">
-                        <b>
-                            <?=$saleCode->title?>
-                        </b>
-                    </div>
+                <div class="grid mt-2">
+                    <b>
+                        <?=$saleCode->title?>
+                    </b>
+                </div>
 
+                <div class="grid">
                     <?php foreach ($saleCode->items as $item):?>
-                        <div class="input col-10">
+                        <div class="input smaller">
                             <div class="input__box">
                                 <input type="<?=$item->type?>" name="<?=$item->name?>" required />
                             </div>
@@ -136,10 +213,9 @@
                     <?php endforeach; ?>
                 </div>
 
-                <div class="action">
-                    <a class="btn btnOutlinedSecondary disabled" type="submit" value="Submit">
-                        <?=$sendButton?>
-                    </a>
+                <div class="action mt-2">
+                    <input type="hidden" id="contactform" name="contactform" value="contactform">
+                    <input class="btn btnOutlinedPrimary " type="submit" value="<?=$sendButton?>" />
                 </div>
             </form>
         </div>

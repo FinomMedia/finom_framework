@@ -1,4 +1,4 @@
-.checkbox {
+.radio {
   display: block;
   position: relative;
   padding-left: 2rem;
@@ -9,8 +9,8 @@
   transition: all .2s ease-in-out;
 
   &:hover input ~ .icon {
-    background-color: var(--checkboxBackgroundChecked);
-    border-color: var(--checkboxBackgroundChecked);
+    background-color: var(--radioBackgroundChecked);
+    border-color: var(--radioBackgroundChecked);
   }
 
   input {
@@ -26,8 +26,8 @@
       }
 
       ~ .icon {
-        background-color: var(--checkboxBackgroundChecked);
-        border-color: var(--checkboxBackgroundChecked);
+        background-color: var(--radioBackgroundChecked);
+        border-color: var(--radioBackgroundChecked);
       }
     }
   }
@@ -38,9 +38,9 @@
     left: 0;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: var(--checkboxBackground);
-    border: var(--checkboxBorder);
-    border-radius: var(--checkboxBorderRadius);
+    background-color: var(--radioBackground);
+    border: var(--radioBorder);
+    border-radius: var(--radioBorderRadius);
     transition: all .2s ease-in-out;
 
     &:after {

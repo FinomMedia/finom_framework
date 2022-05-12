@@ -576,6 +576,9 @@
     "title": "Vytvořte si nezávaznou kalkulaci",
     "subtitle": "Stačí vám na to jen 5 minut",
     "sendButton": "Odeslat poptávku",
+    "sendfrom": "info@finomenergy.cz",
+    "sendto": "ondrejhastik@gmail.com,hastik@strategon.cz",
+    "subject": "Odeslaná poptávka z webu Finom Energy",
     "manual": [
       {
         "id": 1,
@@ -606,7 +609,7 @@
         {
           "label": "Telefonní číslo *",
           "type": "text",
-          "name": "subject"
+          "name": "phone"
         },
         {
           "label": "Ulice, č.p.",
@@ -630,19 +633,23 @@
       "items": [
         {
           "label": "Co nejdříve",
-          "checked": true
+          "checked": true,
+          "name": "conejdrive"
         },
         {
           "label": "Do 6 měsíců",
-          "checked": false
+          "checked": false,
+          "name": "dosestimesicu"
         },
         {
           "label": "Do 12 měsíců",
-          "checked": false
+          "checked": false,
+          "name": "do12mesicu"
         },
         {
           "label": "Nevím, zatím sháním informace",
-          "checked": false
+          "checked": false,
+          "name": "nevim"
         }
       ]
     },
@@ -651,19 +658,23 @@
       "items": [
         {
           "label": "Fotovoltaika",
-          "checked": true
+          "checked": true,
+          "name": "fotovoltaika"
         },
         {
           "label": "Tepelné čerpadlo",
-          "checked": false
+          "checked": false,
+          "name": "tepelne-cerpadlo"
         },
         {
           "label": "Kombinace",
-          "checked": false
+          "checked": false,
+          "name": "kombinace"
         },
         {
           "label": "Nevím, zatím sháním informace",
-          "checked": false
+          "checked": false,
+          "name": "nevim"
         }
       ]
     },

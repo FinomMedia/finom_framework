@@ -2,7 +2,7 @@
     include 'partials/header.php';
 
     component("hero.fullpage-01", $data->hero);
-    component("boxedWrap.translated", $data->cons);
+    component("boxedWrap.fullwidth", $data->cons);
     customComponent("caseStudies.2colsModal", $data->caseStudies);
     component("benefits.3col-bgImage", $data->benefits);
     component("timeline.vertical", $data->timeline);
