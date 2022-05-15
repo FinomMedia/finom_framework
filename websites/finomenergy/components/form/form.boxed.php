@@ -72,8 +72,12 @@ if (isset($_POST['contactform'])){
     //echo "<br><br>";
     //var_dump($text);
 
+    $headers = 'From: web-poptavka@finomenergy.cz' . "\r\n" .
+        'Reply-To: noreply@example.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
     foreach($sendtos as $sendto){
-        mail($sendto,$subject,$text);
+        mail($sendto,$subject,$text,$headers);
     }
 }
 
@@ -83,13 +87,6 @@ if (isset($_POST['contactform'])){
 
 
 <div id="<?=$componentId?>" class="form">
-
-
-<?php if (isset($_POST['contactform'])):?>
-                    <div style="padding: 2rem; background: lime;">Děkujeme za odeslaný formulář</div>
-                <?php endif;?>
-
-
     <div class="wrap">
         <div class="grid-1">
             <h2>
@@ -135,82 +132,90 @@ if (isset($_POST['contactform'])){
                     <?php endforeach; ?>
                 </div>
 
-                <div class="grid mt-2">
-                    <b>
-                        <?=$timeInterval->title?>
-                    </b>
-                </div>
-
-                <div class="grid-4">
-                    <?php foreach ($timeInterval->items as $item):?>
-                        <label class="radio">
-                            <?=$item->label?>
-
-                            <input
-                                type="radio"
-                                id="<?=$item->name?>"
-                                name="time-interval"
-                                value="<?=$item->name?>"
-                                <?=($item->checked == true) ? "checked" : ""?>
-                            />
-                            <span class="icon"></span>
-                        </label>
-                    <?php endforeach; ?>
-                </div>
-
-                <div class="grid mt-2">
-                    <b>
-                        <?=$services->title?>
-                    </b>
-                </div>
-
-                <div class="grid-4">
-                    <?php foreach ($services->items as $item):?>
-                        <label class="radio">
-                            <?=$item->label?>
-
-                            <input
-                                type="radio"
-                                id="<?=$item->name?>"
-                                name="services"
-                                value="<?=$item->name?>"
-                                <?=($item->checked == true) ? "checked" : ""?>
-                            />
-                            <span class="icon"></span>
-                        </label>
-                    <?php endforeach; ?>
-                </div>
-
-                <div class="grid mt-2">
-                    <b>
-                        <?=$moreInfo->title?>
-                    </b>
-                </div>
-
-                <div class="grid">
-                    <?php foreach ($moreInfo->items as $item):?>
-                        <div class="input smaller">
-                            <div class="input__box">
-                                <textarea name="<?=$item->name?>" rows="<?=$item->rows?>" required></textarea>
-                            </div>
+                <div class="grid-3 gapColSmall ais mt-2">
+                    <div>
+                        <div class="grid mb-2">
+                            <b>
+                                <?=$timeInterval->title?>
+                            </b>
                         </div>
-                    <?php endforeach; ?>
-                </div>
 
-                <div class="grid mt-2">
-                    <b>
-                        <?=$saleCode->title?>
-                    </b>
-                </div>
+                        <div class="grid gridLg-4 ais">
+                            <?php foreach ($timeInterval->items as $item):?>
+                                <label class="radio">
+                                    <?=$item->label?>
 
-                <div class="grid">
-                    <?php foreach ($saleCode->items as $item):?>
-                        <div class="input smaller">
-                            <div class="input__box">
-                                <input type="<?=$item->type?>" name="<?=$item->name?>" required />
-                            </div>
+                                    <input
+                                            type="radio"
+                                            id="<?=$item->name?>"
+                                            name="time-interval"
+                                            value="<?=$item->name?>"
+                                        <?=($item->checked == true) ? "checked" : ""?>
+                                    />
+                                    <span class="icon"></span>
+                                </label>
+                            <?php endforeach; ?>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
+
+                    <div>
+                        <div class="grid mb-2">
+                            <b>
+                                <?=$services->title?>
+                            </b>
+                        </div>
+
+                        <div class="grid gridLg-4 ais">
+                            <?php foreach ($services->items as $item):?>
+                                <label class="radio">
+                                    <?=$item->label?>
+
+                                    <input
+                                            type="radio"
+                                            id="<?=$item->name?>"
+                                            name="services"
+                                            value="<?=$item->name?>"
+                                        <?=($item->checked == true) ? "checked" : ""?>
+                                    />
+                                    <span class="icon"></span>
+                                </label>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="grid">
+                            <b>
+                                <?=$moreInfo->title?>
+                            </b>
+                        </div>
+
+                        <div class="grid">
+                            <?php foreach ($moreInfo->items as $item):?>
+                                <div class="input smaller">
+                                    <div class="input__box">
+                                        <textarea name="<?=$item->name?>" rows="<?=$item->rows?>" required></textarea>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <div class="grid mt-2">
+                            <b>
+                                <?=$saleCode->title?>
+                            </b>
+                        </div>
+
+                        <div class="grid">
+                            <?php foreach ($saleCode->items as $item):?>
+                                <div class="input smaller">
+                                    <div class="input__box">
+                                        <input type="<?=$item->type?>" name="<?=$item->name?>" required />
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="action mt-2">
@@ -218,6 +223,10 @@ if (isset($_POST['contactform'])){
                     <input class="btn btnOutlinedPrimary " type="submit" value="<?=$sendButton?>" />
                 </div>
             </form>
+
+            <?php if (isset($_POST['contactform'])):?>
+                <?php component("contact.complete", $data->form->complete); ?>
+            <?php endif;?>
         </div>
     </div>
 </div>

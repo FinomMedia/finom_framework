@@ -59,7 +59,7 @@
         </div>
 
         <div class="wrapS">
-            <?php include 'components/contact/contactComplete.php'; ?>
+            <?php include 'components/contact/contact.complete.php'; ?>
 
             <form>
                 <div class="columns">

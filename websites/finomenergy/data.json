@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Finom Energy - Energetická nezávislost pro váš život"
+    "title": "Finom Energy - Energetická nezávislost pro váš život",
+    "fontFace": "https://res.cloudinary.com/patrik-vadura/raw/upload/v1641887298/fontFaces/BrandonGrotesque/fontBrandonGrotesque_gf3jjy.css"
   },
   "header": {
     "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498649/Finom%20Energy%20-%20web/logo/logo-horizontal_src2vd.svg",
@@ -80,14 +81,10 @@
   },
   "caseStudies": {
     "componentId": "caseStudies",
-    "personalTitle": "Osobní",
+    "personalTitle": "Pro rodinné domy",
     "companyTitle": "Pro firmy",
     "detailButton": "Detailní specifikace",
     "note": "Tahle případová studie je pouze orientační, a výsledné hodnoty a částky se mohou lišit.",
-    "image": {
-      "desktop": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498753/Finom%20Energy%20-%20web/image_building_01_2x_rrhgjo.png",
-      "mobile": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498750/Finom%20Energy%20-%20web/image_biulding_mobile_01_2x_hsqh0y.png"
-    },
     "content": [
       {
         "title": "personal"
@@ -97,8 +94,12 @@
       }
     ],
     "personal": {
+      "image": {
+        "desktop": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498753/Finom%20Energy%20-%20web/image_building_01_2x_rrhgjo.png",
+        "mobile": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498750/Finom%20Energy%20-%20web/image_biulding_mobile_01_2x_hsqh0y.png"
+      },
       "pumps": {
-        "title": "Tepelná čerpadla",
+        "title": "Tepelná<br>čerpadla",
         "return": "Návratnost 3 roky",
         "modalId": "personalPumps",
         "modalColorTheme": "primary",
@@ -213,7 +214,7 @@
         }
       },
       "solarPanels": {
-        "title": "Fotovoltaické elektrárny",
+        "title": "Fotovoltaické<br>elektrárny",
         "return": "Návratnost 6,5 let",
         "modalId": "personalSolarPanels",
         "modalColorTheme": "secondary",
@@ -317,8 +318,12 @@
       }
     },
     "company": {
+      "image": {
+        "desktop": "https://res.cloudinary.com/patrik-vadura/image/upload/v1652444480/Finom%20Energy%20-%20web/image_building_02_o3cnfn.png",
+        "mobile": "https://res.cloudinary.com/patrik-vadura/image/upload/v1652444479/Finom%20Energy%20-%20web/image_biulding_mobile_02_tmn2r6.png"
+      },
       "pumps": {
-        "title": "Tepelná čerpadla",
+        "title": "Tepelná<br>čerpadla",
         "return": "Návratnost 3 roky",
         "modalId": "companyPumps",
         "modalColorTheme": "primary",
@@ -429,7 +434,7 @@
         }
       },
       "solarPanels": {
-        "title": "Fotovoltaické elektrárny",
+        "title": "Fotovoltaické<br>elektrárny",
         "return": "Návratnost 3 roky",
         "modalId": "companySolarPanels",
         "modalColorTheme": "secondary",
@@ -577,8 +582,12 @@
     "subtitle": "Stačí vám na to jen 5 minut",
     "sendButton": "Odeslat poptávku",
     "sendfrom": "info@finomenergy.cz",
-    "sendto": "ondrejhastik@gmail.com,hastik@strategon.cz",
+    "sendto": "hastik@finomgroup.cz,info@finomenergy.cz",
     "subject": "Odeslaná poptávka z webu Finom Energy",
+    "complete": {
+      "title": "Děkujeme za vaši zprávu.",
+      "description": "Vaší zprávě se budemu věnovat co nejdříve. Pokud vaše zpráva nepočká, doporučuji zvolit některý z aletrnativních kontaků."
+    },
     "manual": [
       {
         "id": 1,

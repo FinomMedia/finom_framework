@@ -69,8 +69,8 @@
                     </div>
 
                     <div class="col-4">
-                        <img src="<?=$image->desktop?>" class="desktopImage">
-                        <img src="<?=$image->mobile?>" class="mobileImage">
+                        <img src="<?=$personal->image->desktop?>" class="desktopImage">
+                        <img src="<?=$personal->image->mobile?>" class="mobileImage">
                     </div>
 
                     <div class="col-3 second">
@@ -180,8 +180,8 @@
                     </div>
 
                     <div class="col-4">
-                        <img src="<?=$image->desktop?>" class="desktopImage">
-                        <img src="<?=$image->mobile?>" class="mobileImage">
+                        <img src="<?=$company->image->desktop?>" class="desktopImage">
+                        <img src="<?=$company->image->mobile?>" class="mobileImage">
                     </div>
 
                     <div class="col-3 second">

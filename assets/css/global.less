@@ -43,3 +43,18 @@ iframe {
   vertical-align: middle;
   border: 0;
 }
+
+// functions
+.for(@list, @code) {
+  & {
+    .loop(@i:1) when (@i =< length(@list)) {
+      @value: extract(@list, @i);
+
+      @code();
+
+      .loop(@i + 1);
+    }
+
+    .loop();
+  }
+}

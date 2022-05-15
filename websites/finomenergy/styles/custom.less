@@ -72,11 +72,23 @@ p {
   .price {
     .flex(row, flex-start, center);
 
+    @media (min-width: @screenLg) {
+      .flex(column, flex-start, flex-start);
+    }
+
     &Item {
       color: var(--typography);
 
+      @media (min-width: @screenLg) {
+        margin-bottom: .5rem;
+      }
+
       &:first-child {
         padding-right: 2rem;
+
+        @media (min-width: @screenLg) {
+          padding-right: 0;
+        }
       }
 
       span {
@@ -147,8 +159,10 @@ p {
     }
 
     .price {
-      @media (min-width: @screenMd) {
-        .flex(row, flex-end, center);
+      .flex(row, flex-start, center);
+
+      @media (min-width: @screenLg) {
+        .flex(column, flex-start, flex-end);
       }
     }
   }
@@ -272,6 +286,7 @@ p {
         td {
           padding: 0 .5rem;
           width: 50%;
+          font-size: .825rem;
         }
       }
     }
@@ -302,5 +317,41 @@ p {
       margin-bottom: 1rem;
       color: var(--primary);
     }
+
+    img {
+      width: 1.5rem;
+    }
+
+    p {
+      margin: .5rem 0;
+    }
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+
+  &-boxed {
+    padding: clamp(1rem, calc(1rem + (2 - 1) * var(--calcWidth)), 2rem);
+    background: var(--formBackground);
+
+    .grid {
+      &-3 {
+        .grid(24, 1, 1);
+      }
+      &Lg {
+        &-4 {
+          @media (max-width: @screenLg) {
+            .grid(10, 1, 1) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
