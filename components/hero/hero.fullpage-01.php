@@ -9,7 +9,7 @@
                 <?=$title?>
             </h1>
 
-            <a href="" class="btn btnWhite">
+            <a href="<?=$buttonLink?>" class="btn btnWhite">
                 <?=$button?>
             </a>
         </div>

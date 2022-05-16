@@ -46,6 +46,7 @@
     "classes": "",
     "title": "Energetická nezávislost pro váš život",
     "button": "Mám zájem o nabídku",
+    "buttonLink": "#contact",
     "background": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651498759/Finom%20Energy%20-%20web/header_background_01_2x_aps1iy.jpg"
   },
   "cons": {
@@ -582,7 +583,7 @@
     "subtitle": "Stačí vám na to jen 5 minut",
     "sendButton": "Odeslat poptávku",
     "sendfrom": "info@finomenergy.cz",
-    "sendto": "hastik@finomgroup.cz,info@finomenergy.cz",
+    "sendto": "obchod@finomgroup.cz,hastik@finomgroup.cz",
     "subject": "Odeslaná poptávka z webu Finom Energy",
     "complete": {
       "title": "Děkujeme za vaši zprávu.",

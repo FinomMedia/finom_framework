@@ -1,50 +1,40 @@
 .servicesBox {
   padding: 2rem;
   text-align: center;
+  background-color: var(--serviceBoxBackground);
+  border: var(--serviceBoxBorder);
   transition: all 300ms ease-in-out;
 
   * {
     transition: all 300ms ease-in-out;
   }
 
+  //icon
   img {
     height: 3.5rem;
   }
 
+  //title
+  h3 {
+    color: var(--serviceBoxTitleColor);
+    font-weight: var(--serviceBoxTitleWeight);
+    text-transform: var(--serviceBoxTitleTransform);
+  }
+
+  //content
   p {
-    font-size: 125%;
-  }
-}
-
-.servicesBox {
-  &-01 {
-    color: var(--white);
-
-    &:hover {
-      .hoverStateBackgroundColor(rgba(#bb802b, .5));
-
-      h3 {
-        .hoverStateScale(1.2);
-        .hoverStateColor(var(--primary));
-      }
-    }
+    color: var(--serviceBoxContentColor);
+    font-size: var(--serviceBoxContentSize);
+    font-weight: var(--serviceBoxContentWeight);
+    text-transform: var(--serviceBoxContentTransform);
   }
 
-  &-02 {
-    border: .25rem solid var(--primary);
-    color: var(--white);
+  &:hover {
+    background-color: var(--serviceBoxBackgroundHover);
 
     h3 {
-      color: var(--primary);
-    }
-
-    &:hover {
-      .hoverStateBorderColor(var(--primaryHover));
-
-      h3 {
-        .hoverStateScale(1.2);
-        .hoverStateColor(var(--primary));
-      }
+      .hoverStateScale(1.2);
+      .hoverStateColor(var(--serviceBoxTitleHoverColor));
     }
   }
 }

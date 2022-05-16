@@ -9,10 +9,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>
             <?php
-                if ($_GET['web'] == 'marak') {
-                    echo "Ondřej Mařák";
-                }
-
                 if ($_GET['web'] == 'finomsportCP') {
                     echo "Finom Sport";
                 }
@@ -20,10 +16,6 @@
         </title>
 
         <?php
-            if ($_GET['web'] == 'marak') {
-                echo "<link rel='stylesheet/less' href='assets/css/config.marak.less'>";
-            }
-
             if ($_GET['web'] == 'finomsportCP') {
                 echo "<link rel='stylesheet/less' href='assets/css/config.finomsportCP.less'>";
             }
@@ -39,10 +31,6 @@
     <body id="body">
 
         <?php
-            if ($_GET['web'] == 'marak') {
-                include 'components/header/header.marak.php';
-            }
-
             if ($_GET['web'] == 'finomsportCP') {
                 include 'components/header/comingsoon/header.finomsportCP.php';
             }

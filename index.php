@@ -8,6 +8,6 @@
         $data = Site::$data;
         include 'router.php';
     }
-    else{
+    else {
         include 'index_old.php';
     }

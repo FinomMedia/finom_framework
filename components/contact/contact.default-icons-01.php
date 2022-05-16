@@ -21,7 +21,7 @@
         </div>
 
         <div class="wrapS">
-            <?php include 'components/contact/contact.complete.php'; ?>
+            <?php component("contact.complete", $data->contact->complete); ?>
 
             <form>
                 <div class="columns">

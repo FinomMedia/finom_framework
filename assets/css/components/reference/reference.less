@@ -1,11 +1,32 @@
 .reference {
-  background-image: var(--bgImageReference);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat, repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 0;
 
   @media (min-width: @screenLg) {
     width: 100%;
+  }
+
+  .background {
+    video,
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: var(--referenceSliderTitleColor);
   }
 
   &Slider {
@@ -27,19 +48,12 @@
       bottom: 0;
       margin: 0 .5rem;
       z-index: 5;
-      outline: .5rem solid #ccc;
+      outline: var(--referenceSliderDotSize) solid var(--referenceSliderDotColor);
       outline-offset: -.5rem;
       cursor: pointer;
 
-      &::before {
-        display: none;
-        float: left;
-        border: .5rem solid var(--primary) !important;
-        border-radius: 100%;
-      }
-
       &:checked {
-        outline: .5rem solid var(--primary);
+        outline: var(--referenceSliderDotSize) solid var(--referenceSliderDotColorChecked);
         outline-offset: -.5rem;
 
         &:nth-of-type(1) ~ .referenceSliderInner { left: 0; }
@@ -68,18 +82,25 @@
     }
 
     &Avatar {
-      width: 6rem;
-      height: 6rem;
+      border-radius: var(--referenceSliderAvatarBorderRadius);
+      width: var(--referenceSliderAvatarSize);
+      height: var(--referenceSliderAvatarSize);
     }
 
-    &Caption {
+    &Caption,
+    &Txt {
       .flex(column, center, center);
 
-      font-size: 1rem;
+      color: var(--referenceSliderContentColor);
+      font-size: var(--referenceSliderContentTextSize);
+      font-weight: var(--referenceSliderContentTextWeight);
+      text-transform: var(--referenceSliderContentTextTransform);
 
       span {
-        font-weight: var(--fontWeightBold);
-        text-transform: uppercase;
+        color: var(--referenceSliderNameColor);
+        font-size: var(--referenceSliderNameTextSize);
+        font-weight: var(--referenceSliderNameTextWeight);
+        text-transform: var(--referenceSliderNameTextTransform);
       }
     }
 
@@ -91,21 +112,6 @@
 
 .reference {
   &-01 {
-    padding: 2rem;
-
-    h2 {
-      text-align: center;
-      color: var(--white);
-    }
-
-    .referenceSlider {
-      &Caption {
-        color: var(--white);
-      }
-
-      &Txt {
-        color: var(--white);
-      }
-    }
+    //
   }
 }

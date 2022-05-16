@@ -1,7 +1,7 @@
 .portfolio {
-  &Gallery {
-    column-width: 27rem;
-    column-gap: 0;
+  &Masonry {
+    column-width: var(--portfolioMasonryColWidth);
+    column-gap: var(--portfolioMasonryColGap);
     padding: 0;
     margin-bottom: 5rem;
 
@@ -12,7 +12,7 @@
     &:hover {
       img {
         @media (min-width: @screenLg) {
-          opacity: .28;
+          opacity: var(--portfolioMasonryHoverOpacity);
         }
       }
     }
@@ -21,7 +21,7 @@
       img {
         width: 100%;
         display: block;
-        transition: all .8s;
+        transition: all .8s ease-in-out;
       }
 
       &:hover {
@@ -32,23 +32,25 @@
     }
   }
 
+  h2 {
+    text-align: center;
+    color: var(--portfolioTitleColor);
+    margin-bottom: 3rem;
+  }
+
+  .description {
+    text-align: center;
+    color: var(--portfolioDescriptionColor);
+    margin-bottom: 5rem;
+  }
+
+  .counter {
+    &Item {
+      color: var(--portfolioCounterColor);
+    }
+  }
+
   &-01 {
-    h2 {
-      text-align: center;
-      color: var(--white);
-      margin-bottom: 3rem;
-    }
-
-    .description {
-      text-align: center;
-      color: var(--white);
-      margin-bottom: 5rem;
-    }
-
-    .counter {
-      &Item {
-        color: var(--white);
-      }
-    }
+    //
   }
 }

@@ -7,6 +7,12 @@
             "servername": "test.local"
         },
         {
+            "title": "Mařák",
+            "folder": "marak",
+            "getweb": "marak",
+            "servername": "test.local"
+        },
+        {
             "title": "Finom Sport",
             "folder": "finomsport",
             "getweb": "finomsport",

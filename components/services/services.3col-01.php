@@ -1,4 +1,4 @@
-<div id="<?=$componentId?>" class="services services-01">
+<div id="<?=$componentId?>" class="services">
     <div class="wrap">
         <h2>
             <?=$title?>
@@ -6,7 +6,7 @@
 
         <div class="grid-3 ais">
             <?php foreach ($items as $item):?>
-                <div class="servicesBox <?=$classes?>">
+                <div class="servicesBox">
                     <img src="<?=$item->icon?>">
 
                     <h3>

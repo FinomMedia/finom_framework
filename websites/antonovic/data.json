@@ -89,6 +89,13 @@
     "componentId": "contact",
     "title": "Kontaktujte mě",
     "sendButton": "Odeslat poptávku",
+    "sendfrom": "",
+    "sendto": "",
+    "subject": "Odeslaná zpráva z webu Ondřeje Mařáka",
+    "complete": {
+      "title": "Děkuji za vaši zprávu.",
+      "description": "Vaší zprávě se budu věnovat co nejdříve. Pokud vaše zpráva nepočká, doporučuji zvolit některý z aletrnativních kontaků."
+    },
     "contactInfo": {
       "items": [
         {
