@@ -85,6 +85,19 @@
       }
     ]
   },
+  "cooperation": {
+    "componentId": "cooperation",
+    "classes": "cooperation-01",
+    "title": "Spolupráce",
+    "description": "“Naši spolupráci stavíme na hodnotách, odpovědného přístupu, důvěry a fér jednání. Naši největší hodnotu pak tvoří lidé, kteří tyhle hodnoty představují. Máte stejný postoj, tak vítejte mezi námi.”",
+    "profileImage": "https://res.cloudinary.com/patrik-vadura/image/upload/v1645624054/antonovic_web/spoluprace_profile_helu7h.png",
+    "button": "Dozvědět se více",
+    "buttonLink": "#",
+    "image": {
+      "desktop": "https://res.cloudinary.com/patrik-vadura/image/upload/v1645626361/antonovic_web/spoluprace_design-block_01_j4xjxx.png",
+      "mobile": "https://res.cloudinary.com/patrik-vadura/image/upload/v1645627270/antonovic_web/spoluprace_design-block_01_mobile_granu4.png"
+    }
+  },
   "contact": {
     "componentId": "contact",
     "title": "Kontaktujte mě",
