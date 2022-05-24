@@ -1,39 +1,51 @@
 <?php
-    $heroImage = "https://res.cloudinary.com/patrik-vadura/image/upload/v1641902355/marak_web/Webdesign_JM_02_xpi8qj.png";
-    $heroTitle = "Jmenuji se <span>Ondřej Mařák</span>";
+    $web = $_GET['web'];
+    if($_SERVER['SERVER_NAME']=="finomsport.cz") {
+        $web="finomsport";
+    }
+    $data = json_decode(file_get_contents("data/".$web.".json"));
 ?>
 
-<div class="hero hero-2">
-    <div class="wrap grid-2">
-        <div>
-            <div class="social">
-                <a href="https://www.facebook.com/ondrej.marak.5" target="_blank">
-                    <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912491/marak_web/icons/icon_02_aoi5lu.svg">
-                </a>
+<div class="hero hero-3">
+    <div class="background">
+        <img src="<?php echo $data->hero->background; ?>">
+    </div>
 
-                <a href="https://www.instagram.com/ondrej_marak/" target="_blank">
-                    <img src="https://res.cloudinary.com/patrik-vadura/image/upload/v1641912489/marak_web/icons/icon_01_qdu0ol.svg">
-                </a>
-            </div>
-
+    <div class="row">
+        <div class="col col-3 border-r-secondary pr-1">
             <h1>
-                <?php echo $heroTitle; ?>
+                <?php echo $data->hero->claim->title; ?>
             </h1>
 
-            <div class="special">
-                <span>Investor</span>
-                <span>Podnikatel</span>
-                <span>Poradce</span>
-                <span>Investor</span>
-                <span>Podnikatel</span>
-                <span>Poradce</span>
-            </div>
-
-            <a href="#services" class="scroll"></a>
+            <h2>
+                <?php echo $data->hero->claim->subtitle; ?>
+            </h2>
         </div>
 
-        <div class="image">
-            <img src="<?php echo $heroImage; ?>">
+        <div class="col col-7">
+            <div class="grid-3">
+                <?php
+                    foreach ($data->hero->items as $item) { ?>
+                        <a href="<?php echo $item->link; ?>">
+                            <div class="box">
+                                <img class="boxImage" src="<?php echo $item->img; ?>">
+
+                                <div class="boxContent">
+                                    <h3>
+                                        <?php echo $item->title; ?>
+                                    </h3>
+
+                                    <p>
+                                        <?php echo $item->description; ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    <?php }
+                ?>
+            </div>
         </div>
     </div>
 </div>
+
+

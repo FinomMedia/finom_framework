@@ -1,65 +1,13 @@
 <?php
-    include 'header.php';
+    include 'utils.php';
 
-    if ($_GET['web'] == 'marak') {
-        $component = 01;
+    Site::resolveSite();
 
-        // hero
-        include 'components/hero/hero.marak.php';
-
-        // services
-        include 'components/services/services.marak.php';
-
-        // aboutUs
-        include 'components/aboutUs/aboutUs.marak.php';
-
-        // portfolio
-        include 'components/portfolio/portfolio.marak.php';
-
-        // reference
-        include 'components/reference/reference.marak.php';
-
-        // contact
-        include 'components/contact/contact.marak.php';
+    if(Site::$conf){
+        Site::loadData();
+        $data = Site::$data;
+        include 'router.php';
     }
-
-    if ($_GET['web'] == 'antonovic') {
-        // hero
-        include 'components/hero/hero.antonovic.php';
-
-        // services
-        include 'components/services/services.antonovic.php';
-
-        // aboutUs
-        include 'components/aboutUs/aboutUs.antonovic.php';
-
-        // reference
-        include 'components/cooperation/cooperation.antonovic.php';
-
-        // contact
-        include 'components/contact/contact.antonovic.php';
+    else {
+        include 'index_old.php';
     }
-
-    if ($_GET['web'] == 'finomsport') {
-        // hero
-        include 'components/hero/hero.antonovic.php';
-
-        // services
-        include 'components/services/services.antonovic.php';
-
-        // aboutUs
-        include 'components/aboutUs/aboutUs.antonovic.php';
-
-        // reference
-        include 'components/cooperation/cooperation.antonovic.php';
-
-        // contact
-        include 'components/contact/contact.antonovic.php';
-    }
-
-    if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
-        // coming soon
-        include 'components/comingsoon/comingsoon.finomsport.php';
-    }
-
-    include 'footer.php';

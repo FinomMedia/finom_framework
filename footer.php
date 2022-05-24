@@ -7,12 +7,16 @@
                 include 'components/footer/footer.antonovic.php';
             }
 
-            if ($_GET['web'] == 'finomsport') {
+            if ($_GET['web'] == 'finomsport' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
                 include 'components/footer/footer.finomsport.php';
             }
 
-            if ($_GET['web'] == 'finomsportCP' OR $_SERVER['SERVER_NAME']=="finomsport.cz") {
+            if ($_GET['web'] == 'finomsportCP') {
                 include 'components/footer/comingsoon/footer.finomsportCP.php';
+            }
+
+            if ($_GET['web'] == 'finomenergy') {
+                include 'components/footer/footer.default.php';
             }
         ?>
     </body>

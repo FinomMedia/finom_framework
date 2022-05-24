@@ -19,10 +19,17 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  background: var(--black);
-  color: var(--typography);
+  background: var(--pageBg);
+  color: var(--bodyTextColor);
   overflow-x: hidden;
   white-space: normal;
+}
+a {
+  color: var(--linkColor);
+  text-decoration: var(--linkDecoration);
+}
+a:hover {
+  text-decoration: var(--linkHoverDecoration);
 }
 img,
 iframe {
@@ -30,3 +37,4 @@ iframe {
   vertical-align: middle;
   border: 0;
 }
+/*# sourceMappingURL=global.css.map */

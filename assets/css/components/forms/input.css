@@ -45,3 +45,19 @@ button:focus {
 .input textarea {
   width: 100%;
 }
+.input-01 .input__label {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.input-01 .input__box {
+  background: var(--light);
+}
+.input-01 .input__box:hover,
+.input-01 .input__box:focus-within {
+  background: var(--lightHover);
+  outline: none;
+}
+.input-01 .input__box::-webkit-input-placeholder {
+  color: var(--primary);
+}
+/*# sourceMappingURL=input.css.map */
