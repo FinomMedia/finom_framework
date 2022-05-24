@@ -7,6 +7,10 @@
         <?=$data->meta->title?>
     </title>
 
+    <!--
+    <link rel='stylesheet/less' href='/<?=Site::$conf->pwfolder?>/config.less'>
+    -->
+
     <link rel='stylesheet/less' href='/websites/<?=Site::$conf->folder?>/config.less'>
 
     <link rel="stylesheet" href="<?=$data->meta->fontFace?>">

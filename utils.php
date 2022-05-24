@@ -1,4 +1,4 @@
-<?php
+<?php    
 
     class Site {
 
@@ -8,7 +8,7 @@
 
         public static function resolveSite(){
 
-            $data = json_decode(file_get_contents("websites/sites.json"));
+            $data = json_decode(file_get_contents(__DIR__."/websites/sites.json"));
             //$data = get_object_vars($data);
             //var_dump($data);
 
@@ -66,6 +66,10 @@
             return __DIR__."/components/";
         }
 
+        public static function sitePwUri(){
+            return "http://".$_SERVER['SERVER_NAME']."/site/app/websites/".self::$conf->folder."/";
+        }
+
 
     }
 
@@ -94,7 +98,8 @@
             $data = json_decode(file_get_contents($dataFile));
         }
         else{
-            global $data;
+            
+            $data = Site::$data;
             extract(get_object_vars($componentData));
         }
         $path = $componentPath."/".$name.".php";
