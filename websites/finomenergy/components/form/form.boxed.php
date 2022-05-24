@@ -322,7 +322,7 @@ else{
                                 </div>
 
                                 <div class="input__box">
-                                    <input type="<?=$item->type?>" name="<?=$item->name?>" id="<?=$item->name?>" />
+                                    <input type="<?=$item->type?>" name="<?=$item->name?>" id="<?=$item->id?>" />
                                 </div>
                             </div>
                         <?php endforeach; ?>
