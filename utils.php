@@ -1,4 +1,4 @@
-<?php    
+<?php
 
     class Site {
 
@@ -28,7 +28,7 @@
 
             foreach($sites as $site){
                 //var_dump($site);
-                if($_SERVER['SERVER_NAME']==$site->servername){
+                if($_SERVER['SERVER_NAME']==$site->servername || $_SERVER['SERVER_NAME'] == "www.".$site->servername){
                     self::$conf = $site;
                     return $site;
                 }
@@ -98,7 +98,7 @@
             $data = json_decode(file_get_contents($dataFile));
         }
         else{
-            
+
             $data = Site::$data;
             extract(get_object_vars($componentData));
         }
