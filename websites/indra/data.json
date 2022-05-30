@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "Patrik Indra - Finanční poradce",
+    "fontFace": "https://res.cloudinary.com/patrik-vadura/raw/upload/v1641887298/fontFaces/BrandonGrotesque/fontBrandonGrotesque_gf3jjy.css"
+  },
+  "header": {
+    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642059695/antonovic_web/logo/logo_antonovic_oguqow.png",
+    "logoScroll": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642059695/antonovic_web/logo/logo_antonovic_oguqow.png",
+    "homePath": "#",
+    "links": [
+      {
+        "link": "",
+        "title": "+420 123 456 789"
+      },
+      {
+        "link": "mailto:indra@finom.cz",
+        "title": "indra@finom.cz",
+        "target": true
+      },
+      {
+        "link": "https://www.finom.cz/",
+        "title": "finom.cz",
+        "target": true
+      }
+    ]
+  },
+  "footer": {
+    "classes": "fixed",
+    "createdBy": "Created by",
+    "credits": "© 2022 Patrik Indra",
+    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642160813/FINOM%20GROUP/Finom%20Media/logo/svg/finom-media_logo_claim_negative_nukouh.svg",
+    "scroll": "https://res.cloudinary.com/patrik-vadura/image/upload/v1651663546/Finom%20Energy%20-%20web/icons/scrollToTop_uwi8oc.svg"
+  },
+  "hero": {
+    "classes": "",
+    "title": "Pomůžu vám zajistit to nejcennější. <span>Lidský život.</span>",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis velit. Nulla pulvinar eleifend sem. Fusce suscipit libero eget elit.",
+    "button": "Mám zájem o nabídku",
+    "background": "https://res.cloudinary.com/patrik-vadura/image/upload/v1644913180/antonovic_web/background_theme_03_itjuf6.jpg",
+    "services": [
+      {
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648042795/Finom%20Sport/icon_check_y7apzj.svg",
+        "title": "Pojištění"
+      },
+      {
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648042795/Finom%20Sport/icon_check_y7apzj.svg",
+        "title": "Pojištění"
+      }
+    ]
+  }
+}
