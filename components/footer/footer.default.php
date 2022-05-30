@@ -1,4 +1,4 @@
-<div class="footer footer-01">
+<div class="footer footer-01 <?=$classes?>">
     <div class="wrap">
         <div class="credits">
             <?=$credits?>
