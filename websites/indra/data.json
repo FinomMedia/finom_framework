@@ -1,16 +1,16 @@
 {
   "meta": {
-    "title": "Patrik Indra - Finanční poradce",
+    "title": "Patrik Indra - Investiční a úvěrový specialista",
     "fontFace": "https://res.cloudinary.com/patrik-vadura/raw/upload/v1641887298/fontFaces/BrandonGrotesque/fontBrandonGrotesque_gf3jjy.css"
   },
   "header": {
-    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642059695/antonovic_web/logo/logo_antonovic_oguqow.png",
-    "logoScroll": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642059695/antonovic_web/logo/logo_antonovic_oguqow.png",
+    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653995020/indra_web/logo/logo_negative_brzlgf.png",
+    "logoScroll": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653995020/indra_web/logo/logo_negative_brzlgf.png",
     "homePath": "#",
     "links": [
       {
         "link": "",
-        "title": "+420 123 456 789"
+        "title": "+420 775 265 640"
       },
       {
         "link": "mailto:indra@finom.cz",
@@ -18,14 +18,17 @@
         "target": true
       },
       {
-        "link": "https://www.finom.cz/",
-        "title": "finom.cz",
-        "target": true
+        "link": "",
+        "title": "Stojanova 1334, Uh. Hradiště"
+      },
+      {
+        "link": "",
+        "title": "Vavrečkova 7074, Zlín"
       }
     ]
   },
   "footer": {
-    "classes": "fixed",
+    "classes": "fixed noScroll",
     "createdBy": "Created by",
     "credits": "© 2022 Patrik Indra",
     "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1642160813/FINOM%20GROUP/Finom%20Media/logo/svg/finom-media_logo_claim_negative_nukouh.svg",
@@ -33,18 +36,26 @@
   },
   "hero": {
     "classes": "",
-    "title": "Pomůžu vám zajistit to nejcennější. <span>Lidský život.</span>",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis velit. Nulla pulvinar eleifend sem. Fusce suscipit libero eget elit.",
+    "title": "Uchopne se mnou otěže svých financí",
+    "description": "“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.”",
     "button": "Mám zájem o nabídku",
-    "background": "https://res.cloudinary.com/patrik-vadura/image/upload/v1644913180/antonovic_web/background_theme_03_itjuf6.jpg",
+    "background": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653995805/indra_web/hero_bg_02_tgwx15.jpg",
+    "signature": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653989091/indra_web/Signature_cwzwqu.png",
     "services": [
       {
-        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648042795/Finom%20Sport/icon_check_y7apzj.svg",
-        "title": "Pojištění"
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653997403/indra_web/icon/icon_investice_nynl2f.svg",
+        "title": "Investice",
+        "subtitle": "Životní, Úrazové i Neživotní pojištění"
       },
       {
-        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648042795/Finom%20Sport/icon_check_y7apzj.svg",
-        "title": "Pojištění"
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653997403/indra_web/icon/icon_uvery_jtpand.svg",
+        "title": "Úvěry",
+        "subtitle": "Životní, Úrazové i Neživotní pojištění"
+      },
+      {
+        "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1654001885/indra_web/icon/icon_pojisteni_01_dhbyu1.svg",
+        "title": "Pojištění",
+        "subtitle": "Životní, Úrazové i Neživotní pojištění"
       }
     ]
   }

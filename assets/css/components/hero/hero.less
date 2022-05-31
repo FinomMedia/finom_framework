@@ -11,7 +11,9 @@
     height: 100%;
 
     :only-child {
-      max-width: 80%;
+      @media (min-width: @screenMd) {
+        max-width: 80% !important;
+      }
     }
   }
 
@@ -102,24 +104,49 @@
     }
   }
 
-  .services {
-    .flex(row, flex-start, center);
+  &Services {
+    margin-top: 2rem;
+    padding-top: 2rem;
 
     &Item {
-      .flex(row, flex-start, center);
+      .flex(row, flex-start, flex-start);
 
       img {
         margin-right: 1rem;
-        width: 3rem;
-      }
+        width: 2.5rem;
 
+        @media (max-width: @screenSm) {
+          margin-right: .5rem;
+          width: 2rem;
+        }
+      }
       span {
-        .fontSize(1.5, 1.75);
+        .fontSize(.875, 1.25);
 
+        display: block;
         color: var(--heroParagraphTextColor);
-        font-weight: var(--heroParagraphTextWeight);
+        font-weight: var(--fontWeightBold);
         text-transform: var(--heroParagraphTextTransform);
+        line-height: 1.2;
+
+        &.subtitle {
+          .fontSize(.875, 1);
+
+          margin-top: .5rem;
+          color: var(--heroParagraphTextColor);
+          font-weight: var(--heroParagraphTextWeight);
+          text-transform: var(--heroParagraphTextTransform);
+        }
       }
+    }
+  }
+
+  &Signature {
+    margin-top: 1rem;
+    width: 15rem;
+
+    @media (max-width: @screenSm) {
+      width: 9rem;
     }
   }
 

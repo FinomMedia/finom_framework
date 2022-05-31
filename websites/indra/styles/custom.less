@@ -1,0 +1,90 @@
+.hero {
+  height: 100vh !important;
+
+  .wrap {
+    position: relative;
+    align-items: center;
+    height: auto !important;
+
+    :only-child {
+      width: 100% !important;
+
+      @media (min-width: @screenMd) {
+        max-width: 50% !important;
+      }
+    }
+
+    .grid-6 {
+      grid-template-columns: repeat(auto-fit, minmax(min(50%, unit(min(50%, 10), rem)), 1fr)) !important;
+      grid-column-gap: .5rem;
+      row-gap: 1rem;
+    }
+  }
+
+  .background {
+    img {
+      @media (max-width: @screenSm) {
+        object-position: 60% 50% !important;
+      }
+
+      @media (max-width: @screenMd) {
+        object-position: 60% 50% !important;
+      }
+    }
+  }
+
+  h1 {
+    .fontSize(1.5, 2.5) !important;
+  }
+
+  p {
+    .fontSize(.875, 1.25) !important;
+  }
+
+  .heroServices {
+    border-top: 1px solid ~"rgba(var(--white_rgb), .4)";
+
+    @media (max-width: @screenSm) {
+      bottom: 4rem !important;
+    }
+  }
+}
+
+.header {
+  .logo {
+    img {
+      height: clamp(2rem, calc(2rem + (2.5 - 2) * var(--calcWidth)), 2.5rem) !important;
+    }
+  }
+
+  .navigation {
+    li {
+      border-left: 1px solid ~"rgba(var(--white_rgb), .4)";
+      line-height: 1;
+
+      &:first-of-type {
+        border-left: none;
+      }
+    }
+  }
+}
+
+.footer {
+  .wrap {
+    padding: clamp(unit(1, rem), calc(unit(1, rem) + (3 - 1) * var(--calcWidth)), unit(3, rem));
+  }
+
+  .credits {
+    span {
+      margin-left: .25rem;
+      padding-left: .25rem;
+    }
+
+    img {
+      margin-left: .25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+

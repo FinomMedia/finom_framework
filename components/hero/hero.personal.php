@@ -15,19 +15,31 @@
                 </p>
             <?php endif; ?>
 
-            <?php if ($services):?>
-                <div class="services">
+            <?php if ($signature):?>
+                <img src="<?=$signature?>" class="heroSignature">
+            <?php endif; ?>
+
+            <div class="grid-6 heroServices">
+                <?php if ($services):?>
                     <?php foreach ($services as $item):?>
-                        <div class="servicesItem col-6">
+                        <div class="heroServicesItem">
                             <img src="<?=$item->icon?>">
 
-                            <span>
-                                <?=$item->title?>
-                            </span>
+                            <div>
+                                <span>
+                                    <?=$item->title?>
+                                </span>
+
+                                <?php if ($item->subtitle):?>
+                                    <span class="subtitle">
+                                        <?=$item->subtitle?>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </div>
