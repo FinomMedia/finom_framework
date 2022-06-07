@@ -1,5 +1,5 @@
 <div id="blank" class="component">
   <div class="wrap">
-    Blank component
+    Blank component <?=$blanktitle?>
   </div>
 </div>

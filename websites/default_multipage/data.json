@@ -1,6 +1,8 @@
 {
   "meta": {
-    "title": "Finom Energy - Energetická nezávislost pro váš život",
-    "fontFace": "https://res.cloudinary.com/patrik-vadura/raw/upload/v1641887298/fontFaces/BrandonGrotesque/fontBrandonGrotesque_gf3jjy.css"
+    "title": "Finom Energy - Energetická nezávislost pro váš život"
+  },
+  "blank": {
+    "blanktitle": "Blank component"
   }
 }

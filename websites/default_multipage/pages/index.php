@@ -5,4 +5,4 @@ component("_blank.component", $data->blank);
 
 include __DIR__."/../partials/footer.php";
 ?>
-<h1>Toto je Kontakt page stránek default multipage</h1>
+<h1>Toto je home pagestránek default_multipage</h1>
