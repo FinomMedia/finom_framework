@@ -1,9 +1,10 @@
 <?php
-    include 'partials/header.php';
+    
+    $segment = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
-    component("hero.finomsport", $data->hero);
-    component("blog.finomsport", $data->hero);
-    component("cooperation.finomsport", $data->hero);
-    component("contact.finomsport", $data->hero);
-
-    include 'partials/footer.php';
+    if(!$segment){
+        include "pages/index.php";
+    }
+    else{
+        include "pages/$segment.php";
+    }

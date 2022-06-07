@@ -9,37 +9,45 @@
   "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648035910/Finom%20Sport/logo/finom-invest_logo_horizontal_2x_jk3sxt.png",
   "logoScroll": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648035910/Finom%20Sport/logo/finom-invest_logo_horizontal_2x_jk3sxt.png",
   "header": {
+    "logo": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648035910/Finom%20Sport/logo/finom-invest_logo_horizontal_2x_jk3sxt.png",
+    "logoScroll": "https://res.cloudinary.com/patrik-vadura/image/upload/v1648035910/Finom%20Sport/logo/finom-invest_logo_horizontal_2x_jk3sxt.png",
     "homePath": "/",
     "links": [
       {
         "title": "Mladý sportovec",
-        "link": "mladysportovec.php",
-        "target": false
+        "link": "mladysportovec",
+        "target": false,
+        "class": ""
       },
       {
         "title": "Profesionál",
-        "link": "profesional.php",
-        "target": false
+        "link": "profesional",
+        "target": false,
+        "class": ""
       },
       {
         "title": "Sportovní klub",
-        "link": "klub.php",
-        "target": false
+        "link": "klub",
+        "target": false,
+        "class": ""
       },
       {
         "title": "Agent",
-        "link": "agent.php",
-        "target": false
+        "link": "agent",
+        "target": false,
+        "class": ""
       },
       {
         "title": "Finom",
         "link": "https://finom.cz",
-        "target": true
+        "target": true,
+        "class": ""
       },
       {
         "title": "Kontakt",
-        "link": "contact.php",
-        "target": false
+        "link": "contact",
+        "target": false,
+        "class": ""
       }
     ]
   },
