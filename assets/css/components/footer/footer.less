@@ -5,6 +5,12 @@
   background: var(--footerBackground);
   z-index: 0;
 
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
   .wrap {
     position: relative;
     padding: clamp(unit(2, rem), calc(unit(2, rem) + (3 - 2) * var(--calcWidth)), unit(3, rem));
@@ -34,6 +40,12 @@
 
     img {
       width: 2rem;
+    }
+  }
+
+  &.noScroll {
+    .scroll {
+      display: none !important;
     }
   }
 }

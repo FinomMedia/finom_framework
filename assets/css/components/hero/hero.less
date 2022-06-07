@@ -1,9 +1,7 @@
 .hero {
+  .flex(column, center, center);
+
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: min(100vh, 70rem);
   z-index: 0;
@@ -13,7 +11,9 @@
     height: 100%;
 
     :only-child {
-      max-width: 80%;
+      @media (min-width: @screenMd) {
+        max-width: 80% !important;
+      }
     }
   }
 
@@ -40,6 +40,14 @@
     color: var(--heroH1TextColor);
     font-weight: var(--heroH1TextWeight);
     text-transform: var(--heroH1TextTransform);
+  }
+
+  p {
+    .fontSize(1.5, 1.75);
+
+    color: var(--heroParagraphTextColor);
+    font-weight: var(--heroParagraphTextWeight);
+    text-transform: var(--heroParagraphTextTransform);
   }
 
   .scroll (@width, @height) {
@@ -93,6 +101,52 @@
       20% { opacity: 0; transform: translateY(2rem); }
       80% { opacity: 0; }
       100% { opacity: 0; }
+    }
+  }
+
+  &Services {
+    margin-top: 2rem;
+    padding-top: 2rem;
+
+    &Item {
+      .flex(row, flex-start, flex-start);
+
+      img {
+        margin-right: 1rem;
+        width: 2.5rem;
+
+        @media (max-width: @screenSm) {
+          margin-right: .5rem;
+          width: 2rem;
+        }
+      }
+      span {
+        .fontSize(.875, 1.25);
+
+        display: block;
+        color: var(--heroParagraphTextColor);
+        font-weight: var(--fontWeightBold);
+        text-transform: var(--heroParagraphTextTransform);
+        line-height: 1.2;
+
+        &.subtitle {
+          .fontSize(.875, 1);
+
+          margin-top: .5rem;
+          color: var(--heroParagraphTextColor);
+          font-weight: var(--heroParagraphTextWeight);
+          text-transform: var(--heroParagraphTextTransform);
+        }
+      }
+    }
+  }
+
+  &Signature {
+    margin-top: 1rem;
+    width: 15rem;
+
+    @media (max-width: @screenSm) {
+      width: 9rem;
     }
   }
 

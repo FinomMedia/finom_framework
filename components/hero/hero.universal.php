@@ -19,6 +19,12 @@
                 <?=$title; ?>
             </h1>
 
+            <?php if ($description):?>
+                <p>
+                    <?=$description?>
+                </p>
+            <?php endif; ?>
+
             <?php if ($specialRoller):?>
                 <div class="special">
                     <?php foreach ($specialRoller as $item):?>

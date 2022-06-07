@@ -1,6 +1,6 @@
 <header id="header" class="header">
     <div class="wrap">
-        <a href="/" class="logo">
+        <a href="<?=$homePath?>" class="logo">
             <img src="<?=$logo?>" />
         </a>
 
@@ -15,17 +15,25 @@
         </label>
 
         <ul class="navigation">
-            <?php foreach ($links as $item):?>
-                <li>
-                    <a
-                        href="<?=$item->link?>"
-                        class="<?=$item->class, (substr($_SERVER['REQUEST_URI'], 1) == $item->link) ? "active" : ""?>"
-                        target="<?=($item->target == true) ? "_blank" : "_self"?>"
-                    >
-                        <?=$item->title?>
-                    </a>
-                </li>
-            <?php endforeach; ?>
+            <?php if ($links):?>
+                <?php foreach ($links as $item):?>
+                    <li>
+                        <?php if ($item->link):?>
+                            <a
+                                    href="<?=$item->link?>"
+                                    class="<?=$item->class, (substr($_SERVER['REQUEST_URI'], 1) == $item->link) ? "active" : ""?>"
+                                    target="<?=($item->target == true) ? "_blank" : "_self"?>"
+                            >
+                                <?=$item->title?>
+                            </a>
+                        <?php else:?>
+                            <span>
+                                <?=$item->title?>
+                            </span>
+                        <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </ul>
     </div>
 </header>

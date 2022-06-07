@@ -23,6 +23,12 @@
             "folder": "finomenergy",
             "getweb": "finomenergy",
             "servername": "finomenergy.cz"
+        },
+        {
+            "title": "Indra",
+            "folder": "indra",
+            "getweb": "indra",
+            "servername": "patrikindra.cz"
         }
     ]
 }
