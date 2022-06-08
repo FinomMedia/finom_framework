@@ -4,7 +4,7 @@
 	class MyTemplate{
 		protected $path, $data;
 
-		public function __construct($path, $data = array()){
+		public function __construct($path, $data){
 			$this->path = $path;
 
 			/*$data["page"] = wire()->page;
@@ -18,6 +18,8 @@
 		public function render(){
 			//echo $this->path;
 			//echo __DIR__ . "$this->path";
+
+            //var_dump($this->data);
 
 			if(file_exists($this->path)){
 				extract($this->data);
@@ -43,20 +45,31 @@
         $names = explode(".",$name);
         $componentPath = Site::rootComponentPath().$names[0]."/";
 
+        
         if(!$componentData){
-            $dataFile =  $componentPath."/default.json";
-            $data = json_decode(file_get_contents($dataFile));
+          /*  $dataFile =  $componentPath."/default.json";
+            $data = json_decode(file_get_contents($dataFile));*/
         }
         else{
-            global $data;
-            //extract(get_object_vars($componentData));
+
+            if(is_object($componentData)){
+                $componentData = get_object_vars($componentData);
+            }
+            elseif(is_array($componentData)){
+
+            }
+            else{
+                $componentData = array("prop"=>$componentData);
+            }
+            
+                    
         }
 
-        $fullpath = $componentPath."/".$name.".php";
-        
-        $tmpl = new MyTemplate($componentPath,$data);
+        $fullpath = $componentPath."".$name.".php";
+                
+        $tmpl = new MyTemplate($fullpath,$componentData);
     
-        return $tmpl->render();
+        echo $tmpl->render();
         
         
     }
