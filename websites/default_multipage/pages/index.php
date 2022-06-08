@@ -8,5 +8,7 @@
 
 <?= componentV2("_blank_v2.simple",["v2name"=>"Manuálně zadaný název"]) ?>
 
+<?= componentV2("custom._blank_v2.simple",["v2name"=>"Manuálně zadaný název"]) ?>
+
 
 <?php include __DIR__."/../partials/footer.php" ?>

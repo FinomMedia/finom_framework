@@ -43,7 +43,18 @@
     function componentV2($name, $componentData = false){
         
         $names = explode(".",$name);
-        $componentPath = Site::rootComponentPath().$names[0]."/";
+ 
+
+        if($names[0]=="custom" || $names[0]=="site"){
+            $componentPath = Site::siteComponentPath().$names[1]."/";
+            array_shift($names);
+            $name = implode(".",$names);
+        }
+        else{            
+            $componentPath = Site::rootComponentPath().$names[0]."/";
+        }
+
+        
 
         
         if(!$componentData){
