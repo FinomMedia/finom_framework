@@ -5,4 +5,5 @@
 <?= Templater::getPartial("content") ?>
 
 
+
 <?php include __DIR__."/../partials/footer.php" ?>
