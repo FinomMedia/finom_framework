@@ -7,7 +7,7 @@
 
 
         <?php Templater::partialBegin("component"); ?>
-            <?=Templater::currentPartial()?>
+
             <?php Templater::slotOpen("column1") ?>
                 
                 <h1>Obsah prvního sloupce</h1>
