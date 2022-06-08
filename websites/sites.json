@@ -23,6 +23,12 @@
             "folder": "finomenergy",
             "getweb": "finomenergy",
             "servername": "finomenergy.cz"
+        },
+        {
+            "title": "Default multipage",
+            "folder": "default_multipage",
+            "getweb": "multipage",
+            "servername": "multipage.cz"
         }
     ]
 }
