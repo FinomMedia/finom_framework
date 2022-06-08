@@ -1,5 +1,6 @@
 <?php
     include 'utils.php';
+    include 'templateEnginev2.php';
 
     Site::resolveSite();
 
