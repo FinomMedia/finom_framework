@@ -6,6 +6,10 @@
     <title>
         Default web
     </title>
+
+    <style>
+        <?= Templater::getPartial("css") ?>
+    </style>
 </head>
 
 <body id="body">

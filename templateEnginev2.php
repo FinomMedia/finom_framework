@@ -81,6 +81,8 @@
         $tmpl = new MyTemplate($fullpath,$componentData);
     
         echo $tmpl->render();
+
+        echo Templater::getPartial("html");
         
         
     }
