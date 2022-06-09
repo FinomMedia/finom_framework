@@ -1,8 +1,13 @@
-<?php
-include __DIR__."/../partials/header.php";
+<?php Templater::partialBegin("content"); ?>
 
-component("_blank.component", $data->blank);
+    <?= component("_blank.component", $data->blank) ?>
 
-include __DIR__."/../partials/footer.php";
-?>
-<h1>Toto je home page stránek default_multipage</h1>
+    <?= componentV2("_blank_v2.simple",$data->blank) ?>
+
+    <?= componentV2("_blank_v2.simple",["v2name"=>"Manuálně zadaný název"]) ?>
+
+    <?= componentV2("custom._blank_v2.simple",["v2name"=>"Manuálně zadaný název"]) ?>
+
+<?php Templater::partialEnd("content");?>
+
+<?php include __DIR__."/../templates/default.php" ?>
