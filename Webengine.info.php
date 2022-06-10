@@ -49,7 +49,7 @@ $info = array(
 
 	// Optionally describe versions of ProcessWire, PHP or modules that are required.
 	// To specify more modules, separate each with a comma (CSV) or use PHP array.
-	'requires' => 'ProcessWire>=3.0.165, PHP>=5.6.0, RockMigrations',
+	'requires' => 'ProcessWire>=3.0.165, PHP>=5.6.0, Less,ProcessDatabaseBackups,TracyDebugger,ProcessTracyAdminer',
 	
 	// for more properties that you can include in your module info, see comments 
 	// the file: /wire/core/Module.php

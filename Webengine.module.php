@@ -1,4 +1,5 @@
 <?php namespace ProcessWire;
+use Media;
 
 /**
  * ProcessWire “Hello world” demonstration module
@@ -34,6 +35,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 	public $test = "xyz";
 	public $appname, $view, $data;
+	public $engine;
 
     
 
@@ -42,10 +44,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		parent::__construct();
 		$this->set('helloMessage', 'Hello World');
 		$this->set('useHello', 0);
-		// you may remove this method if you do not need it
-
-		
- 
+		// you may remove this method if you do not need it		
 	}
 
 	/**
@@ -81,27 +80,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		// This works for any type of hook. 
 		
 		
-
-	
-		// Examples of a URL hooks (requires ProcessWire 3.0.173+):
-		// https://processwire.com/blog/posts/pw-3.0.173/
 		
-		// This example outputs "Hello World" when you access the URL /hello/world/
-		$this->addHook('/hello/world/', function(HookEvent $event) {
-			return __('Hello World');
-		});
-		
-		// Access URL /hello/planet/earth, /hello/planet/mars, or /hello/planet/jupiter
-		$this->addHook('/hello/planet/(earth|mars|jupiter)', function(HookEvent $event) {
-			return "Hello " . $event->arguments(1);
-		});
-		
-		// Example of using named arguments: try accessing /hello/neptune, etc.
-		$this->addHook('/hello/{planet}', function(HookEvent $event) {
-			$planet = $event->arguments('planet'); // get the argument by name
-			$planet = wire()->sanitizer->word($planet); // reduce to just 1st word
-			return "Hello $planet";
-		});
 	}
 
 	/**
@@ -136,6 +115,58 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 			);
 		}*/
         
+
+		include "webengine/webengine.php";
+		
+		$this->engine = new Media\WebengineAlone($this->wire());
+
+
+		$webengine_router_page = wire()->pages->findOne("template=webengine_router");
+		$website_root_page = $this->engine->resolveSitePw();
+		$uri = $_SERVER["REQUEST_URI"];
+
+		$real_page_url = "/".$webengine_router_page->name."/".$website_root_page->name.$uri;
+		
+		bd($real_page_url);
+		bd($webengine_router_page);
+		bd($website_root_page);
+
+		if(!$website_root_page){
+			wire()->error("Neexistující web s napojením na tuto doménu.");
+		}
+
+		$current_page = wire()->pages->get($real_page_url);
+
+		if(!$current_page->id){
+			wire()->error("Neexistující stránka na webu s touto doménou.");
+		}
+		else{					
+			bd($current_page);
+			wire()->page= $current_page;
+			bd(wire()->page);
+		}
+
+	
+		// Examples of a URL hooks (requires ProcessWire 3.0.173+):
+		// https://processwire.com/blog/posts/pw-3.0.173/
+		
+		// This example outputs "Hello World" when you access the URL /hello/world/
+		$this->addHook('/hello/world/', function(HookEvent $event) {
+			return __('Hello World');
+		});
+		
+		// Access URL /hello/planet/earth, /hello/planet/mars, or /hello/planet/jupiter
+		$this->addHook('/hello/planet/(earth|mars|jupiter)', function(HookEvent $event) {
+			return "Hello " . $event->arguments(1);
+		});
+		
+		// Example of using named arguments: try accessing /hello/neptune, etc.
+		$this->addHook('/hello/{planet}', function(HookEvent $event) {
+			$planet = $event->arguments('planet'); // get the argument by name
+			$planet = wire()->sanitizer->word($planet); // reduce to just 1st word
+			return "Hello $planet";
+		});
+
 		
 
 	}
