@@ -115,38 +115,41 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 			);
 		}*/
         
-
-		include "webengine/webengine.php";
+		if($page->template->name != 'admin' ) {
+			// i.e. do something that only applies users in the admin
 		
-		$this->engine = new Media\WebengineAlone($this->wire());
+
+			include "webengine/webengine.php";
+			
+			$this->engine = new Media\WebengineAlone($this->wire());
 
 
-		$webengine_router_page = wire()->pages->findOne("template=webengine_router");
-		$website_root_page = $this->engine->resolveSitePw();
-		$uri = $_SERVER["REQUEST_URI"];
+			$webengine_router_page = wire()->pages->findOne("template=webengine_router");
+			$website_root_page = $this->engine->resolveSitePw();
+			$uri = $_SERVER["REQUEST_URI"];
 
-		$real_page_url = "/".$webengine_router_page->name."/".$website_root_page->name.$uri;
-		
-		bd($real_page_url);
-		bd($webengine_router_page);
-		bd($website_root_page);
+			$real_page_url = "/".$webengine_router_page->name."/".$website_root_page->name.$uri;
+			
+			bd($real_page_url);
+			bd($webengine_router_page);
+			bd($website_root_page);
 
-		if(!$website_root_page){
-			wire()->error("Neexistující web s napojením na tuto doménu.");
+			if(!$website_root_page){
+				wire()->error("Neexistující web s napojením na tuto doménu.");
+			}
+
+			$current_page = wire()->pages->get($real_page_url);
+
+			if(!$current_page->id){
+				wire()->error("Neexistující stránka na webu s touto doménou.");
+			}
+			else{					
+				bd($current_page);
+				wire()->page= $current_page;
+				bd(wire()->page);
+			}
+
 		}
-
-		$current_page = wire()->pages->get($real_page_url);
-
-		if(!$current_page->id){
-			wire()->error("Neexistující stránka na webu s touto doménou.");
-		}
-		else{					
-			bd($current_page);
-			wire()->page= $current_page;
-			bd(wire()->page);
-		}
-
-	
 		// Examples of a URL hooks (requires ProcessWire 3.0.173+):
 		// https://processwire.com/blog/posts/pw-3.0.173/
 		
