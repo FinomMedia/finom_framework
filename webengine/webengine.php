@@ -16,7 +16,7 @@
                 $this->pw = $pw;
             }
 
-            bd("test");
+            //bd("test");
         }
 
         public function resolveSite(){

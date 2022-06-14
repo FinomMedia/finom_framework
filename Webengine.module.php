@@ -68,7 +68,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		//$this->pages->addHookAfter('saved', $this, 'pageSaveHookExample'); 
 		
 		// note use of our configurable property: $this->useHello		
-		//$this->addHookBefore('Page::render', $this, 'pageRenderHookExample');
+		$this->addHookBefore('Page::render', $this, 'pageRenderHookExample');
 
 		// Add a 'hello' method to every page that returns "Hello World".
 		// Use "echo $page->hello();" in your template file to display output
@@ -130,9 +130,9 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 			$real_page_url = "/".$webengine_router_page->name."/".$website_root_page->name.$uri;
 			
-			bd($real_page_url);
-			bd($webengine_router_page);
-			bd($website_root_page);
+			//bd($real_page_url);
+			//bd($webengine_router_page);
+			//bd($website_root_page);
 
 			if(!$website_root_page){
 				wire()->error("Neexistující web s napojením na tuto doménu.");
@@ -144,9 +144,9 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 				wire()->error("Neexistující stránka na webu s touto doménou.");
 			}
 			else{					
-				bd($current_page);
+				//bd($current_page);
 				wire()->page= $current_page;
-				bd(wire()->page);
+				//bd(wire()->page);
 			}
 
 		}
@@ -213,8 +213,26 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		// since the hook is to Page::render.
 		
 		$page = $event->object; /** @var Page $page */
-		if($this->view){
-			bd($page->template);
+
+
+		bd($page->template->name);
+
+		$site_spec_template_path = $this->config->paths->root."sites/pwmd.local/templates/".$page->template->name.".php";
+		$webengine_spec_template_path = $this->config->paths->root."site/modules/webengine/page_templates/".$page->template->name.".php";
+		bd($site_spec_template_path);
+		bd($webengine_spec_template_path);
+		bd(file_exists($site_spec_template_path));
+		bd(file_exists($webengine_spec_template_path));
+		if(file_exists($site_spec_template_path)){
+			$page->template->setFilename($site_spec_template_path);
+		}
+		elseif(file_exists($webengine_spec_template_path)){
+			$page->template->setFilename($webengine_spec_template_path);
+		}
+
+
+		/*if($this->view){
+			
 
 			bd($this->config->paths->templates);
 
@@ -234,7 +252,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 			bd($this->config->paths->templates);
 
 			
-		}
+		}*/
 		
 		
 	}
