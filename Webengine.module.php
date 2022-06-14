@@ -223,7 +223,24 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		bd($webengine_spec_template_path);
 		bd(file_exists($site_spec_template_path));
 		bd(file_exists($webengine_spec_template_path));
-		if(file_exists($site_spec_template_path)){
+
+		
+		if($page->xcf_custom_template){
+			$template_arr = explode(">",$page->xcf_custom_template);
+			if($template_arr[0]=="webengine"){
+				$custom_template_path = $this->config->paths->root."site/modules/webengine/page_templates/".$template_arr[1];
+			}
+			elseif($template_arr[0]=="site"){
+				$custom_template_path = $this->config->paths->root."sites/pwmd.local/templates/".$template_arr[1];
+			}
+
+			if(file_exists($custom_template_path)){
+				$page->template->setFilename($custom_template_path);
+			}
+			
+		}
+
+		elseif(file_exists($site_spec_template_path)){
 			$page->template->setFilename($site_spec_template_path);
 		}
 		elseif(file_exists($webengine_spec_template_path)){

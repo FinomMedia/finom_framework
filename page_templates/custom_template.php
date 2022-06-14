@@ -2,13 +2,11 @@
 <?php include __DIR__."/../partials/header.php" ?>
 
 <div id="content">
-	XCT z modules/webengine/page_templates
+	custom template z modules/webengine/page_templates
 </div>	
 <div class="description">
 	
 <?=$page->title?>
-
-
 
 	
 </div>
