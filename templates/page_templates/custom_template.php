@@ -8,6 +8,8 @@
 	
 <?=$page->title?>
 
+<?php include __DIR__."/../page_layouts/default.php" ?>
+
 	
 </div>
 

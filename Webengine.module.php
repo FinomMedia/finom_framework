@@ -218,7 +218,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		bd($page->template->name);
 
 		$site_spec_template_path = $this->config->paths->root."sites/pwmd.local/templates/".$page->template->name.".php";
-		$webengine_spec_template_path = $this->config->paths->root."site/modules/webengine/page_templates/".$page->template->name.".php";
+		$webengine_spec_template_path = $this->config->paths->root."site/modules/webengine/templates/page_templates/".$page->template->name.".php";
 		bd($site_spec_template_path);
 		bd($webengine_spec_template_path);
 		bd(file_exists($site_spec_template_path));
@@ -228,7 +228,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		if($page->xcf_custom_template){
 			$template_arr = explode(">",$page->xcf_custom_template);
 			if($template_arr[0]=="webengine"){
-				$custom_template_path = $this->config->paths->root."site/modules/webengine/page_templates/".$template_arr[1];
+				$custom_template_path = $this->config->paths->root."site/modules/webengine/templates/page_templates/".$template_arr[1];
 			}
 			elseif($template_arr[0]=="site"){
 				$custom_template_path = $this->config->paths->root."sites/pwmd.local/templates/".$template_arr[1];
