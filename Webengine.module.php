@@ -32,10 +32,16 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	 * 
 	 */
 
-
-	public $test = "xyz";
-	public $appname, $view, $data;
 	public $engine;
+	public $templater;
+
+	public $router_page;
+	public $web_root_page;
+	public $web_root_page_real_url;
+	public $current_page;
+	public $current_page_real_url;
+		// i.e. do something that only applies users in the admin
+
 
     
 
@@ -59,28 +65,10 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	 */
 	public function init() {
 
-		
-		$this->wire()->set("webengine", $this);;
-	
-		//require 'plates/Extension/.php';
-		
-		// Add a hook after the $pages->save, to issue a notice every time a page is saved
-		//$this->pages->addHookAfter('saved', $this, 'pageSaveHookExample'); 
-		
-		// note use of our configurable property: $this->useHello		
-		$this->addHookBefore('Page::render', $this, 'pageRenderHookExample');
+		$this->wire()->set("webengine", $this);				
+		//$this->engine = new Media\WebengineAlone($this->wire());				
+		$this->addHookBefore('Page::render', $this, 'pageRenderEngineProcess');
 
-		// Add a 'hello' method to every page that returns "Hello World".
-		// Use "echo $page->hello();" in your template file to display output
-		// Optionally specify an argument to include it in the return value. 
-		//$this->addHook('Page::hello', $this, 'pageHelloHookExample'); 
-
-		// When adding a hook, you can optionally make the function right there, rather than
-		// putting it somewhere else in the class, as we show in the examples below. 
-		// This works for any type of hook. 
-		
-		
-		
 	}
 
 	/**
@@ -95,58 +83,33 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	public function ready() {
 
 
-
+		
 		$page = $this->wire()->page; 
 		$user = $this->wire()->user; 
-		if($page->template->name === 'admin' && $user->isLoggedin()) {
-			// i.e. do something that only applies users in the admin
-		}
-		// You may remove this method if you do not need it
-
-		//$this->appname = $this->page->parent("template=app")->app_name;
-		//bd($this->page->parent("template=app"));
-		/*if ($this->appname){
-			$this->view = $this->page->app_view ? $this->page->app_view : $this->page->template->name; //$this->page->parent("template=app")->app_view;
-		}
-		else {
-			$this->view = false;
-			bd(
-				"Není app name"
-			);
-		}*/
         
 		if($page->template->name != 'admin' ) {
-			// i.e. do something that only applies users in the admin
-		
 
-			include "webengine/webengine.php";
-			
-			$this->engine = new Media\WebengineAlone($this->wire());
-
-
-			$webengine_router_page = wire()->pages->findOne("template=webengine_router");
-			$website_root_page = $this->engine->resolveSitePw();
+			$this->router_page = wire()->pages->findOne("template=webengine_router");	
+			$this->web_root_page = $this->resolveSite();
 			$uri = $_SERVER["REQUEST_URI"];
 
-			$real_page_url = "/".$webengine_router_page->name."/".$website_root_page->name.$uri;
+			$real_page_url = "/".$this->router_page->name."/".$this->web_root_page->name.$uri;
 			
 			//bd($real_page_url);
 			//bd($webengine_router_page);
 			//bd($website_root_page);
 
-			if(!$website_root_page){
+			if(!$this->web_root_page){
 				wire()->error("Neexistující web s napojením na tuto doménu.");
 			}
 
-			$current_page = wire()->pages->get($real_page_url);
+			$this->current_page = wire()->pages->get($real_page_url);
 
-			if(!$current_page->id){
+			if(!$this->current_page->id){
 				wire()->error("Neexistující stránka na webu s touto doménou.");
 			}
 			else{					
-				//bd($current_page);
-				wire()->page= $current_page;
-				//bd(wire()->page);
+				wire()->page= $this->current_page;
 			}
 
 		}
@@ -172,6 +135,12 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 		
 
+	}
+
+	public function resolveSite(){		
+        $site_name = $_SERVER['SERVER_NAME'];
+        $page = wire()->pages->findOne("title=$site_name"); //TODO dodělat field pro url adresy ve website šabloně
+        return $page;
 	}
 
 	public function getAppConfigPath(){
@@ -207,7 +176,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	 * @param HookEvent $event
 	 *
 	 */
-	public function pageRenderHookExample(HookEvent $event) {
+	public function pageRenderEngineProcess(HookEvent $event) {
 
 		// The $event->object is always the object hooked to, in this case a Page object,
 		// since the hook is to Page::render.
