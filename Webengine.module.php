@@ -83,6 +83,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	public function ready() {
 
 
+		include "templater/xc_template_engine.php";
 		
 		$page = $this->wire()->page; 
 		$user = $this->wire()->user; 

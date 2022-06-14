@@ -1,45 +1,7 @@
-<?php 
+<?php namespace ProcessWire;
 
+use function ProcessWire\repeaterItemsToTree as ProcessWireRepeaterItemsToTree;
 
-	class MyTemplate{
-		protected $path, $data;
-
-		public function __construct($path, $data){
-			$this->path = $path;
-
-			/*$data["page"] = wire()->page;
-			$data["user"] = wire()->user;
-			$data["happ"] = wire()->happ;
-*/
-			$this->data = $data;
-			
-		}
-
-		public function render(){
-			//echo $this->path;
-			//echo __DIR__ . "$this->path";
-
-            //var_dump($this->data);
-
-			if(file_exists($this->path)){
-				extract($this->data);
-				ob_start();
-
-				include $this->path;
-				$buffer = ob_get_contents();
-				@ob_end_clean();
-				return $buffer;
-			}
-			else{
-				echo "error v šabloně - neexistující soubor se šablonou";
-				die;
-			}
-		}
-	}
-
-
-
-    
     function componentV2($name, $componentData = false){
         
         $names = explode(".",$name);
@@ -86,7 +48,6 @@
         
         
     }
-
 
 
 	class Templater {
@@ -184,3 +145,27 @@
 		@ob_end_clean();
 		return $buffer;
 	}
+
+
+
+	function componentMatrixRender($matrix_field_name = "xcf_content_matrix"){
+		$matrix_array = wire()->page->$matrix_field_name;
+		$matrix_tree = ProcessWireRepeaterItemsToTree($matrix_array);
+		bd($matrix_array);
+		bd($matrix_tree);
+	}
+
+	function repeaterItemsToTree($arr, $currentLevel = 0) {
+		$root = array();
+	  
+		foreach ($arr as $elem){
+		  if ($elem->depth == $currentLevel) {
+			$root[] = $elem;
+			//unset($elem);
+		  } else if ($elem->depth == $currentLevel + 1) {
+			$root[count($root)-1]->subitems = repeaterItemsToTree($arr,$elem->depth);      
+		  }
+		}
+	  
+		return $root;
+	  }
