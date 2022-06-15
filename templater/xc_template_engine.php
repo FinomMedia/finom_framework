@@ -1,55 +1,8 @@
 <?php namespace ProcessWire;
 
-use function ProcessWire\repeaterItemsToTree as ProcessWireRepeaterItemsToTree;
+	include "xc_matrix_renderer.php";
 
-    function componentV2($name, $componentData = false){
-        
-        $names = explode(".",$name);
- 
-
-        if($names[0]=="custom" || $names[0]=="site"){
-            $componentPath = Site::siteComponentPath().$names[1]."/";
-            array_shift($names);
-            $name = implode(".",$names);
-        }
-        else{            
-            $componentPath = Site::rootComponentPath().$names[0]."/";
-        }
-
-        
-
-        
-        if(!$componentData){
-          /*  $dataFile =  $componentPath."/default.json";
-            $data = json_decode(file_get_contents($dataFile));*/
-        }
-        else{
-
-            if(is_object($componentData)){
-                $componentData = get_object_vars($componentData);
-            }
-            elseif(is_array($componentData)){
-
-            }
-            else{
-                $componentData = array("prop"=>$componentData);
-            }
-            
-                    
-        }
-
-        $fullpath = $componentPath."".$name.".php";
-                
-        $tmpl = new MyTemplate($fullpath,$componentData);
-    
-        echo $tmpl->render();
-
-        echo Templater::getPartial("html");
-        
-        
-    }
-
-
+   
 	class Templater {
 
 		public static $sections = array();
@@ -147,25 +100,3 @@ use function ProcessWire\repeaterItemsToTree as ProcessWireRepeaterItemsToTree;
 	}
 
 
-
-	function componentMatrixRender($matrix_field_name = "xcf_content_matrix"){
-		$matrix_array = wire()->page->$matrix_field_name;
-		$matrix_tree = ProcessWireRepeaterItemsToTree($matrix_array);
-		bd($matrix_array);
-		bd($matrix_tree);
-	}
-
-	function repeaterItemsToTree($arr, $currentLevel = 0) {
-		$root = array();
-	  
-		foreach ($arr as $elem){
-		  if ($elem->depth == $currentLevel) {
-			$root[] = $elem;
-			//unset($elem);
-		  } else if ($elem->depth == $currentLevel + 1) {
-			$root[count($root)-1]->subitems = repeaterItemsToTree($arr,$elem->depth);      
-		  }
-		}
-	  
-		return $root;
-	  }

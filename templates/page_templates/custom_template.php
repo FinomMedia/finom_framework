@@ -31,7 +31,10 @@
 
 
 <h2>Matrix render</h2>
+
 <?php componentMatrixRender() ?>
+
+
 	
 </div>
 
