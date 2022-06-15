@@ -1,5 +1,7 @@
 <?php namespace ProcessWire;
 
+include "xc_template.php";
+
 
 function componentV2($name, $componentData = false){
         
@@ -49,6 +51,12 @@ function componentV2($name, $componentData = false){
     }
 
 function xcComponent($name,$repeater_item = false){
-    echo "<div style='background: #f2f2f2; margin: 1rem;'>*".$name." - ".$repeater_item->xcf_title." - ".$repeater_item->xcf_richtext."*</div>";
+
+    //bd(wire()->webengine->getComponentFile($name));
+
+    $tmpl = new XcTemplate(wire()->webengine->getComponentFile($name),$repeater_item);
+    echo $tmpl->render();
+
+    //echo "<div style='background: #f2f2f2; margin: 1rem;'>*".$name." - ".$repeater_item->xcf_title." - ".$repeater_item->xcf_richtext."*</div>";
 }
 

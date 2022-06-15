@@ -40,7 +40,68 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	public $web_root_page_real_url;
 	public $current_page;
 	public $current_page_real_url;
+
+	public $site_path;
+	public $webengine_path;
 		// i.e. do something that only applies users in the admin
+
+
+	public function getWebengineComponentPath($component_name = null){
+		return $this->webengine_path."templates/components/";
+	}
+
+	public function getSiteComponentPath($component_name = null){
+		return $this->site_path."templates/components/";
+	}
+
+	public function resolveComponentFileName($component_name){
+		
+		$name_arr = explode("_",$component_name);
+
+		if(count($name_arr)==1){
+			$c_name = $component_name;
+			$c_layout = "default";
+			$c_version = "v1";
+		}
+		elseif(count($name_arr)==2){
+			$c_name = $name_arr[0];
+			$c_layout = $name_arr[1];
+			$c_version = "v1";
+		}
+		elseif(count($name_arr)==3){
+			$c_name = $name_arr[0];
+			$c_layout = $name_arr[1];
+			$c_version = $name_arr[2];
+		}
+
+
+		return $c_name."_".$c_layout."_".$c_version.".php";
+	}
+
+	public function getComponentFile($component_name){
+		$component_file_name = $this->resolveComponentFileName($component_name);
+		
+
+		$component_webengine_path = $this->getWebengineComponentPath().$component_name."/".$component_file_name;
+		$component_site_path = $this->getSiteComponentPath().$component_name."/".$component_file_name ;
+
+		/*bd($component_webengine_path);
+		bd($component_site_path);
+		bd(file_exists($component_webengine_path));
+*/
+		if(file_exists($component_site_path)){
+			return $component_site_path;
+		}
+		elseif(file_exists($component_webengine_path)){
+			return $component_webengine_path;
+		}
+		else{
+			wire()->error("Komponenta $component_name nemá požadovaný soubor šablony.");
+		}
+
+
+	}
+
 
 
     
@@ -92,6 +153,10 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 			$this->router_page = wire()->pages->findOne("template=webengine_router");	
 			$this->web_root_page = $this->resolveSite();
+
+			$this->site_path =  wire()->config->paths->root."sites/".$this->router_page->name."/";
+			$this->webengine_path = wire()->config->paths->root."site/modules/webengine/";
+
 			$uri = $_SERVER["REQUEST_URI"];
 
 			$real_page_url = "/".$this->router_page->name."/".$this->web_root_page->name.$uri;
@@ -189,11 +254,11 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 		$site_spec_template_path = $this->config->paths->root."sites/pwmd.local/templates/".$page->template->name.".php";
 		$webengine_spec_template_path = $this->config->paths->root."site/modules/webengine/templates/page_templates/".$page->template->name.".php";
-		bd($site_spec_template_path);
+		/*bd($site_spec_template_path);
 		bd($webengine_spec_template_path);
 		bd(file_exists($site_spec_template_path));
 		bd(file_exists($webengine_spec_template_path));
-
+*/
 		
 		if($page->xcf_custom_template){
 			$template_arr = explode(">",$page->xcf_custom_template);

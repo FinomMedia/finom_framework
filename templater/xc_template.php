@@ -6,6 +6,13 @@ class XcTemplate {
 		protected $path, $data;
 
 		public function __construct($path, $data){
+
+			
+			if($data instanceof RepeaterMatrixPage){
+				//dump("Je to repeater page");
+				//dump($data->getFields());
+			}
+
 			$this->path = $path;
 			$this->data = $data;
 			
@@ -17,12 +24,15 @@ class XcTemplate {
             //var_dump($this->data);
 
 			if(file_exists($this->path)){
-				extract($this->data);
+				//extract($this->data);
 				ob_start();
+
+				$data = $this->data;
 
 				include $this->path;
 				$buffer = ob_get_contents();
 				@ob_end_clean();
+				
 				return $buffer;
 			}
 			else{

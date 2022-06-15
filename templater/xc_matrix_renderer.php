@@ -34,8 +34,8 @@
     function componentMatrixRender($matrix_field_name = "xcf_content_matrix"){
 		$matrix_array = wire()->page->$matrix_field_name;
 		$matrix_tree = repeaterItemsToTree($matrix_array);
-		bd($matrix_array);
-		bd($matrix_tree);
+		//bd($matrix_array);
+		//bd($matrix_tree);
         
 
         processMatrixTreeRender($matrix_tree);
@@ -51,7 +51,7 @@
             echo " - ".$item->xcf_title." -  <br>";
             //bd($item->name);
             //dump($item->children->count());
-            bd($item->getMatrixInfo()["type"]);
+           // bd($item->getMatrixInfo()["type"]);
             
             if($item->subitems){
                 processMatrixTreeSimpleRender($item->subitems,$depth + 1);
@@ -67,8 +67,8 @@
             }
             xcComponent($item->getMatrixInfo()["type"],$item);
             
-            if($item->subitems){
+            /*if($item->subitems){
                 processMatrixTreeRender($item->subitems,$depth + 1);
-            }
+            }*/
         }    
     }
