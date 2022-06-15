@@ -54,7 +54,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		return $this->site_path."templates/components/";
 	}
 
-	public function resolveComponentFileName($component_name){
+	public function resolveComponentFilePath($component_name){
 		
 		$name_arr = explode("_",$component_name);
 
@@ -75,18 +75,18 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		}
 
 
-		return $c_name."_".$c_layout."_".$c_version.".php";
+		return $c_name."/".$c_name."_".$c_layout."_".$c_version.".php";
 	}
 
 	public function getComponentFile($component_name){
-		$component_file_name = $this->resolveComponentFileName($component_name);
+		$component_file_name = $this->resolveComponentFilePath($component_name);
 		
 
-		$component_webengine_path = $this->getWebengineComponentPath().$component_name."/".$component_file_name;
-		$component_site_path = $this->getSiteComponentPath().$component_name."/".$component_file_name ;
+		$component_webengine_path = $this->getWebengineComponentPath()."".$component_file_name;
+		$component_site_path = $this->getSiteComponentPath()."".$component_file_name ;
 
 		//bd($component_webengine_path);
-		bd($component_site_path);
+		//bd($component_site_path);
 		//bd(file_exists($component_webengine_path));
 
 		if(file_exists($component_site_path)){
@@ -252,8 +252,8 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 		bd($page->template->name);
 
-		$site_spec_template_path = $this->config->paths->root."sites/pwmd.local/templates/".$page->template->name.".php";
-		$webengine_spec_template_path = $this->config->paths->root."site/modules/webengine/templates/page_templates/".$page->template->name.".php";
+		$site_spec_template_path = $this->site_path."sites/pwmd.local/templates/".$page->template->name.".php";
+		$webengine_spec_template_path = $this->webengine_path."templates/page_templates/".$page->template->name.".php";
 		/*bd($site_spec_template_path);
 		bd($webengine_spec_template_path);
 		bd(file_exists($site_spec_template_path));

@@ -1,4 +1,9 @@
 <?php namespace ProcessWire; ?>
+
+
+
+
+
 <?php include __DIR__."/../partials/header.php" ?>
 
 <div id="content">
@@ -10,29 +15,39 @@
 
 <?php include __DIR__."/../page_layouts/default.php" ?>
 
-<?php Templater::partialBegin("content")?>
-
-	<div>
-		Toto je obsah v parcialu.
-	</div>
-
-<?php Templater::partialEnd()?>
 
 
-<?php Templater::partialBegin("content2")?>
 
-	<div>
-		Toto je obsah v parcialu 2.
-	</div>
+<?php if($cache->get("pager")): ?>
+	<?=$cache->get("pager") ?>
+<?php else: ?>
 
-<?= Templater::partialEnd()?>
+	<?php Templater::partialBegin("content")?>
 
-<?= Templater::getPartial("content")?>
+		<?php $pgs = repeaterItemsToTree($page->xcf_content_matrix); //dump($pgs); ?>
 
 
-<h2>Matrix render</h2>
+		<div>
+			Toto je obsah v parcialu.
+		</div>
 
-<?php componentMatrixRender() ?>
+		<h2>Navigace</h2>
+		<?= xcComponent("navigation_test")?>
+
+		<h2>Matrix render</h2>
+		<?php for($i=1;$i<2;$i++):?>
+			<?= xcComponent("matrixarray_root",$pgs)?>
+		<?php endfor ?>
+
+		
+	<?php Templater::partialEnd()?>
+
+	<?php $value = Templater::getPartial("content") ?>
+	<?php $cache->save("pager", $value, 5) ?>
+
+	<?= $value ?>
+
+<?php endif ?>
 
 
 	

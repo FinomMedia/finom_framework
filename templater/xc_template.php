@@ -13,8 +13,11 @@ class XcTemplate {
 				//dump($data->getFields());
 			}
 
+			//bd($this->data);
+
 			$this->path = $path;
 			$this->data = $data;
+			
 			
 		}
 
@@ -22,6 +25,8 @@ class XcTemplate {
 			//echo $this->path;
 			//echo __DIR__ . "$this->path";
             //var_dump($this->data);
+
+			//bd($this->data);
 
 			if(file_exists($this->path)){
 				//extract($this->data);
