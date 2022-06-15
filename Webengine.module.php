@@ -85,10 +85,10 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		$component_webengine_path = $this->getWebengineComponentPath().$component_name."/".$component_file_name;
 		$component_site_path = $this->getSiteComponentPath().$component_name."/".$component_file_name ;
 
-		/*bd($component_webengine_path);
+		//bd($component_webengine_path);
 		bd($component_site_path);
-		bd(file_exists($component_webengine_path));
-*/
+		//bd(file_exists($component_webengine_path));
+
 		if(file_exists($component_site_path)){
 			return $component_site_path;
 		}
@@ -154,7 +154,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 			$this->router_page = wire()->pages->findOne("template=webengine_router");	
 			$this->web_root_page = $this->resolveSite();
 
-			$this->site_path =  wire()->config->paths->root."sites/".$this->router_page->name."/";
+			$this->site_path =  wire()->config->paths->root."sites/".$this->web_root_page->name."/";
 			$this->webengine_path = wire()->config->paths->root."site/modules/webengine/";
 
 			$uri = $_SERVER["REQUEST_URI"];
