@@ -9,13 +9,10 @@
     <title>
         Default web
     </title>
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
 
     <style>
-        <?= Templater::getPartial("css") ?>
-    </style>
-
-    <style>
-        <?=XcResourcer::getCss(); ?>
+        <?= XcResourcer::getCss(); ?>
     </style>
 </head>
 
