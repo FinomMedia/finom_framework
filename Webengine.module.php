@@ -130,14 +130,13 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		$page = $this->wire()->page; 
 		$user = $this->wire()->user; 
 
-		if(wire()->input->urlSegment1()){
+		if(wire()->input->urlSegment1() || wire()->input->urlSegmentStr==""){
 			$this->site_context_urls = true; 
 		}
 		else{
 			$this->site_context_urls = false;
 		}
 
-		bd($this->site_context_urls);
         
 		if($page->template->name != 'admin' ) {
 			
@@ -152,8 +151,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 			$uri = $_SERVER["REQUEST_URI"];
 
 			$real_page_url = "/".$this->router_page->name."/".$this->web_root_page->name.$uri;
-			
-			//bd($real_page_url);
+						
 			//bd($webengine_router_page);
 			//bd($website_root_page);
 
@@ -166,7 +164,10 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 			if(!$this->current_page->id){
 				wire()->error("Neexistující stránka na webu s touto doménou.");
 			}
-			else{					
+			else{			
+				if($this->current_page->template=="webengine_website"){
+					$this->current_page = wire()->page= $this->current_page->child();
+				}		
 				wire()->page= $this->current_page;
 			}
 
@@ -240,9 +241,6 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		// since the hook is to Page::render.
 		
 		$page = $event->object; /** @var Page $page */
-
-
-		bd($page->template->name);
 
 		$site_spec_template_path = $this->site_path."sites/pwmd.local/templates/".$page->template->name.".php";
 		$webengine_spec_template_path = $this->webengine_path."templates/page_templates/".$page->template->name.".php";
