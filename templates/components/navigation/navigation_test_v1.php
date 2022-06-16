@@ -2,6 +2,7 @@
     namespace ProcessWire;
 
     $pages = wire()->webengine->web_root_page->children();
+    $pages = wire()->modules("webengine")->preparePagesForNavigation($pages);
     bd($pages);
 ?>
 
@@ -11,7 +12,7 @@
     
     <ul>
         <?php foreach($pages as $page): ?>
-            <a href="<?=$page->url?>"><?=$page->title?></a>
+            <a href="<?=$page->page_url?>"><?=$page->title?></a>
         <?php endforeach;?>
     </ul>
    

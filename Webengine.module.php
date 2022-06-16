@@ -71,8 +71,46 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		$this->wire()->set("webengine", $this);				
 		//$this->engine = new Media\WebengineAlone($this->wire());				
 		$this->addHookBefore('Page::render', $this, 'pageRenderEngineProcess');
-		$this->addHookAfter('Page::ready', $this, 'pageUrlChanger');
+		
 
+	}
+
+	public function preparePagesForNavigation($pages){
+		$new_pages = $pages;
+		foreach($new_pages as $page){
+			$page = $this->preparePageForNavigation($page);
+		}
+		return $new_pages;
+	}
+
+	public function preparePageForNavigation($page){
+		
+		bd($this->site_context_urls);
+
+
+		
+		$url_arr = explode("/",$page->url);
+		bd($url_arr);
+		$sliced = array_slice($url_arr,3,-1);
+		bd($sliced);
+		$final = "/".implode("/",$sliced);
+		bd($final);
+
+		if($this->site_context_urls){
+			if($final == "/home"){
+				$page->page_url = "/";
+			}
+			else{
+				$page->page_url = $final;
+			}
+			
+		}
+		else{
+			$page->page_url = $page->url;
+		}
+
+		return $page;
+		
 	}
 
 	/**
@@ -102,6 +140,8 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		bd($this->site_context_urls);
         
 		if($page->template->name != 'admin' ) {
+			
+			//$this->addHookAfter('Page::renderValue("url")', $this, 'pageUrlChanger');
 
 			$this->router_page = wire()->pages->findOne("template=webengine_router");	
 			$this->web_root_page = $this->resolveSite();
@@ -266,8 +306,20 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		// The $event->object is always the object hooked to, in this case a Page object,
 		// since the hook is to Page::render.
 		
-		$page = $event->object; /** @var Page $page */
-		$page->url = "/dadsa"; // TODO !!!
+		
+
+		/*$page = $event->object; 
+		$page->page_link = "/dadsa"; // TODO !!!
+		
+*/
+		$event->return = "/google";
+
+		bd("A");
+		//bd($event->object);
+		
+		//$page->path = "/dsadasdas/dsadas";
+
+		/*return $page;*/
 
 	}
 
