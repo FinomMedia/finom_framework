@@ -3,9 +3,16 @@
 ?>
 
 
-<div style="padding: 2rem; background: tomato;">
-    GRID s titulkem <?=$data->xcf_title?> a textem <?=$data->xcf_richtext?>
-
-    <?php xcComponent("matrixarray",$data) ?>
+<div class="componentGrid" style="padding: 2rem; background: tomato;">
+    <?= xcComponent("matrixarray",$data) ?>
 
 </div>
+
+
+<style>
+    .componentGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+</style>

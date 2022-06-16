@@ -1,3 +1,6 @@
+<?php
+    namespace Processwire;
+?>
 <!DOCTYPE html>
 <html lang="cs-CZ">
 <head>
@@ -8,7 +11,11 @@
     </title>
 
     <style>
-        <?php //= Templater::getPartial("css") ?>
+        <?= Templater::getPartial("css") ?>
+    </style>
+
+    <style>
+        <?=XcResourcer::getCss(); ?>
     </style>
 </head>
 

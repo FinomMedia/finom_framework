@@ -8,7 +8,7 @@
 
 <?php foreach($data as $subitem) : ?>
   
-    <?php xcComponent($subitem->getMatrixInfo()["type"],$subitem) ?>
+    <?= xcComponent($subitem->getMatrixInfo()["type"],$subitem) ?>
 <?php endforeach; ?>
 
 </div>

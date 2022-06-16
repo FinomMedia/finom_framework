@@ -23,8 +23,8 @@
 
     <?php
     
-    $this->addLessString("h2 { color: #abcabc; }");
-    $this->addLessFile(__DIR__."/feature_v1.less");
+    Templater::$less->addStr("h2 { color: #abc$rand; }");
+    Templater::$less->addFile(__DIR__."/feature_v1.less");
     
     ?>
 <?php Templater::partialEnd()?>
