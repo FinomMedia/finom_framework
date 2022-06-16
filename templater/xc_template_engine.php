@@ -1,7 +1,7 @@
 <?php namespace ProcessWire;
 
 	include "xc_matrix_renderer.php";
-
+	
    
 	class Templater {
 
@@ -15,9 +15,15 @@
 
 		public static $current_partial;
 
+		public static $less;
+
 		public static function partialBegin($name){
 			self::$partials_lifo[]=$name;
 			sectionStart();
+		}
+
+		public static function setLess($sless){
+			self::$less = $sless;
 		}
 
 
@@ -59,9 +65,16 @@
 			self::$partials[$name] = $content; 
 		}
 
+		public static function removePartial($name){
+			unset(self::$partials[$name]);
+		}
+
 		public static function getPartial($name){
+			if(isset(self::$partials[$name])){
+				return self::$partials[$name];
+			}
+			else return false;
 			
-			return self::$partials[$name];
 
 		}
 
@@ -100,3 +113,4 @@
 	}
 
 
+	Templater::setLess(wire()->modules->get('Less'));
