@@ -122,6 +122,11 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	 * initialization requires that the `$page` API variable is available.
 	 * 
 	 */
+
+	 public function getOriginPage(){
+
+	 }
+
 	public function ready() {
 
 
@@ -138,7 +143,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		}
 
         
-		if($page->template->name != 'admin' ) {
+		if($page->template->name != 'admin' && true) {
 			
 			//$this->addHookAfter('Page::renderValue("url")', $this, 'pageUrlChanger');
 
@@ -168,7 +173,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 				if($this->current_page->template=="webengine_website"){
 					$this->current_page = wire()->page= $this->current_page->child();
 				}		
-				wire()->page= $this->current_page;
+				//wire()->page= $this->current_page;
 			}
 
 		}

@@ -20,7 +20,7 @@
 		<?= xcComponent("navigation_test") ?>
 
 		<h2>Matrix render</h2>
-		<?php for($i=1;$i<40;$i++):?>
+		<?php for($i=1;$i<2;$i++):?>
 			<?= xcComponent("matrixarray_root",$pgs)?>
 		<?php endfor ?>
 
