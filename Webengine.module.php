@@ -35,6 +35,8 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	public $engine;
 	public $templater;
 
+	public $site_context_urls;
+
 	public $router_page;
 	public $web_root_page;
 	public $web_root_page_real_url;
@@ -45,66 +47,6 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	public $webengine_path;
 		// i.e. do something that only applies users in the admin
 
-
-	public function getWebengineComponentPath($component_name = null){
-		return $this->webengine_path."templates/components/";
-	}
-
-	public function getSiteComponentPath($component_name = null){
-		return $this->site_path."templates/components/";
-	}
-
-	public function resolveComponentFilePath($component_name){
-		
-		$name_arr = explode("_",$component_name);
-
-		if(count($name_arr)==1){
-			$c_name = $component_name;
-			$c_layout = "default";
-			$c_version = "v1";
-		}
-		elseif(count($name_arr)==2){
-			$c_name = $name_arr[0];
-			$c_layout = $name_arr[1];
-			$c_version = "v1";
-		}
-		elseif(count($name_arr)==3){
-			$c_name = $name_arr[0];
-			$c_layout = $name_arr[1];
-			$c_version = $name_arr[2];
-		}
-
-
-		return $c_name."/".$c_name."_".$c_layout."_".$c_version.".php";
-	}
-
-	public function getComponentFile($component_name){
-		$component_file_name = $this->resolveComponentFilePath($component_name);
-		
-
-		$component_webengine_path = $this->getWebengineComponentPath()."".$component_file_name;
-		$component_site_path = $this->getSiteComponentPath()."".$component_file_name ;
-
-		//bd($component_webengine_path);
-		//bd($component_site_path);
-		//bd(file_exists($component_webengine_path));
-
-		if(file_exists($component_site_path)){
-			return $component_site_path;
-		}
-		elseif(file_exists($component_webengine_path)){
-			return $component_webengine_path;
-		}
-		else{
-			wire()->error("Komponenta $component_name nemá požadovaný soubor šablony.");
-		}
-
-
-	}
-
-
-
-    
 
 
 	public function __construct() {
@@ -129,6 +71,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		$this->wire()->set("webengine", $this);				
 		//$this->engine = new Media\WebengineAlone($this->wire());				
 		$this->addHookBefore('Page::render', $this, 'pageRenderEngineProcess');
+		$this->addHookAfter('Page::ready', $this, 'pageUrlChanger');
 
 	}
 
@@ -148,6 +91,15 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		
 		$page = $this->wire()->page; 
 		$user = $this->wire()->user; 
+
+		if(wire()->input->urlSegment1()){
+			$this->site_context_urls = true; 
+		}
+		else{
+			$this->site_context_urls = false;
+		}
+
+		bd($this->site_context_urls);
         
 		if($page->template->name != 'admin' ) {
 
@@ -309,6 +261,16 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		
 	}
 
+	public function pageUrlChanger(HookEvent $event) {
+
+		// The $event->object is always the object hooked to, in this case a Page object,
+		// since the hook is to Page::render.
+		
+		$page = $event->object; /** @var Page $page */
+		$page->url = "/dadsa"; // TODO !!!
+
+	}
+
 
 	/**
 	 * Hook to Page::hello
@@ -425,31 +387,7 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		}
 	}
 
-	public function getStyleDirPath(){
-        return true;
-    }
-
-    public function getView(){
-        return $this->view;
-    }
-
-    public function getAllowedRoles(){
-        if($this->page->roles_allowed->count){
-            return $this->page->roles_allowed;
-        }
-        else{
-            echo "ne";
-            return $this->page->parents("roles_allowed!=")->roles_allowed;
-        }
-    }
-
-	public function getPath($path){
-		return "/site/apps/".$this->appname."/".$path;
-	}
-
-	public function getSrcPath($path){
-		return "/site/apps/".$this->appname."/resources/".$path;
-	}
+	
 
 		
 }
