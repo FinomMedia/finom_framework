@@ -46,11 +46,12 @@ class xcComponent {
     }
 
     public function testMe($ta){
-        bd($ta);
+        //bd($ta);
     }
 
     public function addLessString($string){
         $this->less_strings[] = $string;
+        
     }
     public function addLessFile($file_name){
         $this->less_files[] = $file_name;

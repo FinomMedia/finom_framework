@@ -11,7 +11,7 @@
     <?php Templater::partialEnd()?>
 
 	<?php $value = Templater::getPartial("page") ?>
-	<?php $cache->save($hash, $value, 60) ?>
+	<?php $cache->save($hash, $value, 1) ?>
 	<?= $value ?>
 
 <?php endif ?>

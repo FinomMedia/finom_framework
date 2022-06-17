@@ -85,16 +85,16 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 	public function preparePageForNavigation($page){
 		
-		bd($this->site_context_urls);
+		//bd($this->site_context_urls);
 
 
 		
 		$url_arr = explode("/",$page->url);
-		bd($url_arr);
+		//bd($url_arr);
 		$sliced = array_slice($url_arr,3,-1);
-		bd($sliced);
+		//bd($sliced);
 		$final = "/".implode("/",$sliced);
-		bd($final);
+		//bd($final);
 
 		if($this->site_context_urls){
 			if($final == "/home"){

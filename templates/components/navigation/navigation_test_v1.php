@@ -3,7 +3,7 @@
 
     $pages = wire()->webengine->web_root_page->children();
     $pages = wire()->modules("webengine")->preparePagesForNavigation($pages);
-    bd($pages);
+    //bd($pages);
 ?>
 
 

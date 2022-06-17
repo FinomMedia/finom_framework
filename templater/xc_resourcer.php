@@ -8,20 +8,27 @@
 
 
         public static function addLessString($string,$id){
+            
             if(!$id){
                 self::$less_strings["global"].=$string; 
             }
             else{
-                self::$less_strings[$id]=$string;
+                if(isset(self::$less_strings[$id])){
+                    self::$less_strings[$id].=$string;
+                }
+                else{
+                    self::$less_strings[$id]=$string;
+                }
+                
             }
             
-
         }
         public static function addLessFile($file_path,$id){
             self::$less_files[$id] = $file_path;
         }
 
         public static function parseAllLess(){
+            bd(self::$less_strings);
             foreach(self::$less_strings as $string){
                 Templater::$less->addStr($string);
             }
