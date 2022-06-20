@@ -202,8 +202,8 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 	}
 
 	public function resolveSite(){		
-        $site_name = $_SERVER['SERVER_NAME'];
-        $page = wire()->pages->findOne("title=$site_name"); //TODO dodělat field pro url adresy ve website šabloně
+        $server_name = $_SERVER['SERVER_NAME'];
+        $page = wire()->pages->findOne("xcf_domains.xcf_domain=$server_name");
         return $page;
 	}
 

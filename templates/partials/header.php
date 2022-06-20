@@ -9,7 +9,6 @@
     <title>
         Default web
     </title>
-    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
 
     <style>
         <?= XcResourcer::getCss(); ?>
