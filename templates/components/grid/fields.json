@@ -1,5 +1,0 @@
-{"fieldgroups": [
-        {"name": "grid", "showif": "text=ano"},
-        {"name": "region", "showif": "text=ano"}
-    ]
-}

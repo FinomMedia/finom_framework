@@ -3,7 +3,7 @@
 ?>
 
 
-<div style="padding: 2rem; border: 2px dashed white;">
+<div class="matrixRoot">
     MATRIX array root
 
 <?php foreach($data as $subitem) : ?>

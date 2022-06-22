@@ -3,9 +3,11 @@
 ?>
 
 
-<div style="padding: 2rem; background: grey;">
-    SECTION s titulkem <?=$data->xcf_title?>
+<div class="section region"style="background:#fafafa;">
+  <div class="wrapper flow">
 
+    <h2><?=$data->xcf_title?></h2>
     <?= xcComponent("matrixarray",$data) ?>
 
+    </div>
 </div>
