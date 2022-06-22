@@ -45,6 +45,8 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 
 	public $site_path;
 	public $webengine_path;
+
+
 		// i.e. do something that only applies users in the admin
 
 
@@ -246,11 +248,11 @@ class Webengine extends WireData implements Module, ConfigurableModule {
 		// since the hook is to Page::render.
 		
 		$page = $event->object; /** @var Page $page */
-
-		$site_spec_template_path = $this->site_path."sites/pwmd.local/templates/".$page->template->name.".php";
+		
+		$site_spec_template_path = $this->site_path."templates/page_templates/".$page->template->name.".php";
 		$webengine_spec_template_path = $this->webengine_path."templates/page_templates/".$page->template->name.".php";
-		/*bd($site_spec_template_path);
-		bd($webengine_spec_template_path);
+		bd($site_spec_template_path);
+		/*bd($webengine_spec_template_path);
 		bd(file_exists($site_spec_template_path));
 		bd(file_exists($webengine_spec_template_path));
 */
