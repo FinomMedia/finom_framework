@@ -5,7 +5,7 @@
 
 <?php Templater::partialBegin("html")?>
 
-<div class="componentFeature card" >
+<div class="componentFeature card flow" >
     <div class="svg"><?=$data->xcf_svg?></div>
     <h3> <?=$data->xcf_title?></h3>
     <p><?=$data->xcf_text?></p>

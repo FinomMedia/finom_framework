@@ -27,12 +27,100 @@ ideally, as a minimum.
 
 --grid-placement (auto-fill): Set either auto-fit or auto-fill
 to change how empty grid tracks are handled */
+/* Modern reset: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Prevent zooming when orientation changes on some iOS devices */
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
 .grid {
     display: grid;
     grid-template-columns: repeat(
       var(--grid-placement, auto-fit),
       minmax(var(--grid-min-item-size, 16rem), 1fr)
     );
+
+
+    /*--gutter: var(--space-s-l); */
+    --max: 533px;
+    --min: calc(var(--step-0) * 20 );
+    
+
+    
+    --cols: 3;
+    --gaps: calc( ( var(--cols) - 1 ) * var(--gutter));
+
+    --middle: calc(33% - var(--gaps));
+
+    --wrap: var(--wrapper-max-width,100vw);
+    --max: calc( var(--wrap)/var(--cols) - calc( ( var(--cols) - 1 ) * var(--gutter)));
+    grid-template-columns: repeat(
+      var(--grid-placement, auto-fit),
+      minmax(clamp(var(--min),var(--middle),var(--max)), 1fr )
+    );
+    
     gap: var(--gutter, var(--space-s-l));
   }
   
@@ -150,9 +238,39 @@ Info about this implementation: https://piccalil.li/quick-tip/flow-utility/
   --step-3: clamp(1.25rem, calc(0.84rem + 2.01vw), 3.26rem);
   --step-4: clamp(1.40rem, calc(0.81rem + 2.94vw), 4.34rem);
 
+  --step--3: clamp(0.66rem, calc(0.66rem + 0.01vw), 0.69rem);
+  --step--2: clamp(0.74rem, calc(0.72rem + 0.08vw), 0.91rem);
+  --step--1: clamp(0.83rem, calc(0.80rem + 0.18vw), 1.22rem);
+  --step-0: clamp(0.94rem, calc(0.88rem + 0.31vw), 1.63rem);
+  --step-1: clamp(1.06rem, calc(0.95rem + 0.51vw), 2.17rem);
+  --step-2: clamp(1.19rem, calc(1.03rem + 0.77vw), 2.89rem);
+  --step-3: clamp(1.34rem, calc(1.11rem + 1.14vw), 3.85rem);
+  --step-4: clamp(1.50rem, calc(1.17rem + 1.65vw), 5.13rem);
+  --step-5: clamp(1.69rem, calc(1.22rem + 2.34vw), 6.84rem);
+
+  --step--3: clamp(0.66rem, calc(0.65rem + 0.04vw), 0.74rem);
+  --step--2: clamp(0.74rem, calc(0.72rem + 0.11vw), 0.99rem);
+  --step--1: clamp(0.83rem, calc(0.79rem + 0.22vw), 1.31rem);
+  --step-0: clamp(0.94rem, calc(0.86rem + 0.37vw), 1.75rem);
+  --step-1: clamp(1.06rem, calc(0.94rem + 0.58vw), 2.33rem);
+  --step-2: clamp(1.19rem, calc(1.01rem + 0.87vw), 3.11rem);
+  --step-3: clamp(1.34rem, calc(1.08rem + 1.28vw), 4.14rem);
+  --step-4: clamp(1.50rem, calc(1.14rem + 1.83vw), 5.53rem);
+  --step-5: clamp(1.69rem, calc(1.17rem + 2.58vw), 7.37rem);
+
+  --step--3: clamp(0.66rem, calc(0.66rem + 0.00vw), 0.66rem);
+  --step--2: clamp(0.74rem, calc(0.72rem + 0.09vw), 0.94rem);
+  --step--1: clamp(0.83rem, calc(0.79rem + 0.22vw), 1.33rem);
+  --step-0: clamp(0.94rem, calc(0.85rem + 0.43vw), 1.88rem);
+  --step-1: clamp(1.06rem, calc(0.91rem + 0.73vw), 2.65rem);
+  --step-2: clamp(1.19rem, calc(0.95rem + 1.16vw), 3.75rem);
+  --step-3: clamp(1.34rem, calc(0.97rem + 1.80vw), 5.30rem);
+  --step-4: clamp(1.50rem, calc(0.96rem + 2.72vw), 7.50rem);
+  --step-5: clamp(1.69rem, calc(0.88rem + 4.05vw), 10.60rem);
+
 
   --wrapper-max-width: calc( var(--step-0) * 75); /* TODO asi to dělat přes em */
-
+  --wsrapper-max-width: 1600px; /* TODO asi to dělat přes em */
 
   
   --font-base: Inter,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
@@ -166,7 +284,11 @@ Info about this implementation: https://piccalil.li/quick-tip/flow-utility/
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
 
-  --min-item: calc(var(--step-0) * 10);
+  --min-item: calc(var(--step-0) * 15);
+  --min-item: 16rem;
+  
+  --max-item: calc(var(--step-0) * 20);
+  --max-item: 20rem;
   
 }
 
@@ -182,20 +304,112 @@ body {
 
 }
 .componentFeature{
-    font-size: var(--step--1);
     text-align: center;
 }
 
 
 
     .grida{ --grid-min-item-size: 12rem;}
-    .grid2{ --grid-min-item-size: clamp( var(--min-item), 50vw, 20rem )}
-    .grid3{ --grid-min-item-size: clamp( var(--min-item), 33%, 20rem )}
+    .grid2{ --grid-min-item-size: clamp( var(--min-item), 50vw,  var(--max-item) )}
+    .grid3{ --grid-cols: 3; --grid-min-item-size: clamp( var(--min-item), 33%,  calc(var(--wrapper-max-width)/var(--grid-cols) ))}
     .grid4{ --grid-min-item-size: clamp( var(--min-item), 25%, 20rem )}
     .grid5{ --grid-min-item-size: clamp( var(--min-item), 20%, 20rem )}
     .grid6{ --grid-min-item-size: clamp( var(--min-item), 16.666%, 20rem )}
 
 
+
+    /* 
+  Global styles 
+
+  Low-specificity, global styles that apply to the whole 
+  project: https://cube.fyi/css.html
+*/
+
+
+/* Base typesetting */
+h1,
+h2,
+h3 {
+  line-height: 1;
+  letter-spacing: var(--tracking-s);
+}
+
+h1 {
+  font-size: var(--size-step-5);
+}
+
+h2 {
+  font-size: var(--size-step-4);
+}
+
+h3 {
+  font-size: var(--size-step-3);
+}
+
+/* Set line lengths */
+p.s,
+li,
+blockquote:not([class]) {
+  max-width: 50ch;
+}
+
+h1,
+h2,
+h3 {
+  
+}
+
+/* More generic elements */
+blockquote:not([class]) {
+  font-family: var(--font-serif);
+  font-size: var(--size-step-2);
+}
+
+/* Markdown blockquuote:not([class])s aren't ideal, so we're presuming the person quoted is the last p */
+blockquote:not([class]) p:last-of-type {
+  font-family: var(--font-base);
+  font-size: var(--size-step-1);
+  font-weight: normal;
+}
+
+svg {
+  height: 2ex;
+  width: auto;
+  flex: none;
+}
+
+[role='list'] {
+  padding: 0;
+}
+
+/* Base interactive elements */
+
+a {
+  color: currentcolor;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+:focus {
+  outline: 2px solid;
+  outline-offset: 0.3ch;
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Base selection styles that invert whatever colours are rendered */
+::selection {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
 
 
 
