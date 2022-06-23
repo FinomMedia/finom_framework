@@ -43,7 +43,7 @@ return function ($page = null, $field = null, $value = null) {
                         'auto-fit' => 'auto-fit'
                     ]
                 ],
-                'custom_grid-min-item-size' => [
+                'custom_grid_min_item_size' => [
                     'label' => 'Min Item Size',
                     'type' => Mystique::TEXT,
                     'showIf' => [
