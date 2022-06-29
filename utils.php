@@ -28,7 +28,7 @@
 
             foreach($sites as $site){
                 //var_dump($site);
-                if($_SERVER['SERVER_NAME']==$site->servername){
+                if($_SERVER['SERVER_NAME']==$site->servername || $_SERVER['SERVER_NAME'] == "www.".$site->servername){
                     self::$conf = $site;
                     return $site;
                 }
