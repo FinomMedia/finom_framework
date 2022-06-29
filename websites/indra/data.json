@@ -36,8 +36,8 @@
   },
   "hero": {
     "classes": "",
-    "title": "Uchopne se mnou otěže svých financí",
-    "description": "“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.”",
+    "title": "Ve světě financí se na mě můžete kdykoliv obrátit",
+    "description": "“Již více než 8 let pomáhám klientům v řešení jejich finančního zázemí, zajištění lidského života a v přípravě na budoucnost, plány a cíle. Spolupráci si zakládám na fér jednání, zodpovědném přístupu a na kvalitě předávaných informací. Pokud právě tyto hodnoty ve financích hledáte, už víte na koho se obrátit.”",
     "button": "Mám zájem o nabídku",
     "background": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653995805/indra_web/hero_bg_02_tgwx15.jpg",
     "signature": "https://res.cloudinary.com/patrik-vadura/image/upload/v1654257408/indra_web/slice2_gold_qt5tqg.svg",
@@ -45,12 +45,12 @@
       {
         "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653997403/indra_web/icon/icon_investice_nynl2f.svg",
         "title": "Investice",
-        "subtitle": "Životní, Úrazové i Neživotní pojištění"
+        "subtitle": "Nemovitostní a Podílové fondy, Aktivně řízené portfolia"
       },
       {
         "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1653997403/indra_web/icon/icon_uvery_jtpand.svg",
         "title": "Úvěry",
-        "subtitle": "Životní, Úrazové i Neživotní pojištění"
+        "subtitle": "Hypoteční, Spotřebitelský a Podnikatelský úvěr"
       },
       {
         "icon": "https://res.cloudinary.com/patrik-vadura/image/upload/v1654001885/indra_web/icon/icon_pojisteni_01_dhbyu1.svg",

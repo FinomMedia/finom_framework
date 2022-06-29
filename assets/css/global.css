@@ -37,4 +37,9 @@ iframe {
   vertical-align: middle;
   border: 0;
 }
+.d-down-sm-none,
+.d-down-md-none,
+.d-down-lg-none {
+  display: none !important;
+}
 /*# sourceMappingURL=global.css.map */

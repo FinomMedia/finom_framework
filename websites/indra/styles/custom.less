@@ -10,12 +10,16 @@
       width: 100% !important;
 
       @media (min-width: @screenMd) {
+        max-width: 70% !important;
+      }
+
+      @media (min-width: @screenXl) {
         max-width: 50% !important;
       }
     }
 
     .grid-6 {
-      grid-template-columns: repeat(auto-fit, minmax(min(50%, unit(min(50%, 10), rem)), 1fr)) !important;
+      grid-template-columns: repeat(auto-fit, minmax(min(50%, unit(min(50%, 8), rem)), 1fr)) !important;
       grid-column-gap: .5rem;
       row-gap: 1rem;
     }
@@ -38,7 +42,24 @@
   }
 
   p {
-    .fontSize(.875, 1.25) !important;
+    .fontSize(.875, 1) !important;
+
+    @media (min-width: @screenXl) {
+      font-size: 1.25rem !important;
+    }
+  }
+
+  &Signature {
+    margin-top: 1rem;
+    width: 9rem;
+
+    @media (min-width: @screenMd) {
+      width: 10rem;
+    }
+
+    @media (min-width: @screenXl) {
+      width: 12rem;
+    }
   }
 
   .heroServices {

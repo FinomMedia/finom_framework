@@ -16,7 +16,7 @@
             <?php endif; ?>
 
             <?php if ($signature):?>
-                <img src="<?=$signature?>" class="heroSignature">
+                <img src="<?=$signature?>" class="heroSignature d-down-lg-none">
             <?php endif; ?>
 
             <div class="grid-6 heroServices">
@@ -31,7 +31,7 @@
                                 </span>
 
                                 <?php if ($item->subtitle):?>
-                                    <span class="subtitle">
+                                    <span class="subtitle d-down-sm-none">
                                         <?=$item->subtitle?>
                                     </span>
                                 <?php endif; ?>

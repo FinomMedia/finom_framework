@@ -44,6 +44,36 @@ iframe {
   border: 0;
 }
 
+.d-down-none-setting (@breakpoint) {
+  @media (max-width: @breakpoint) {
+    display: none !important;
+  }
+}
+
+.d-up-none-setting (@breakpoint) {
+  @media (min-width: @breakpoint) {
+    display: none !important;
+  }
+}
+
+.d {
+  &-down {
+    &-xs-none { .d-down-none-setting (@screenXs); }
+    &-sm-none { .d-down-none-setting (@screenSm); }
+    &-md-none { .d-down-none-setting (@screenMd); }
+    &-lg-none { .d-down-none-setting (@screenLg); }
+    &-xl-none { .d-down-none-setting (@screenXl); }
+  }
+
+  &-up {
+    &-xs-none { .d-up-none-setting (@screenXs); }
+    &-sm-none { .d-up-none-setting (@screenSm); }
+    &-md-none { .d-up-none-setting (@screenMd); }
+    &-lg-none { .d-up-none-setting (@screenLg); }
+    &-xl-none { .d-up-none-setting (@screenXl); }
+  }
+}
+
 // functions
 .for(@list, @code) {
   & {
