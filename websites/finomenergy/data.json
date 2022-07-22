@@ -583,7 +583,7 @@
     "subtitle": "Stačí vám na to jen 5 minut",
     "sendButton": "Odeslat poptávku",
     "sendfrom": "info@finomenergy.cz",
-    "sendto": "obchod@finomgroup.cz,hastik@finomgroup.cz",
+    "sendto": "hastik@finomgroup.cz,obchod@finomgroup.cz,leady@solarhunter.cz",
     "subject": "Odeslaná poptávka z webu Finom Energy",
     "complete": {
       "title": "Děkujeme za vaši zprávu.",
@@ -680,11 +680,6 @@
           "label": "Kombinace",
           "checked": false,
           "name": "kombinace"
-        },
-        {
-          "label": "Nevím, zatím sháním informace",
-          "checked": false,
-          "name": "nevim"
         }
       ]
     },
@@ -705,6 +700,23 @@
           "label": "Slevový kód",
           "type": "text",
           "name": "code"
+        }
+      ]
+    },
+    "upload": {
+      "title": "Pro urychlení přiložte potřebné dokumenty",
+      "items": [
+        {
+          "label": "Poslední vyúčtování plynu",
+          "type": "file",
+          "name": "gasFileToUpload",
+          "id": "gasFileToUpload"
+        },
+        {
+          "label": "Poslední vyúčtování elektřiny",
+          "type": "file",
+          "name": "eleFileToUpload",
+          "id": "eleFileToUpload"
         }
       ]
     }

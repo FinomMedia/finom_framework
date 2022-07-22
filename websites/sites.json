@@ -21,6 +21,7 @@
         {
             "title": "Finom Energy",
             "folder": "finomenergy",
+            "pwfolder":"site/app/websites/finomenergy",
             "getweb": "finomenergy",
             "servername": "finomenergy.cz"
         },

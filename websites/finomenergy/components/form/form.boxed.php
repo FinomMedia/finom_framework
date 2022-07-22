@@ -1,50 +1,101 @@
 <?php
+use ProcessWire;
+
+
+
+$promoCode = isset($_GET["uai"]) ? $_GET["uai"] : "";
+$hash = uniqid();
+
+function handleFileUpload($target_dir,$fileinput_name,$hash){
+
+
+    if($_FILES[$fileinput_name]["name"]){
+        $target_dir = Site::sitePath()."/uploads/";
+        $file_name = $hash ."-" . basename($_FILES[$fileinput_name]["name"]);
+        $target_file = $target_dir . $file_name;
+        $uploadOk = 1;
+
+
+        // Check file size
+        if ($_FILES[$fileinput_name]["size"] > 6750000) {
+        bd("Sorry, your file is too large.");
+        $uploadOk = 0;
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+        // if everything is ok, try to upload file
+        } else {
+        if (move_uploaded_file($_FILES[$fileinput_name]["tmp_name"], $target_file)) {
+            bd("The file ". htmlspecialchars( basename( $_FILES[$fileinput_name]["name"])). " has been uploaded.");
+        } else {
+            bd("Sorry, there was an error uploading your file.");
+        }
+        }
+
+        $fileLink = Site::sitePwUri()."uploads/".$file_name;
+
+        return $fileLink;
+    }
+    else return false;
+
+
+}
+
+function handleAffilView($measure,$url,$uai,$hash,$type,$value,$data){
+
+    if(Processwire\wire()->input->cookie->get('systemawk')){
+        return false;
+    }
+    else{
+        Processwire\wire()->input->cookie->set('systemawk', 'set', 1); //86400
+    }
+
+    $parent = Processwire\wire()->pages->get("finom-energy");
+    $template= "affil-record";
+    $name = "View-" . date("Y-m-d--h-i-s");
+
+    $values = array(
+        "affil_url"=> $url,
+        "affil_uai"=> $uai,
+        "affil_hash"=> $hash,
+        "affil_type"=> $type,
+        "affil_value"=> $value,
+        "affil_data"=> $data,
+    );
+    bd($values);
+
+    Processwire\wire()->pages->add($template, $parent, $name, $values);
+}
+
+function handleAffilConversion($measure,$url,$uai,$hash,$type,$value,$data){
+
+    Processwire\wire()->input->cookie->set('systemawk', 'set', 1); //86400
+
+
+    $parent = Processwire\wire()->pages->get("finom-energy");
+    $template= "affil-record";
+    $name = "Conversion-" . date("Y-m-d--h-i-s");
+
+    $values = array(
+        "affil_url"=> $url,
+        "affil_uai"=> $uai,
+        "affil_hash"=> $hash,
+        "affil_type"=> $type,
+        "affil_value"=> $value,
+        "affil_data"=> $data,
+    );
+    bd($values);
+
+    Processwire\wire()->pages->add($template, $parent, $name, $values);
+}
+
+
+
 
 if (isset($_POST['contactform'])){
 
-
-    /*$datafields = $data->contact->form->fields;
-
-    foreach($datafields as &$datafield){
-        $datafield = get_object_vars($datafield);
-    }
-
-    $fields = array();
-
-    foreach($datafields as $datafield){
-
-        if(isset($_POST[$datafield["name"]])){
-            $field["label"] = $datafield["label"];
-            $field["value"] = $_POST[$datafield["name"]];
-        }
-        $fields[]=$field;
-    }
-
-    $sendtos = explode(",",$data->contact->form->sendto);
-    $subject = $data->contact->form->subject;
-    $sendfrom = $data->contact->form->sendfrom;
-    $sendto = $data->contact->form->sendto;
-
-    $text = "";
-
-    foreach($fields as $field){
-        $text.=$field["label"].": ".$field["value"]."\n";
-    }
-
-    if(isset($_GET["debug"])){
-        echo "<br><br>Pole do emailu: <br><br>";
-        var_dump($fields);
-        echo "<br><br>Od: $sendfrom<br><br>";
-        echo "<br><br>Pro: $sendto<br><br>";
-        echo "<br><br>Předmět: $subject<br><br>";
-        echo "<br><br>Text: $text<br><br>";
-    }
-
-    foreach($sendtos as $sendto){
-        mail($sendto,$subject,$text);
-    }*/
-
-    //var_dump($_POST);
 
     $fields = array();
     foreach($_POST as $key => $value){
@@ -53,13 +104,25 @@ if (isset($_POST['contactform'])){
         $fields[]=$field;
 
     }
+
+
+    $gasFile = handleFileUpload(Site::sitePath()."/uploads/","gasFileToUpload",$_POST["hash"]);
+    $eleFile = handleFileUpload(Site::sitePath()."/uploads/","eleFileToUpload",$_POST["hash"]);
+
     //echo "<br><br>";
     //var_dump($fields);
 
-    $sendtos = explode(",",$sendto);
-    $subject = $subject;
+
+
+    if($_POST["services"]=="tepelne-cerpadlo") $prefix = "TC - ";
+    if($_POST["services"]=="fotovoltaika") $prefix = "FVE - ";
+    if($_POST["services"]=="kombinace") $prefix = "FVETC - ";
+
+
+    $subject = $prefix.$_POST["name"];
+
     $sendfrom = $sendfrom;
-    $sendto = $sendto;
+
 
     $text = "";
 
@@ -69,6 +132,13 @@ if (isset($_POST['contactform'])){
         }
     }
 
+    $text.="\nVyúčtování plynu: ";
+    $text.= $gasFile ? $gasFile : "nenahráno";
+
+    $text.="\nVyúčtování elektřiny: ";
+    $text.= $eleFile ? $eleFile : "nenahráno";
+
+
     //echo "<br><br>";
     //var_dump($text);
 
@@ -76,8 +146,22 @@ if (isset($_POST['contactform'])){
         'Reply-To: noreply@example.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
+    bd($sendto);
+    $sendtos = explode(",",$sendto);
+    bd($sendtos);
+
     foreach($sendtos as $sendto){
+        bd("Odesílám na ".$sendto);
         mail($sendto,$subject,$text,$headers);
+    }
+
+    handleAffilConversion("finom-energy","finomenergy.cz",$_POST["code"],$_POST["hash"],"conversion",$_POST["services"],$text);
+
+}
+
+else{
+    if($promoCode){
+        handleAffilView("finom-energy","finomenergy.cz",$promoCode,$hash,"view",1,"no data");
     }
 }
 
@@ -111,7 +195,11 @@ if (isset($_POST['contactform'])){
                 <?php endforeach; ?>
             </div>
 
-            <form class="form-boxed" method="post">
+            <?php if (isset($_POST['contactform'])): bd($data); ?>
+                <?php component("contact.complete", $data->form->complete); ?>
+            <?php endif;?>
+
+            <form class="form-boxed" method="post" action="#contact" enctype="multipart/form-data">
                 <div class="grid">
                     <b>
                         <?=$contactInfo->title?>
@@ -134,7 +222,7 @@ if (isset($_POST['contactform'])){
 
                 <div class="grid-3 gapColSmall ais mt-2">
                     <div>
-                        <div class="grid mb-2">
+                        <div class="grid mb-1">
                             <b>
                                 <?=$timeInterval->title?>
                             </b>
@@ -159,7 +247,7 @@ if (isset($_POST['contactform'])){
                     </div>
 
                     <div>
-                        <div class="grid mb-2">
+                        <div class="grid mb-1">
                             <b>
                                 <?=$services->title?>
                             </b>
@@ -194,7 +282,7 @@ if (isset($_POST['contactform'])){
                             <?php foreach ($moreInfo->items as $item):?>
                                 <div class="input smaller">
                                     <div class="input__box">
-                                        <textarea name="<?=$item->name?>" rows="<?=$item->rows?>" required></textarea>
+                                        <textarea name="<?=$item->name?>" rows="<?=$item->rows?>" ></textarea>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -210,7 +298,7 @@ if (isset($_POST['contactform'])){
                             <?php foreach ($saleCode->items as $item):?>
                                 <div class="input smaller">
                                     <div class="input__box">
-                                        <input type="<?=$item->type?>" name="<?=$item->name?>" required />
+                                        <input type="<?=$item->type?>" name="<?=$item->name?>" value="<?=$promoCode?>" />
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -218,15 +306,35 @@ if (isset($_POST['contactform'])){
                     </div>
                 </div>
 
+                <div class="file-uploads">
+                    <div class="grid mt-2 mb-1">
+                        <b>
+                            <?=$upload->title?>
+                        </b>
+                    </div>
+
+
+                    <div class="grid-2 gapColSmall gapRowNone">
+                        <?php foreach ($upload->items as $item):?>
+                            <div class="input smaller">
+                                <div class="input__label">
+                                    <?=$item->label?>
+                                </div>
+
+                                <div class="input__box">
+                                    <input type="<?=$item->type?>" name="<?=$item->name?>" id="<?=$item->id?>" />
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
                 <div class="action mt-2">
                     <input type="hidden" id="contactform" name="contactform" value="contactform">
+                    <input type="hidden" id="hash" name="hash" value="<?=$hash?>">
                     <input class="btn btnOutlinedPrimary " type="submit" value="<?=$sendButton?>" />
                 </div>
             </form>
-
-            <?php if (isset($_POST['contactform'])):?>
-                <?php component("contact.complete", $data->form->complete); ?>
-            <?php endif;?>
         </div>
     </div>
 </div>
